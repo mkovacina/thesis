@@ -1,0 +1,72 @@
+<controller name="controller" format="state">
+	<builder class="sweep.controller.FSABuilder"/>
+	<initialState name="searching"/>
+	<states>
+	
+		<!-- State: controls the search beahviors -->
+		<state name="searching">
+			<!-- Rule: if in range of garbage, go into collecting mode -->
+			<transition nextState="collect-garbage">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="near-garbage" value="true"/>
+				</rule>
+				<action name="broadcast-garbage"/>
+			</transition>
+						
+			<!-- Rule: otherwise, keep searching randomly -->
+			<default nextState="searching">
+				<action name="move-random"/>
+			</default>
+		</state>
+		
+		<!-- State: controls the collection of garbage -->
+		<state name="collect-garbage">
+			<!-- Rule: if on a piece of garbage, pick it up -->
+			<transition nextState="collect-garbage">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="holding-garbage" value="false"/>
+					<sensor name="on-garbage" value="true"/>
+				</rule>
+				<action name="pick-up-garbage"/>
+			</transition>
+			
+			<!-- Rule: if near garbage, move towards it -->
+			<transition nextState="collect-garbage">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="holding-garbage" value="false"/>
+					<sensor name="near-garbage" value="true"/>
+				</rule>
+				<action name="move-towards-garbage"/>
+			</transition>
+			
+			<!-- Rule: if holding garbage, move towards the dumpster -->
+			<transition nextState="collect-garbage">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="holding-garbage" value="true"/>
+					<sensor name="on-dumpster" value="false"/>
+				</rule>
+				<action name="move-towards-dumpster"/>
+			</transition>
+
+			<!-- Rule: if holding garbage and on the dumpster, dispose of the garbage -->
+			<transition nextState="searching">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="holding-garbage" value="true"/>
+					<sensor name="on-dumpster" value="true"/>
+				</rule>
+				<action name="put-down-garbage"/>
+			</transition>
+
+			<!-- Rule: go back to searching -->
+			<default nextState="searching">
+				<action name="move-random"/>
+			</default>
+
+		</state>
+	</states>
+</controller>

@@ -1,0 +1,241 @@
+\begin{thebibliography}{10}
+
+\bibitem{clough:PersonalCommunication}
+
+
+\bibitem{appleby:agent-control}
+Stephen Appleby and Simon Steward.
+\newblock Mobile software agents for control in telecommunication networks.
+\newblock {\em British Telecom Technical Journal}, 12(2), April 1994.
+
+\bibitem{arabshahi:SwarmIntelligence}
+Payman Arabshahi.
+\newblock Swarm intelligence resources page.
+\newblock \url{http://dsp.jpl.nasa.gov/members/payman/swarm}, 2002.
+
+\bibitem{back:ec1}
+Thomas Baeck, David Fogel, and Zbigniew Michalewicz, editors.
+\newblock {\em Evolutionary Computation 1: Basic Algorithms and Operators}.
+\newblock Institute of Physics Publishing, 2000.
+
+\bibitem{balch:FormationControl}
+T.~Balch and R.~Arkin.
+\newblock Behavior-based formation control for multi-robot teams.
+\newblock {\em IEEE Transactions on Robotics and Automation}, 14(6):926--939,
+  1998.
+
+\bibitem{beni:CellularRoboticSystems}
+G.~Beni.
+\newblock The concept of cellular robotic systems.
+\newblock In {\em Proceedings 1988 IEEE International Symposium on Intelligent
+  Control}, pages 57--62, Arlington, VA, August 1988. IEEE Computer Society
+  Press.
+
+\bibitem{bonabeau:SwarmSmarts}
+Eric Bonabeau and Guy Theraulaz.
+\newblock Swarm smarts.
+\newblock {\em Scientific American}, pages 82--90, March 2002.
+
+\bibitem{brown:AdHocUAV}
+Timothy Brown, Brian Argrow, Cory Dixon, Sheetalkumar Doshi, Roshan-George
+  Thekkekunnel, and Daniel Henkel.
+\newblock Ad-hoc {UAV} ground network ({AUGN}et).
+\newblock In {\em AIAA 3rd \qw{Unmanned Unlimited} Technical Conference,
+  Workshop and Exhibit}, Chicago, IL, September 2004. American Institute of
+  Aeronautics and Astronautics.
+
+\bibitem{caro-antnet}
+G.~Di Caro and M.~Dorigo.
+\newblock {AntNet}: a mobile agents approach to adaptive routing.
+\newblock Technical Report IRIDIA/97-12, Universit\'e Libre de Bruxelles,
+  Belgium, 1997.
+
+\bibitem{clough:SwarmingUAVs}
+Bruce Clough.
+\newblock {UAV} swarming? {So} what are those swarms, what are the
+  implications, and how do we handle them?
+\newblock Technical Report AFRL-VA-WP-2002-308, Air Force Research Lab, 2002.
+
+\bibitem{clr}
+Thomas Cormen, Charles Leiserson, and Ronald Rivest.
+\newblock {\em Introduction to Algorithms}.
+\newblock The MIT Press, Cambridge, MA, 1989.
+
+\bibitem{bonabeau:SwarmIntelligence}
+Eric.
+\newblock {\em Swarm Intelligence ...}
+\newblock Someone, 1990.
+
+\bibitem{GoF}
+Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+\newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
+\newblock Addison-Wesley, Reading, MA, 1994.
+
+\bibitem{gaudiano:EvolvingBehaviorsUAVs}
+Paul Gaudiano, Eric Bonabeau, and Ben Shargel.
+\newblock Evolving behaviors for a swarm of unmanned air vehicles.
+\newblock In {\em IEEE Swarm Intelligence Symposium}, 2005.
+
+\bibitem{go:AutonomousBehaviors}
+Jared Go, Thuc Vu, and James Kuffner.
+\newblock Autonomous behaviors for interactive vehicle animations.
+\newblock In {\em Proc. ACM SIGGRAPH Symposium on Computer Animation (SCA
+  2004)}. ACM, August 2004.
+
+\bibitem{grasse:Stigmergy}
+P.-P. Grass.ANi.
+\newblock La reconstruction du nid et les coordinations inter-individuelles
+  chez {{\it B}}{\it ellicositermes natalensis} et {{\it C}}{\it ubitermes sp}.
+  {L}a th.aniorie de la {S}tigmergie: {E}ssai d'interpr.anitation du
+  comportement des {T}ermites {C}onstructeurs.
+\newblock {\em Insectes sociaux}, 6:41--80, 1959.
+
+\bibitem{hantak:SWEEP}
+Chad Hantak and Daniel~Palmer (advisor).
+\newblock Implementing a swarm intelligence software laboratory using finite
+  state automata.
+\newblock In {\em Proceedings 12th National Conference on Undergraduate
+  Research (NCUR)}, volume~3, pages 984--988. National Conference on
+  Undergraduate Research, 1998.
+
+\bibitem{jholland:Adaptation}
+J.H. Holland.
+\newblock {\em Adaptation in natural and artificial systems}.
+\newblock The University of Michigan Press, Ann Arbor, 1975.
+
+\bibitem{orbital:SatelliteSwarms}
+Orbital~Research Inc.
+\newblock Auto-adaptive fuzzy rule base control of autonomous swarms.
+\newblock Sbir phase i final report, Kirtland AFB Space Vehicles Directorate,
+  1999.
+
+\bibitem{isreal:PredatorModeling}
+Major General Kenneth~R. Isreal.
+\newblock Modeling and simulation employed in the predator unmanned aerial
+  vehicle program.
+\newblock Technical report, Defense Airborne Reconnaissance Office, March 1997.
+
+\bibitem{dkoeppel:MassiveAttack}
+Dan Koeppel.
+\newblock Massive attack.
+\newblock {\em Popular Science}, pages 38--44, December 2002.
+
+\bibitem{kolacinski:SwarmRovers}
+Richard.~M. Kolacinski, Daniel~W. Palmer, Patrick~M. Cloutier, and Jason~E.
+  Schatz.
+\newblock Biologically inspired design for low cost exploration of space:
+  Swarms of martian rovers based on the russian thistle.
+\newblock In {\em Proceedings of the 7th World Multiconference on Systemics,
+  Cybernetics and Informatics}, volume~11, pages 32--38, 2003.
+
+\bibitem{kovacina:AdaptiveIntelligentEvolution}
+Michael~A. Kovacina, Daniel~W. Palmer, Ravi Vaidyanathan, and Richard~M.
+  Kolacinski.
+\newblock Intelligent/adaptive operators and representation modulation for
+  evolutionary programming.
+\newblock In {\em AIAA 3rd Unmanned Unlimited Technical Conference}, Chicago,
+  IL, September 2004. American Institute of Aeronautics and Astronautics.
+
+\bibitem{pkovacina:AspectSwarms}
+Peter~T. Kovacina.
+\newblock Use of aspect-oriented programming with swarm algorithms.
+\newblock In {\em Proceedings 19th National Conference on Undergraduate
+  Research (NCUR)}. National Conference on Undergraduate Research, 2005.
+
+\bibitem{koza:geneticprogramming-1}
+Jonathan Koza.
+\newblock {\em Genetic Programming:On the Programming of Computers by Means of
+  Natural Selection}.
+\newblock Bradford Books, 1992.
+
+\bibitem{lewis:Nanorobots}
+M.~Anthony Lewis and George Bekey.
+\newblock The behavioral self-organization of nanorobots using local rules.
+\newblock In {\em Proceedings of IEEE/RSJ International Conference on
+  Intelligent Robots and Systems}, volume~2, 1992.
+
+\bibitem{plinz:FormalLanguages}
+Peter Linz.
+\newblock {\em An introduction to formal languages and automata}.
+\newblock D. C. Heath and Company, Lexington, MA, USA, 1990.
+
+\bibitem{palmer:Behavior}
+Daniel Palmer, Chad Hantak, and Michael Kovacina.
+\newblock Impact of behavior influence on decentralized control strategies for
+  swarms of simple, autonomous mobile agents.
+\newblock In {\em Workshop: Biomechanics Meets Robotics Modeling and Simulation
+  of Motion}, 1999.
+
+\bibitem{palmer:CAST}
+Daniel Palmer, Marc Kirschenbaum, Jon Muron, and Kelly Zajac.
+\newblock Decentralized cooperative auction for multiple agent task allocation
+  using synchronized random number generators.
+\newblock In {\em Proceedings of the 2003 International Conference on
+  Intelligent Robots and Systems}, 2003.
+
+\bibitem{dpalmer:SwarmReasoning}
+Daniel Palmer, Marc Kirschenbaum, Jason Shifflet, and Linda Seiter.
+\newblock Swarm reasoning.
+\newblock In {\em IEEE Swarm Intelligence Symposium}, 2005.
+
+\bibitem{palmer:HumanSwarm}
+Daniel~W. Palmer, Marc Kirschenbaum, Jon~P. Murton, Michael~A. Kovacina,
+  Daniel~H. Steinberg, Sam~N. Calabrese, Kelly~M. Zajac, Chad~M. Hantak, and
+  Jason~E. Schatz.
+\newblock Using a collection of humans as an execution testbed for swarm
+  algorithms.
+\newblock In {\em Proceedings of the IEEE Swarm Intelligence Symposium}, pages
+  58--64. Institute of Electrical and Electronics Engineers, 2003.
+
+\bibitem{parunak:DigitalPheromone}
+H.V.D. Parunak, M.~Purcell, and R~O.ANUConnell.
+\newblock Digital pheromones for autonomous coordination of swarming uavs.
+\newblock In {\em Proceedings of the AIAA's First Technical Conference and
+  Workshop on Unmanned Aerospace Vehicles, Systems, and Operations}, 2002.
+
+\bibitem{jpolderman:SystemsTheoryBehavioral}
+Jan~Willem Polderman and Jan~C. Willems.
+\newblock {\em Introduction to mathematical systems theory: a behavioral
+  approach}.
+\newblock Springer-Verlag New York, Inc., Secaucus, NJ, USA, 1998.
+
+\bibitem{reynolds:Batman}
+Craig Reynolds.
+\newblock Boids (flocks, herds, and schools: A distributed behavior model).
+\newblock \url{http://www.red3d.com/cwr/boids}, June 2001.
+
+\bibitem{reynolds87flocks}
+Craig~W. Reynolds.
+\newblock Flocks, herds, and schools: {A} distributed behavioral model.
+\newblock {\em Computer Graphics}, 21(4):25--34, 1987.
+
+\bibitem{jshifflet:SwarmReasoning}
+Jason Shifflet.
+\newblock Swarm-based reasoning for the four color mapping problem.
+\newblock In {\em Proceedings 19th National Conference on Undergraduate
+  Research (NCUR)}. National Conference on Undergraduate Research, 2005.
+
+\bibitem{web:massive}
+Massive Software.
+\newblock Massive software.
+\newblock \url{http://www.massivesoftware.com}, 2005.
+
+\bibitem{trahan:UAVSwarms}
+M.~Trahan, J.~Wagner, K.~Stantz, P.~Gray, and R.~Robinett.
+\newblock Swarms of uavs and fighter aircraft.
+\newblock In {\em Proceedings of the Second International Conference on
+  Nonlinear Problems in Aviation and Aerospace}, volume~2, pages 745--752,
+  1998.
+
+\bibitem{yang:PathPlanning}
+Gang Yang and Vikram Kapila.
+\newblock Optimal path planning for unmanned air vehicles with kinematic and
+  tactical constraints.
+\newblock Provided to Orbital Research, 2002.
+
+\bibitem{zaera:EvolveCollectiveBehavior}
+Nahum Zaera, Dave Cliff, and Janet Bruten.
+\newblock (not) evolving collective behaviours in synthetic fish.
+\newblock Technical Report HPL-96-04, Hewlett-Packard Laboratories, 1996.
+
+\end{thebibliography}

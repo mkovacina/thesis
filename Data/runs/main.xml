@@ -1,0 +1,13 @@
+<main>
+	<info name="about" type="info-type1"/>
+	
+	<swarm name="my-swarm-1" type="swarm-1">
+		<entity type="swarm-1-entity" number="100"/>
+	</swarm>
+
+	<!-- should be able to override environment attributes here too -->
+	<environment name="world" type="world"/>
+	
+	<probe name="probe" type="terminator"/>
+	<probe name="summary" type="summarizer"/>
+</main>

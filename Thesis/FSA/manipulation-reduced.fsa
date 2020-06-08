@@ -1,0 +1,76 @@
+\multirow{5}{*}{A}
+ & on-object\_C & pick-up & J\\
+ & near-object\_C & move-to-object\_D & J\\
+ & near-object\_D & move-random & H\\
+ & holding-object\_C & move-to-object\_C & F\\
+ & on-goal & - & G\\
+\hline
+
+\multirow{1}{*}{B}
+ & !on-goal & move-random & J\\
+\hline
+
+\multirow{4}{*}{C}
+ & !near-object\_C & broadcast-object\_D & A\\
+ & on-object\_D(untouched) & broadcast-object\_D & A\\
+ & holding-object\_C & broadcast-object\_D & D\\
+ & on-object\_C & broadcast-garbage & J\\
+\hline
+
+\multirow{4}{*}{D}
+ & near-object\_D & broadcast-object\_D & C\\
+ & !on-object\_C & move-random & K\\
+ & holding-object\_C & broadcast-garbage & D\\
+ & !holding-object\_C & - & B\\
+\hline
+
+\multirow{1}{*}{E}
+ & !near-object\_D & pick-up & K\\
+\hline
+
+\multirow{7}{*}{F}
+ & on-object\_C & - & B\\
+ & holding-object\_C & put-down & K\\
+ & on-object\_D(damaged) & second-attack & -\\
+ & !near-object\_D & - & B\\
+ & on-object\_D(untouched) & first-attack & -\\
+ & near-object\_C & put-down & K\\
+ & near-object\_D & move-to-object\_D & D\\
+\hline
+
+\multirow{6}{*}{G}
+ & on-object\_D(damaged) & broadcast-object\_D & C\\
+ & holding-object\_C & move-to-goal & K\\
+ & !near-object\_D & move-to-object\_C & B\\
+ & near-object\_C & broadcast-object\_D & A\\
+ & !on-goal & move-to-goal & I\\
+ & near-object\_D & move-to-object\_C & J\\
+\hline
+
+\multirow{1}{*}{H}
+ & !on-object\_C & broadcast-object\_D & G\\
+\hline
+
+\multirow{6}{*}{I}
+ & on-goal & - & E\\
+ & on-object\_D(untouched) & - & F\\
+ & !near-object\_C & broadcast-object\_D & J\\
+ & on-object\_C & - & A\\
+ & !on-object\_D(damaged) & move-to-object\_C & C\\
+ & near-object\_C & second-attack & -\\
+\hline
+
+\multirow{6}{*}{J}
+ & on-object\_D(damaged) & - & I\\
+ & holding-object\_C & move-to-goal & G\\
+ & near-object\_D & pick-up & I\\
+ & on-object\_C & broadcast-garbage & E\\
+ & !near-object\_C & put-down & C\\
+ & !on-goal & move-to-object\_C & I\\
+\hline
+
+\multirow{2}{*}{K}
+ & !on-object\_D(damaged) & put-down & J\\
+ & on-object\_D(damaged) & - & G\\
+\hline
+

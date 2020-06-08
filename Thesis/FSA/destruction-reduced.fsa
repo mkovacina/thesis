@@ -1,0 +1,53 @@
+\multirow{3}{*}{A}
+ & on-object\_D(untouched) & first-attack & -\\
+ & !on-object\_D(damaged) & move-to-object\_D & E\\
+ & near-object\_D & second-attack & -\\
+\hline
+
+\multirow{3}{*}{B}
+ & !near-object\_D & - & H\\
+ & !on-object\_D(untouched) & move-to-object\_D & B\\
+ & near-object\_D & second-attack & I\\
+\hline
+
+\multirow{2}{*}{C}
+ & near-object\_D & move-to-object\_D & A\\
+ & !on-object\_D(damaged) & move-random & J\\
+\hline
+
+\multirow{3}{*}{D}
+ & !on-object\_D(untouched) & move-random & B\\
+ & !on-object\_D(damaged) & - & H\\
+ & !near-object\_D & - & I\\
+\hline
+
+\multirow{4}{*}{E}
+ & !near-object\_D & move-random & E\\
+ & on-object\_D(damaged) & second-attack & -\\
+ & on-object\_D(untouched) & move-random & E\\
+ & !on-object\_D(damaged) & move-to-object\_D & C\\
+\hline
+
+\multirow{2}{*}{F}
+ & !on-object\_D(damaged) & move-to-object\_D & H\\
+ & !on-object\_D(untouched) & second-attack & -\\
+\hline
+
+\multirow{1}{*}{G}
+ & on-object\_D(damaged) & second-attack & I\\
+\hline
+
+\multirow{2}{*}{H}
+ & !on-object\_D(untouched) & broadcast-object\_D & H\\
+ & on-object\_D(untouched) & - & D\\
+\hline
+
+\multirow{2}{*}{I}
+ & !near-object\_D & - & H\\
+ & near-object\_D & second-attack & -\\
+\hline
+
+\multirow{1}{*}{J}
+ & on-object\_D(untouched) & move-random & F\\
+\hline
+

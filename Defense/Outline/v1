@@ -1,0 +1,53 @@
+__Simple but to the point__
+
+
+* Title
+** Swarm Behaviors: Simulation and Generation
+
+* Summary/Contributions
+** Taken from Chapter 1
+
+* Overview
+** Basic outline overview of the entire presentation
+
+* Introduction
+** Swarm Intelligence overview (Chapter 2)
+** The problem
+*** Swarm algorithms needs simulation
+*** Swarm algorithms can be tough to code by hand
+** The solution
+*** Use evolutionary computing to evolve solutions
+*** Will need a simulation tool to compute fitness
+
+* SWEEP
+** Basic design overview
+** SWEEP Applications (Chapter 4)
+** Other SWEEP applications (Chapter 7)
+
+* ECS (Evolutionary Computing for Swarms)
+** Basic design overview (Chapter 5)
+
+* Evolving Dispersion
+** Problem description
+** Discuss fitness
+** Results
+
+* Evolving Object Manipulation
+** Problem description
+** Discuss fitness
+*** Raw metrics
+*** Composite metrics
+** Results: Object Destruction
+** Resulls: Object Collection
+** Results: Object Manipulation
+
+* Conclusions
+** From Chapter 7
+
+* Future Work
+** From Chapter 7
+
+* Acknowledgements
+
+* Questions
+** Oh, no questions.  Excellent.  Have a great day.

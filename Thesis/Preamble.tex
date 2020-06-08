@@ -1,0 +1,105 @@
+\documentclass[12pt,letterpaper]{report}
+
+\usepackage[hmargin={1.5in,1in},vmargin={1in,1in},marginparsep=0in,marginparwidth=0pt,pdftex]{geometry}
+%\usepackage[left=1.5in, right=1in, top=1in, bottom=1in, pdftex]{geometry}
+%\usepackage[left=1.5in, pdftex]{geometry}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{verbatim}
+\usepackage{multicol}
+
+\usepackage[small]{caption}
+
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+%\topmargin 0in
+%\headheight 0in
+%\headsep 0in
+%\textheight 9in
+%\textwidth 6in
+%\oddsidemargin 0.5in
+%\evensidemargin 0.5in
+%\headsep 0in
+
+
+
+\graphicspath{{../Images/}}
+
+
+
+\newcommand{\SWEEP}{SWEEP\xspace}
+\newcommand{\SWEEPexp}{SWarm Experimentation and Evaluation Platform\xspace}
+\newcommand{\SWEEPexpbf}{\textbf{SW}arm \textbf{E}xperimentation and \textbf{E}valuation \textbf{P}latform\xspace}
+
+\newcommand{\ECS}{ECS\xspace}
+\newcommand{\ECSexp}{\textbf{E}volutionary \textbf{C}omputing for \textbf{S}warms\xspace}
+
+\newcommand{\mutation}[1]{\textit{#1\/}}
+
+\newcommand{\italic}[1]{\textit{#1\/}}
+%\newcommand{\bold}[1]{\textbf{#1}}
+
+\newcommand{\ie}{i.e.,\xspace} % in other words
+\newcommand{\eg}{e.g.,\xspace} % for example
+\newcommand{\apriori}{\textit{a~priori}\xspace}
+
+%%
+%% MiKo: macros for displaying Java terms
+%%
+%%% \/ at the end of a textit{} is the italics correction factor
+\newcommand{\jclass}[1]{\texttt{#1\/}}
+\newcommand{\jmethod}[1]{\textit{\textbf{#1}\/}}
+\newcommand{\true}{\texttt{true}\xspace}
+\newcommand{\false}{\texttt{false}\xspace}
+
+%% qw - Quote word, ala perl
+\newcommand{\qw}[1]{``#1''}
+
+%
+% LATER (make or find)
+% * make macros for creating the labels, then mod the \ref's to not need the ch: or fig:, etc
+% * marcos for big-O, little-O, etc
+% 
+
+%\newcommand{\refFigure}[1]{\textbf{Figure~\ref{fig:#1}}}
+%\newcommand{\refFigures}[2]{\textbf{Figures~\ref{fig:#1}--\ref{fig:#2}}}
+%\newcommand{\refTable}[1]{\textbf{Table~\ref{tab:#1}}}
+
+\newcommand{\refFigure} [1]{Figure~\ref{fig:#1}}
+\newcommand{\refFigures}[2]{Figures~\ref{fig:#1}--\ref{fig:#2}}
+\newcommand{\refTable}  [1]{Table~\ref{tab:#1}}
+
+\newcommand{\refAppendix}[1]{Appendix~\ref{app:#1}}
+\newcommand{\refChapter}[1]{Chapter~\ref{ch:#1}}
+\newcommand{\refSection}[1]{Section~\ref{sec:#1}}
+\newcommand{\refAlgorithm}[1]{Algorithm~\ref{alg:#1}}
+
+
+\newcommand{\note}[1]{\texttt{\textbf{NOTE\@: #1}}}
+
+\newcommand{\placeholder}[1]{\begin{center}\fbox{#1}\end{center}}
+
+%{\Large{$\star$}
+%\newcommand{\msb}[1]{\marginpar{\fbox{\footnotesize #1}}}
+
+% http://blue.chem.psu.edu/~rajarshi/misc/tipsntricks.html#q30
+\newcommand{\msb}[1]{\marginpar{%
+      \vskip-\baselineskip{}
+      \raggedright\footnotesize
+      \itshape\hrule\smallskip#1\par\smallskip\hrule}} 
+      
+%\setfiguredirectory{DIRECTORY}
+
+\doublespacing{}

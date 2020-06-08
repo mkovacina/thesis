@@ -1,0 +1,14 @@
+function om_display( filename, n_soln, n_gen )
+
+### [1] Get the data
+[x, best, gens] = crunch( filename, n_soln, n_gen, [7 8 9 10 11] );
+
+nbest=best;
+nbest(:,5) = nbest(:,5)/-399;
+nbest(:,5) = 1-nbest(:,5);
+
+### [2] Reset Gnuplot
+
+graw("reset;");
+clearplot;
+

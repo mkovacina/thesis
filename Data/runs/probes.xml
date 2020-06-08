@@ -1,0 +1,24 @@
+
+<probes>
+	<probe name="terminator">
+		<builder class="sweep.probe.CounterProbeBuilder"/>
+		<iterations num="400"/>
+	</probe>
+		
+		
+	<probe name="summarizer">
+		<builder class="sweep.probe.GlobalSummaryProbeBuilder"/>
+		<ref name="global:pickup"/>
+		<ref name="global:garbage"/>
+		<ref name="global:disarm-phase-1"/>
+		<ref name="global:disarm-phase-2"/>
+		<ref name="global:correct"/>
+		<ref name="global:error"/>
+		<ref name="global:clock"/>
+
+		<target ref="global:garbage"        value="50"/>
+		<target ref="global:disarm-phase-2" value="30"/>
+
+		<file name="data.dat"/>
+	</probe>
+</probes>

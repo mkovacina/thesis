@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controller name="controller" format="state"><!--1-->
+	<builder class="sweep.controller.FSABuilder"/>
+	<initialState name="df4e2:ff817e3e64:-7f9e"/>
+	<states>
+		<state name="df4e2:ff817e3e64:-8000">
+			<transition nextState="df4e2:ff817e3e64:-7fb8">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="no-op"/>
+			</transition>
+			<default nextState="df4e2:ff817e3e64:-7ff4">
+				<action name="move-random"/>
+			</default>
+		</state>
+		<state name="df4e2:ff817e3e64:-7ff4">
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="true"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="true"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7f84">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="no-op"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-8000">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="true"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="true"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="true"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<default nextState="df4e2:ff817e3e64:-8000">
+				<action name="move-random"/>
+			</default>
+		</state>
+		<state name="df4e2:ff817e3e64:-7fe0">
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="true"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="true"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="no-op"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="true"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="no-op"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7f84">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="true"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-8000">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="true"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="no-op"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="true"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<default nextState="df4e2:ff817e3e64:-7fe0">
+				<action name="no-op"/>
+			</default>
+		</state>
+		<state name="df4e2:ff817e3e64:-7fb8">
+			<transition nextState="df4e2:ff817e3e64:-8000">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7fb8">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<default nextState="df4e2:ff817e3e64:-7fe0">
+				<action name="no-op"/>
+			</default>
+		</state>
+		<state name="df4e2:ff817e3e64:-7f9e">
+			<transition nextState="df4e2:ff817e3e64:-7f9e">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="true"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="no-op"/>
+			</transition>
+			<default nextState="df4e2:ff817e3e64:-7ff4">
+				<action name="no-op"/>
+			</default>
+		</state>
+		<state name="df4e2:ff817e3e64:-7f84">
+			<transition nextState="df4e2:ff817e3e64:-8000">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7ff4">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="false"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="no-op"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-8000">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="true"/>
+					<sensor name="Neighbor-Below" value="false"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="true"/>
+				</rule>
+				<action name="move-random"/>
+			</transition>
+			<transition nextState="df4e2:ff817e3e64:-7fb8">
+				<rule logical="and">
+					<builder class="sweep.controller.SensorRuleBuilder"/>
+					<sensor name="Neighbor-Above" value="true"/>
+					<sensor name="Neighbor-Below" value="true"/>
+					<sensor name="Neighbor-Left" value="false"/>
+					<sensor name="Neighbor-Right" value="false"/>
+				</rule>
+				<action name="no-op"/>
+			</transition>
+			<default nextState="df4e2:ff817e3e64:-7f9e">
+				<action name="no-op"/>
+			</default>
+		</state>
+	</states>
+</controller>

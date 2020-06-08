@@ -1,0 +1,139 @@
+\begin{slide}{UAV Chemical Cloud Tracking}
+  Highlights
+  \begin{itemize}
+  \item Develop decentralized algorithms for small collections of UAVs
+  \item Constrained vehicles
+    \begin{itemize}
+    \item Limited communication
+    \item Limited flight capabilities
+    \item Binary sensors
+    \end{itemize}
+  \item Explore potential emergent behavior of small collections of agents
+  \end{itemize}
+\end{slide}
+
+%%%%%
+%%%%%
+
+\overlays{3}{%
+  \begin{slide}{UAV Chemical Cloud Tracking}
+    \onlySlide*{1}{
+      \includegraphics[height=\textheight,width=\textwidth]{CloudScenario_1.eps}
+    }
+    
+    \onlySlide*{2}{
+      \includegraphics[height=\textheight,width=\textwidth]{CloudScenario_2.eps}
+    }
+    
+    \onlySlide*{3}{
+      \includegraphics[height=\textheight,width=\textwidth]{CloudScenario_3.eps}
+    }
+  \end{slide}
+}%
+
+%%%%%
+%%%%%
+
+\begin{slide}{UAV Chemical Cloud Tracking}
+  UAV Characteristics
+  \begin{itemize}
+  \item UAV flight model
+    \begin{itemize}
+    \item Point mass
+    \item
+      $\left\{ 
+      \begin{array}{l}
+        \dot {x}=v_C \cos (\theta ) \\ 
+        \dot {y}=v_C \sin (\theta ) \\ 
+        \dot {\theta}=\omega \\
+      \end{array}
+      \right.$
+    \item Fixed turning radius
+    \item Constant speed
+    \item Geometric path planner
+    \end{itemize}
+  \item 30 minute power supply
+  \item Binary chemical sensor
+  \end{itemize}
+\end{slide}
+
+%%%%%
+%%%%%
+
+\begin{slide}{UAV Chemical Cloud Tracking}
+  \hfill
+  \begin{minipage}{.45\textwidth}
+    Data Collection
+    \begin{itemize}
+    \item Cloud detection only
+    \item 20,000 simulations
+      \begin{itemize}
+      \item 5 to 15 agents
+      \item 20 cloud sizes
+      \end{itemize}
+    \item 30 minute power supply
+    \item 40 knots constant speed
+    \item Constant wind speed and direction
+    \end{itemize}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\textwidth}
+    \ptsize{9}
+    \fbox{
+      \begin{minipage}{\textwidth}
+	\begin{algorithmic}
+	  \STATE generateRandomPath()
+	  \LOOP
+	  \IF{endOfPath() or rand() < .1}
+	  \STATE generateRandomFlightPlan()
+	  \ENDIF
+	  \ENDLOOP
+	\end{algorithmic}
+      \end{minipage}
+    }
+    \begin{center}
+      \includegraphics[scale=.5]{Search_Symmetrical2}
+    \end{center}
+  \end{minipage}
+  \hfill
+\end{slide}
+
+%%%%%
+%%%%%
+
+\begin{slide}{UAV Chemical Cloud Tracking}
+  \begin{minipage}{.3\textwidth}
+    \ptsize{10}
+    \begin{itemize}
+    \item Normalized search time
+    \item Speed increases with swarm and cloud size
+    \item Larger swarms are faster
+    \item Bigger clouds are easier
+    \end{itemize}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.6\textwidth}
+    \includegraphics[width=\textwidth,height=\textheight]{CloudTracking_Time.eps}
+  \end{minipage}
+  \hfill
+\end{slide}
+
+%%%%%
+%%%%%
+
+\begin{slide}{UAV Chemical Cloud Tracking}
+  \centering
+  \begin{minipage}{.3\textwidth}
+    \ptsize{10}
+    \begin{itemize}
+    \item Detection rate
+    \item Rate increases with swarm and cloud size
+    \item Larger swarms are more accurate
+    \item More UAVs, more area covered
+    \end{itemize}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.6\textwidth}
+    \includegraphics[width=\textwidth,height=\textheight]{CloudTracking_Success.eps}
+  \end{minipage}
+\end{slide}

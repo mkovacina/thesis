@@ -1,0 +1,24 @@
+<environments>
+	<environment name="world">
+		<builder class="standard.environment.EnvironmentBuilder"/>
+		<model class="grid.environment.SafeGridModel">
+			<attributes>
+				<attribute name="rows" value="50"/>
+				<attribute name="cols" value="50"/>
+			</attributes>
+			<initializers>
+				<initializer class="grid.environment.RandomInitialization">
+					<builder class="grid.environment.RandomInitializationBuilder"/>
+
+					<seed value="3141592654"/>
+					
+					<!-- Garbage Object-->
+					<object value="1" number="50"/>
+					<!-- Mine Object -->
+					<object value="4" number="30"/>
+				</initializer>
+			</initializers>
+			<updates></updates>
+		</model>
+	</environment>
+</environments>

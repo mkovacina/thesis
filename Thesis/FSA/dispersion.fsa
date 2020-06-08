@@ -1,0 +1,44 @@
+\multirow{2}{*}{A}
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & no-op & D\\
+ & default & move-random & B\\
+\hline
+
+\multirow{6}{*}{B}
+ & \parbox{1ex}{~}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{~}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & move-random & B\\
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & no-op & F\\
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & move-random & A\\
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{~}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & move-random & B\\
+ & \parbox{1ex}{~}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{~}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & move-random & B\\
+ & default & move-random & A\\
+\hline
+
+\multirow{7}{*}{C}
+ & \parbox{1ex}{~}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{~}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & no-op & B\\
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{~}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & no-op & B\\
+ & \parbox{1ex}{~}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & move-random & F\\
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & move-random & A\\
+ & \parbox{1ex}{~}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & no-op & B\\
+ & \parbox{1ex}{~}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & move-random & B\\
+ & default & no-op & C\\
+\hline
+
+\multirow{3}{*}{D}
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & move-random & A\\
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & move-random & D\\
+ & default & no-op & C\\
+\hline
+
+\multirow{3}{*}{E}
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & move-random & E\\
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{~}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & no-op & B\\
+ & default & no-op & B\\
+\hline
+
+\multirow{5}{*}{F}
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & move-random & A\\
+ & \parbox{1ex}{!}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & no-op & B\\
+ & \parbox{1ex}{~}Neighbor-Above, \parbox{1ex}{!}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{~}Neighbor-Right & move-random & A\\
+ & \parbox{1ex}{~}Neighbor-Above, \parbox{1ex}{~}Neighbor-Below, \parbox{1ex}{!}Neighbor-Left, \parbox{1ex}{!}Neighbor-Right & no-op & D\\
+ & default & no-op & E\\
+\hline
+

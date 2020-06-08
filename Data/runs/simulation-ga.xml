@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE simulation [
+<!ENTITY main SYSTEM "file:./xml/main.xml">
+<!ENTITY environment SYSTEM "file:./xml/environments.xml">
+<!ENTITY models SYSTEM "file:./xml/models.xml">
+<!ENTITY agents SYSTEM "file:./xml/agents.xml">
+<!ENTITY probes SYSTEM "file:./xml/probes.xml">
+<!ENTITY swarms SYSTEM "file:./xml/swarms.xml">
+]>
+
+<simulation builder="standard.simulation.SimulationBuilder">
+	
+	&main;
+	
+	&environment;
+	
+	&models;
+
+	&agents;
+
+	&probes;
+	
+	&swarms;
+
+	<controllers>
+	</controllers>
+	
+	<information>
+		<info name="info-type1">
+			<builder class="sweep.info.NullInfoBuilder"/>
+		</info>
+	</information>
+	
+</simulation>

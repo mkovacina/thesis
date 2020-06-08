@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controller name="controller" format="state">
+  <builder class="sweep.controller.FSABuilder"/>
+  <initialState name="568fb5:102d4ad91c4:-7ffe"/>
+  <states>
+    <state name="568fb5:102d4ad91c4:-7ffe">
+      <transition nextState="568fb5:102d4ad91c4:-7f7c">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f7c">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7ffe">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7fde">
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="false"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fa5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f3e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f66">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ede">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="false"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7ffe">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7fd5">
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="broadcast-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f3e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f72">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="broadcast-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ede">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f3e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ede">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7fde">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7fc4">
+      <transition nextState="568fb5:102d4ad91c4:-7fde">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f72">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fde">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="broadcast-object-c"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7ffe">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7fa5">
+      <transition nextState="568fb5:102d4ad91c4:-7fa5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f3e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f66">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7fa5">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7f7c">
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f7c">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f72">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ede">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f72">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7fd5">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7f72">
+      <transition nextState="568fb5:102d4ad91c4:-7fde">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f3e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f7c">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ffe">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ede">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="false"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ffe">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f7c">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="broadcast-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f72">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7f72">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7f66">
+      <transition nextState="568fb5:102d4ad91c4:-7fde">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fa5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ede">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f7c">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7fa5">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7f3e">
+      <transition nextState="568fb5:102d4ad91c4:-7ede">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ffe">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f3e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="false"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f66">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="broadcast-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ede">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7f3e">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7ede">
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fa5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="false"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f66">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="false"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fde">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="false"/>
+        </rule>
+        <action name="move-towards-object-c"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="false"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ffe">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7f72">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d4ad91c4:-7ebb">
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f72">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fa5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fd5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f7c">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-goal" value="true"/>
+        </rule>
+        <action name="put-down"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7f66">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7fc4">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-object-c" value="true"/>
+        </rule>
+        <action name="pick-up"/>
+      </transition>
+      <transition nextState="568fb5:102d4ad91c4:-7ebb">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-object-c" value="true"/>
+        </rule>
+        <action name="move-towards-goal"/>
+      </transition>
+      <default nextState="568fb5:102d4ad91c4:-7fde">
+        <action name="default-action"/>
+      </default>
+    </state>
+  </states>
+</controller>

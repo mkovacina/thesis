@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<controller name="controller" format="state">
+  <builder class="sweep.controller.FSABuilder"/>
+  <initialState name="e67e6a:10264a56b71:-7ff9"/>
+  <states>
+    <state name="e67e6a:10264a56b71:-7ff9">
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-garbage" value="true"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <default nextState="e67e6a:10264a56b71:-7ff9">
+        <action name="default-action"/>
+      </default>
+      <transition nextState="e67e6a:10264a56b71:-7fc5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-garbage" value="true"/>
+        </rule>
+        <action name="put-down-garbage"/>
+      </transition>
+    </state>
+    <state name="e67e6a:10264a56b71:-7fc5">
+      <transition nextState="e67e6a:10264a56b71:-7fc5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="false"/>
+        </rule>
+        <action name="move-towards-dumpster"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7fb8">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="true"/>
+        </rule>
+        <action name="put-down-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7fb8">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-garbage" value="true"/>
+        </rule>
+        <action name="broadcast-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-garbage" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <default nextState="e67e6a:10264a56b71:-7fc5">
+        <action name="default-action"/>
+      </default>
+      <transition nextState="e67e6a:10264a56b71:-7f23">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="false"/>
+        </rule>
+        <action name="move-towards-garbage"/>
+      </transition>
+    </state>
+    <state name="e67e6a:10264a56b71:-7fb8">
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="true"/>
+        </rule>
+        <action name="move-towards-dumpster"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7fc5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-garbage" value="false"/>
+        </rule>
+        <action name="broadcast-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7f37">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-garbage" value="false"/>
+        </rule>
+        <action name="move-towards-dumpster"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7f37">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="false"/>
+        </rule>
+        <action name="move-towards-dumpster"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7fb8">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-garbage" value="false"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <default nextState="e67e6a:10264a56b71:-7fb8">
+        <action name="default-action"/>
+      </default>
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="false"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7fc5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-garbage" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7fc5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-garbage" value="true"/>
+        </rule>
+        <action name="put-down-garbage"/>
+      </transition>
+    </state>
+    <state name="e67e6a:10264a56b71:-7f37">
+      <transition nextState="e67e6a:10264a56b71:-7f23">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-garbage" value="false"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-garbage" value="true"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7fc5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="false"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7f37">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-garbage" value="false"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="holding-garbage" value="false"/>
+        </rule>
+        <action name="move-towards-garbage"/>
+      </transition>
+      <default nextState="e67e6a:10264a56b71:-7ff9">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="e67e6a:10264a56b71:-7f23">
+      <transition nextState="e67e6a:10264a56b71:-7f23">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-garbage" value="true"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-garbage" value="true"/>
+        </rule>
+        <action name="broadcast-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-garbage" value="false"/>
+        </rule>
+        <action name="pick-up-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7ff9">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-dumpster" value="false"/>
+        </rule>
+        <action name="move-towards-garbage"/>
+      </transition>
+      <transition nextState="e67e6a:10264a56b71:-7fc5">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-garbage" value="true"/>
+        </rule>
+        <action name="broadcast-garbage"/>
+      </transition>
+      <default nextState="e67e6a:10264a56b71:-7fc5">
+        <action name="default-action"/>
+      </default>
+    </state>
+  </states>
+</controller>
+

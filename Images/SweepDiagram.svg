@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="990.00000px"
+   height="765.00000px"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.42"
+   sodipodi:docbase="/home/mkovacina/Workspaces/MastersThesis/Images"
+   sodipodi:docname="SweepDiagram.svg"
+   inkscape:export-filename="/home/mkovacina/Workspaces/MastersThesis/Images/SweepDiagram.eps"
+   inkscape:export-xdpi="90.000000"
+   inkscape:export-ydpi="90.000000">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lstart"
+       style="overflow:visible">
+      <path
+         sodipodi:nodetypes="cccc"
+         id="path3095"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) translate(-5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         sodipodi:nodetypes="ccccc"
+         id="path3112"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         sodipodi:nodetypes="cccc"
+         id="path3104"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(-5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.66789186"
+     inkscape:cx="472.58169"
+     inkscape:cy="375.17828"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3485"
+     inkscape:window-width="897"
+     inkscape:window-height="668"
+     inkscape:window-x="51"
+     inkscape:window-y="232"
+     showguides="true"
+     showgrid="false"
+     showborder="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none">
+    <rect
+       style="fill:#000000;fill-opacity:0.47560975;stroke-width:0.88828093;stroke-miterlimit:4.0000000;stroke-dasharray:7.1062474 7.1062474 ;stroke-dashoffset:0.0000000"
+       id="rect1306"
+       width="608.57141"
+       height="467.14285"
+       x="68.571426"
+       y="179.50504" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="components"
+     style="display:inline">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2946"><flowRegion
+         id="flowRegion2948"><rect
+           id="rect2950"
+           width="44.285713"
+           height="27.142857"
+           x="304.28571"
+           y="235.21933" /></flowRegion><flowPara
+         id="flowPara2952">Controller</flowPara></flowRoot>    <g
+       id="g3290"
+       transform="matrix(0.720458,0.000000,0.000000,0.720458,-25.55658,161.5420)">
+      <g
+         transform="matrix(2.831907,0.000000,0.000000,2.519363,-187.4743,-741.5052)"
+         id="g3234"
+         style="display:inline">
+        <g
+           id="g3236">
+          <g
+             id="g3238">
+            <rect
+               style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+               id="rect3240"
+               width="207.14285"
+               height="188.57143"
+               x="81.428574"
+               y="353.79074" />
+            <rect
+               style="opacity:1.0000000;fill:#2bda79;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+               id="rect3242"
+               width="195.71428"
+               height="60.000004"
+               x="87.142860"
+               y="358.07648" />
+          </g>
+        </g>
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot3244"
+           transform="matrix(3.438908,0.000000,0.000000,3.438908,-199.9763,-284.2000)"><flowRegion
+             id="flowRegion3246"><rect
+               id="rect3248"
+               width="37.725296"
+               height="16.623949"
+               x="94.285713"
+               y="186.64790" /></flowRegion><flowPara
+             id="flowPara3250">Entity</flowPara></flowRoot>      </g>
+      <g
+         id="g3252">
+        <g
+           id="g2903"
+           transform="matrix(0.943451,0.000000,0.000000,0.943451,4.579613,31.41007)">
+          <g
+             id="g2899">
+            <g
+               id="g3156">
+              <rect
+                 y="353.79074"
+                 x="81.428574"
+                 height="188.57143"
+                 width="207.14285"
+                 id="rect1311"
+                 style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000" />
+              <rect
+                 y="358.07648"
+                 x="87.142860"
+                 height="60.000004"
+                 width="195.71428"
+                 id="rect2077"
+                 style="opacity:1.0000000;fill:#2bda79;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000" />
+            </g>
+          </g>
+          <flowRoot
+             transform="matrix(3.438908,0.000000,0.000000,3.438908,-199.9763,-284.2000)"
+             id="flowRoot2067"
+             xml:space="preserve"><flowRegion
+               id="flowRegion2069"><rect
+                 y="186.64790"
+                 x="94.285713"
+                 height="16.623949"
+                 width="37.725296"
+                 id="rect2071" /></flowRegion><flowPara
+               id="flowPara2075">Agent</flowPara></flowRoot>        </g>
+        <g
+           id="g2964"
+           transform="matrix(0.943451,0.000000,0.000000,0.943451,32.88314,235.5998)">
+          <path
+             transform="matrix(1.048387,0.000000,0.000000,1.685714,-2.972350,-152.4769)"
+             d="M 238.57143 247.36218 A 88.571426 25.000000 0 1 1  61.428574,247.36218 A 88.571426 25.000000 0 1 1  238.57143 247.36218 z"
+             sodipodi:ry="25.000000"
+             sodipodi:rx="88.571426"
+             sodipodi:cy="247.36218"
+             sodipodi:cx="150.00000"
+             id="path2944"
+             style="opacity:1.0000000;fill:#0064ff;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+             sodipodi:type="arc" />
+          <flowRoot
+             transform="matrix(2.748782,0.000000,0.000000,2.748782,-756.3530,-249.4825)"
+             id="flowRoot2954"
+             xml:space="preserve"><flowRegion
+               id="flowRegion2956"><rect
+                 y="179.50504"
+                 x="301.42856"
+                 height="110.00000"
+                 width="221.42857"
+                 id="rect2958" /></flowRegion><flowPara
+               id="flowPara2962">Controller</flowPara></flowRoot>        </g>
+        <g
+           id="g3140"
+           transform="matrix(0.943451,0.000000,0.000000,0.943451,53.63907,32.75784)">
+          <g
+             id="g2935">
+            <g
+               id="g2914"
+               transform="translate(286.4286,-1.428554)">
+              <rect
+                 y="353.79074"
+                 x="81.428574"
+                 height="188.57143"
+                 width="207.14285"
+                 id="rect2916"
+                 style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000" />
+              <rect
+                 y="358.07648"
+                 x="87.142860"
+                 height="60.000004"
+                 width="195.71428"
+                 id="rect2918"
+                 style="opacity:1.0000000;fill:#2bda79;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000" />
+            </g>
+            <flowRoot
+               xml:space="preserve"
+               id="flowRoot2920"
+               transform="matrix(3.438908,0.000000,0.000000,3.438908,79.96400,-285.6286)"><flowRegion
+                 id="flowRegion2922"><rect
+                   id="rect2924"
+                   width="42.710266"
+                   height="16.623949"
+                   x="94.285713"
+                   y="186.64790" /></flowRegion><flowPara
+                 id="flowPara2926">Avatar</flowPara></flowRoot>          </g>
+          <g
+             id="g2971"
+             transform="translate(315.7143,215.0000)">
+            <path
+               transform="matrix(1.048387,0.000000,0.000000,1.685714,-2.972350,-152.4769)"
+               d="M 238.57143 247.36218 A 88.571426 25.000000 0 1 1  61.428574,247.36218 A 88.571426 25.000000 0 1 1  238.57143 247.36218 z"
+               sodipodi:ry="25.000000"
+               sodipodi:rx="88.571426"
+               sodipodi:cy="247.36218"
+               sodipodi:cx="150.00000"
+               id="path2973"
+               style="opacity:1.0000000;fill:#0064ff;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+               sodipodi:type="arc" />
+            <flowRoot
+               transform="matrix(2.748782,0.000000,0.000000,2.748782,-726.3530,-250.9111)"
+               id="flowRoot2975"
+               xml:space="preserve"><flowRegion
+                 id="flowRegion2977"><rect
+                   y="179.50504"
+                   x="301.42856"
+                   height="18.011206"
+                   width="57.719700"
+                   id="rect2979" /></flowRegion><flowPara
+                 id="flowPara2981">Model</flowPara></flowRoot>          </g>
+        </g>
+        <path
+           style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.94345099px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1.0000000"
+           d="M 243.40750,458.73072 C 337.87343,364.26479 429.40213,457.38294 429.40213,457.38294"
+           id="path2989"
+           sodipodi:nodetypes="cc" />
+        <path
+           sodipodi:nodetypes="cc"
+           id="path3128"
+           d="M 430.92815,513.95437 C 342.37888,602.50363 248.97689,513.95437 248.97689,513.95437"
+           style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.94345099px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1.0000000" />
+        <text
+           xml:space="preserve"
+           style="font-size:28.484161px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans"
+           x="288.46268"
+           y="408.20901"
+           id="text3130"><tspan
+             sodipodi:role="line"
+             x="288.46268"
+             y="408.20901"
+             id="tspan3134">Actions</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:29.353395px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans"
+           x="281.71124"
+           y="580.69226"
+           id="text3136"><tspan
+             sodipodi:role="line"
+             id="tspan3138"
+             x="281.71124"
+             y="580.69226">Sensors</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3441"
+       transform="matrix(1.113951,0.000000,0.000000,1.113951,-27.49577,-92.80778)">
+      <g
+         id="g3405">
+        <rect
+           style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:1.1543651;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+           id="rect3344"
+           width="328.25784"
+           height="201.09030"
+           x="512.38971"
+           y="328.84198" />
+        <rect
+           style="opacity:1.0000000;fill:#daba2b;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+           id="rect3346"
+           width="310.14703"
+           height="63.983284"
+           x="521.44507"
+           y="333.41223" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot3348"
+           transform="matrix(3.244441,0.000000,0.000000,3.244441,246.6133,-269.1253)"><flowRegion
+             id="flowRegion3350"><rect
+               id="rect3352"
+               width="84.062233"
+               height="31.634506"
+               x="94.285713"
+               y="186.64790" /></flowRegion><flowPara
+             id="flowPara3354">Environment</flowPara></flowRoot>      </g>
+      <g
+         transform="translate(31.76143,82.57973)"
+         id="g3413">
+        <rect
+           y="328.84198"
+           x="512.38971"
+           height="201.09030"
+           width="328.25784"
+           id="rect3415"
+           style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:1.1543651;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000" />
+        <rect
+           y="333.41223"
+           x="521.44507"
+           height="63.983284"
+           width="310.14703"
+           id="rect3417"
+           style="opacity:1.0000000;fill:#daba2b;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000" />
+        <flowRoot
+           transform="matrix(3.244441,0.000000,0.000000,3.244441,246.6133,-269.1253)"
+           id="flowRoot3419"
+           xml:space="preserve"><flowRegion
+             id="flowRegion3421"><rect
+               y="186.64790"
+               x="94.285713"
+               height="31.634506"
+               width="84.062233"
+               id="rect3423" /></flowRegion><flowPara
+             id="flowPara3425">Environment</flowPara></flowRoot>      </g>
+      <g
+         id="g3427"
+         transform="translate(69.87515,169.3943)">
+        <rect
+           style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:1.1543651;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+           id="rect3429"
+           width="328.25784"
+           height="201.09030"
+           x="512.38971"
+           y="328.84198" />
+        <rect
+           style="opacity:1.0000000;fill:#daba2b;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+           id="rect3431"
+           width="310.14703"
+           height="63.983284"
+           x="521.44507"
+           y="333.41223" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot3433"
+           transform="matrix(3.244441,0.000000,0.000000,3.244441,246.6133,-269.1253)"><flowRegion
+             id="flowRegion3435"><rect
+               id="rect3437"
+               width="84.062233"
+               height="31.634506"
+               x="94.285713"
+               y="186.64790" /></flowRegion><flowPara
+             id="flowPara3439">Environment</flowPara></flowRoot>      </g>
+    </g>
+    <path
+       style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.3933523;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend);stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
+       d="M 448.52247,449.50309 C 522.25263,449.50309 522.25263,449.50309 522.25263,449.50309"
+       id="path3475" />
+    <g
+       id="g3485"
+       transform="translate(46.58344,-104.9320)">
+      <path
+         transform="translate(-4.234854,-2.117428)"
+         d="M 535.70953 209.17490 A 77.286156 77.286156 0 1 1  381.13721,209.17490 A 77.286156 77.286156 0 1 1  535.70953 209.17490 z"
+         sodipodi:ry="77.286156"
+         sodipodi:rx="77.286156"
+         sodipodi:cy="209.17490"
+         sodipodi:cx="458.42337"
+         id="path3464"
+         style="opacity:1.0000000;fill:#da382b;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:0.88800001;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+         sodipodi:type="arc" />
+      <text
+         id="text3466"
+         y="200.27939"
+         x="429.51404"
+         style="font-size:40.172657px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans"
+         xml:space="preserve"
+         transform="scale(0.916703,1.090866)"><tspan
+           y="200.27939"
+           x="429.51404"
+           id="tspan3468"
+           sodipodi:role="line">Probes</tspan></text>
+      <path
+         sodipodi:nodetypes="csc"
+         id="path3481"
+         d="M 207.74289,358.57107 C 207.74289,358.57107 216.19025,287.08353 262.79604,244.22991 C 306.51193,204.03353 365.49135,200.29326 365.49135,200.29326"
+         style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.6000000;stroke-linecap:butt;stroke-linejoin:round;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend);stroke-miterlimit:4.0000000;stroke-dasharray:1.6000000 12.800000 ;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000" />
+      <path
+         style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.6000000;stroke-linecap:butt;stroke-linejoin:round;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend);stroke-miterlimit:4.0000000;stroke-dasharray:1.6000000 12.800000 ;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+         d="M 701.28091,357.62978 C 701.28091,357.62978 692.83355,286.14224 646.22776,243.28862 C 602.51187,203.09224 543.53245,199.35197 543.53245,199.35197"
+         id="path3483"
+         sodipodi:nodetypes="csc" />
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3493"><flowRegion
+           id="flowRegion3495"><rect
+             id="rect3497"
+             width="20.961477"
+             height="14.972484"
+             x="410.24606"
+             y="116.69146" /></flowRegion><flowPara
+           id="flowPara3499"></flowPara></flowRoot>    </g>
+  </g>
+</svg>

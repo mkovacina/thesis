@@ -1,0 +1,436 @@
+<html>
+              <!-- This panel generated from the developerWorks XML tag set for tutorials, Version 3.0.2.  (C) Copyright 2000, 2002 IBM Corporation.  All rights reserved. -->
+            <head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Example SWEEP Simulation</title></head><body vlink="663366" alink="330000" text="000000" bgcolor="ffffff"><script language="javascript">
+<!-- 
+var emailAbstract="A reference tutorial for the SWEEP swarm development platform";
+var justTitle="";
+var tutorialPrereqs="";
+var menu1blurb="Introduction"; 
+var menu2blurb="Example SWEEP Simulation"; 
+
+      var browser = "x";
+      if (navigator.userAgent.indexOf("Mozilla/4") != -1) browser = "N3";
+      else if (navigator.userAgent.indexOf("Mozilla/3") != -1) browser = "N3";
+      else browser = "x";
+      
+      if (browser=="N3")
+      {
+    var menu1over=new Image(108,68); 
+var menu1out=new Image(108,68); 
+var menu2over=new Image(108,68); 
+var menu2out=new Image(108,68); 
+
+        var topmainover=new Image(77,15);
+        var topmainout=new Image(77,15);
+        var bottommainover=new Image(77,15);
+        var bottommainout=new Image(77,15);
+        var topsectionover=new Image(98,15);
+        var topsectionout=new Image(98,15);
+        var bottomsectionover=new Image(98,15);
+        var bottomsectionout=new Image(98,15);
+        var topfeedbackover=new Image(80,15);
+        var topfeedbackout=new Image(80,15);
+        var bottomfeedbackover=new Image(80,15);
+        var bottomfeedbackout=new Image(80,15);
+        var toppreviousover=new Image(77,15);
+        var toppreviousout=new Image(77,15);
+        var bottompreviousover=new Image(77,15);
+        var bottompreviousout=new Image(77,15);
+        var topnextover=new Image(60,15);
+        var topnextout=new Image(60,15);
+        var bottomnextover=new Image(60,15);
+        var bottomnextout=new Image(60,15);
+        var topnextsectionover=new Image(108,15);
+        var topnextsectionout=new Image(108,15);
+        var bottomnextsectionover=new Image(108,15);
+        var bottomnextsectionout=new Image(108,15);
+      
+    menu1over.src="imagemaster/himenu1.jpg"; 
+menu1out.src="imagemaster/menu1.jpg"; 
+menu2over.src="imagemaster/himenu2.jpg"; 
+menu2out.src="imagemaster/menu2.jpg"; 
+
+        var mainblurb="Main menu";
+        var sectionblurb="Section menu";
+        var feedbackblurb="Give feedback on this tutorial";
+        var previousblurb="Go to previous panel";
+        var nextblurb="Go to next panel";
+        var nextsectionblurb="Go to next section";
+
+      topmainover.src="../default/i/h-main.gif";
+      topmainout.src="../default/i/main.gif";
+      bottommainover.src="../default/i/h-main.gif";
+      bottommainout.src="../default/i/main.gif";
+      topsectionover.src="../default/i/h-section.gif";
+      topsectionout.src="../default/i/section.gif";      
+      bottomsectionover.src="../default/i/h-section.gif";
+      bottomsectionout.src="../default/i/section.gif";      
+      topfeedbackover.src="../default/i/h-feedback.gif";
+      topfeedbackout.src="../default/i/feedback.gif";
+      bottomfeedbackover.src="../default/i/h-feedback.gif";
+      bottomfeedbackout.src="../default/i/feedback.gif";
+      toppreviousover.src="../default/i/h-previous.gif";
+      toppreviousout.src="../default/i/previous.gif";
+      bottompreviousover.src="../default/i/h-previous.gif";
+      bottompreviousout.src="../default/i/previous.gif";
+      topnextover.src="../default/i/h-next.gif";
+      topnextout.src="../default/i/next.gif";
+      bottomnextover.src="../default/i/h-next.gif";
+      bottomnextout.src="../default/i/next.gif";
+      topnextsectionout.src="../default/i/nextsection.gif";
+      topnextsectionover.src="../default/i/h-nextsection.gif";
+      bottomnextsectionout.src="../default/i/nextsection.gif";
+      bottomnextsectionover.src="../default/i/h-nextsection.gif";
+      }
+      function iOut(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "out.src");
+      }
+      function iOver(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "over.src");
+      }
+      // -->
+    </script><script src="../default/i/emailfriend.js" language="javascript"></script><a href="#navskip"><img border="0" alt="Skip to main content" src="../default/i/c.gif"></a><table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr bgcolor="#006699">
+      <td width="300">
+        <table width="300" border="0" cellspacing="0" cellpadding="0">
+          <tr bgcolor="#006699">
+            <td width="150"><img src="../default/i/mast_logo.gif" alt="IBM" width="160" height="47"></td>
+            <td width="150" background="../default/i/mgradient.gif"><font size="-2" color="#99ccff" face="Verdana, sans-serif"><b>&nbsp;<!--Country--></b></font><br><img src="../default/i/c.gif" width="150" height="1" alt=""></td>
+          </tr>
+        </table> 
+      </td>
+      <td align="left" width="300">
+        <table width="300" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100"><a href="http://www.ibm.com/shop1/"><img border="0" src="../default/i/shopibm.gif" width="100" height="25" alt="Shop"></a></td>
+            <td width="100"><a href="http://www.ibm.com/support/"><img border="0" src="../default/i/support.gif" width="100" height="25" alt="Support"></a></td>
+            <td width="100"><a href="http://www.ibm.com/download/"><img border="0" src="../default/i/downloads.gif" width="100" height="25" alt="Downloads"></a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table><table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr bgcolor="#000000">
+      <td>
+        <table width="600" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#006699" width="150"><img src="../default/i/mast_lnav_sp.gif" width="150" height="21" alt=""></td>
+            <td colspan="4" bgcolor="#000000">
+              <table border="0" cellspacing="0" cellpadding="0" height="21">
+                <tr>
+                  <td height="21" bgcolor="#000000" width="79" align="center"><a class="nav" style="color: #ffffff;" href="http://www.ibm.com/home/"><font size="-2" color="#ffffff" face="Verdana, sans-serif"><b>IBM Home</b></font></a></td>
+                  <td bgcolor="#959595" width="1"><img src="../default/i/c.gif" width="1" height="1" alt=""></td>
+                  <td height="21" bgcolor="#000000" width="74" align="center"><a class="nav" style="color: #ffffff;" href="http://www.ibm.com/products/"><font size="-2" color="#ffffff" face="Verdana, sans-serif"><b>Products</b></font></a></td>
+                  <td bgcolor="#959595" width="1"><img src="../default/i/c.gif" width="1" height="1" alt=""></td>
+                  <td height="21" bgcolor="#000000" width="81" align="center"><a class="nav" style="color: #ffffff;" href="http://www.ibm.com/services/"><font size="-2" color="#ffffff" face="Verdana, sans-serif"><b>Consulting</b></font></a></td>
+                  <td bgcolor="#959595" width="1"><img src="../default/i/c.gif" width="1" height="1" alt=""></td>
+                  <td height="21" bgcolor="#000000" width="81" align="center"><a class="nav" style="color: #ffffff;" href="http://www.ibm.com/solutions/"><font size="-2" color="#ffffff" face="Verdana, sans-serif"><b>Industries</b></font></a></td>
+                  <td bgcolor="#959595" width="1"><img src="../default/i/c.gif" width="1" height="1" alt=""></td>
+                  <td height="21" bgcolor="#000000" width="57" align="center"><a class="nav" style="color: #ffffff;" href="http://www.ibm.com/news/"><font size="-2" color="#ffffff" face="Verdana, sans-serif"><b>News</b></font></a></td>
+                  <td bgcolor="#959595" width="1"><img src="../default/i/c.gif" width="1" height="1" alt=""></td>
+                  <td height="21" bgcolor="#000000" width="78" align="center"><a class="nav" style="color: #ffffff;" href="http://www.ibm.com/ibm/"><font size="-2" color="#ffffff" face="Verdana, sans-serif"><b>About IBM</b></font></a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table><table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td bgcolor="#ffffff" height="1" width="150"><img src="../default/i/c.gif" width="150" height="1" alt=""></td>
+    </tr>
+    <tr>
+      <td bgcolor="#cc6633" height="3" width="150"><img src="../default/i/c.gif" width="150" height="3" alt=""></td>
+    </tr>
+    <tr>
+      <td bgcolor="#333333" height="1" width="150"><img src="../default/i/c.gif" width="150" height="1" alt=""></td>
+    </tr>
+    <tr>
+      <td bgcolor="#000000" height="1" width="150"><img src="../default/i/c.gif" width="150" height="1" alt=""></td>
+    </tr>
+  </table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><img src="imagemaster/masthead.jpg" alt=""></td><td width="*" valign="bottom" align="right"><a border="0" href="doc.zip"><img alt="ZIP" border="0" src="../default/i/icon-zip.gif"></a><a border="0" href="doc-ltr.pdf"><img alt="PDF (letter)" border="0" src="../default/i/icon-pdf-ltr.gif"></a><a border="0" href="doc-a4.pdf"><img alt="PDF (A4)" border="0" src="../default/i/icon-pdf-a4.gif"></a><a href="javascript:newWindow()" border="0"><img alt="e-mail" border="0" src="../default/i/icon-email.gif"></a></td></tr><tr><td height="2" colspan="2"><img height="2" width="1" src="../default/i/c.gif"></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td width="150" height="1" bgcolor="#000000" colspan="6"><img alt="" height="1" width="150" src="../default/i/c.gif"></td></tr><tr><td background="../default/i/sw-gold.gif"><a border="0" href="index.html" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;"><img alt="Main menu" border="0" src="../default/i/main.gif" name="topmain"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topsection'); iOver('bottomsection'); self.status=sectionblurb; return true;" onMouseOut="iOut('topsection'); iOut('bottomsection'); self.status=''; return true;" href="index2.html"><img alt="Section menu" border="0" src="../default/i/section.gif" name="topsection"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topfeedback'); iOver('bottomfeedback'); self.status=feedbackblurb; return true;" onMouseOut="iOut('topfeedback'); iOut('bottomfeedback'); self.status=''; return true;" href="index.html"><img alt="Feedback" border="0" src="../default/i/feedback.gif" name="topfeedback"></a></td><td width="100%" background="../default/i/sw-gold.gif"><img src="../default/i/c.gif"></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="doc-2-2.html"><img alt="Previous" border="0" src="../default/i/previous.gif" name="topprevious"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="doc-2-4.html"><img alt="Next" border="0" src="../default/i/next.gif" name="topnext"></a></td></tr></table><table bgcolor="ffffff" cellspacing="0" cellpadding="2" border="0" height="400" width="100%"><tr valign="bottom"><td height="25" colspan="4"><img border="0" height="25" width="562" src="imagemaster/titlebar2.jpg" alt="2. Example SWEEP Simulation"></td></tr><tr><td bgcolor="ffffff" width="15">&nbsp;</td><td bgcolor="ffffff" width="12">&nbsp;</td><td valign="top" align="left" bgcolor="ffffff" width="*"><p><br><table cellspacing="0" cellpadding="0" border="0"><tr><td width="90%"><font size="4" face="Verdana, Arial, sans-serif"><b>&lt;Model&gt;</b></font></td><td width="200" align="right"><font size="1" face="Verdana, Arial, sans-serif"><nobr>    page 3 of 9</nobr></font></td></tr></table><br><br></p><font size="2" face="Verdana, Arial, sans-serif"><b xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">Description</b><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">The <i>&lt;Model&gt;</i> section describes the different types of <i>physical</i> agents that will be used in a simulation.  The main purpose of an agent model, sometimes referred to as an <i>avatar</i>, is to define the basic behaviors and senses available with respect to the operating environment.</p><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">For example, in this scenario, the available behaviors and sensors are related to the garbage objects and the mine objects that are scattered throughout the environment.  The basic sensors are:</p><ul><li>on-garbage</li><li>on-dumpster</li><li>near-garbage</li><li>on-armed-mine</li><li>on-partially-disarmed-mine</li><li>near-mine</li><li>holding-garbage</li></ul><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">And the basic actions are:</p><ul><li>pick-up-garbage</li><li>put-down-garbage</li><li>disarm-mine-stage-1</li><li>disarm-mine-stage-2</li><li>move-random</li><li>move-towards-garbage</li><li>move-towards-dumpster</li><li>move-towards-mine</li></ul><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">All the the sensors and actions are implemented using the basic actions and sensors defined in the core SWEEP package.  Though custom defined actions and sensors can be implemented in Java, this approach was not taken so as to show how a non-programmer might use SWEEP.</p><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">The &lt;attributes&gt; section establishes a set of variables that the different sensors and actions can access.  Using attributes in this way makes changing parameter values much easier.  For example, without the attribute variables, changing all of the sensor ranges would require one to change the value in each sensor definition.  But using an attribute variable allows a user to make a single change and have that change propogate throughout.</p><pre><font size="2" face="Courier New">
+&lt;models&gt;
+    &lt;model name="avatar" class="grid.model.GridAvatar"&gt;
+        &lt;builder class="standard.model.ModelBuilder"/&gt;
+        
+        &lt;!-- attributes define model parameters --&gt;
+        &lt;attributes&gt;
+            &lt;!-- Basic attributes --&gt;
+            &lt;attribute name="empty" value="0"/&gt;
+            &lt;attribute name="environment" value="world"/&gt;
+            &lt;attribute name="holdingGarbage" value="false"/&gt;
+            
+            
+            &lt;!-- Parameters for garbage actions/sensors --&gt;
+            &lt;attribute name="garbage.grid" value="world"/&gt;
+            &lt;attribute name="garbage.value" value="1"/&gt;
+            &lt;attribute name="garbage.downvalue" value="6"/&gt;
+            &lt;attribute name="garbage.range.on" value="0"/&gt;
+            &lt;attribute name="garbage.range.near" value="5"/&gt;
+
+            &lt;!-- Paramters for mine actions/sensors --&gt;
+            &lt;attribute name="mine.grid" value="world"/&gt;
+            &lt;attribute name="mine.value.armed" value="4"/&gt;
+            &lt;attribute name="mine.value.partial" value="3"/&gt;
+            &lt;attribute name="mine.value.disarmed" value="2"/&gt;
+            &lt;attribute name="mine.range.on" value="0"/&gt;
+            &lt;attribute name="mine.range.near" value="5"/&gt;
+        &lt;/attributes&gt;
+        
+        &lt;!-- define available sensors --&gt;
+        &lt;sensors&gt;
+            &lt;!-- Sensor: true when on a piece of garbage --&gt;
+            &lt;sensor name="on-garbage" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="range"       value="garbage.range.on"/&gt;
+                    &lt;attribute name="targetValue" value="garbage.value"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when in range of garbage --&gt;
+            &lt;sensor name="near-garbage" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="range" value="garbage.range.near"/&gt;
+                    &lt;attribute name="targetValue" value="garbage.value"/&gt;
+                    &lt;attribute name="varName" value="garbage.location"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when holding garbage --&gt;
+            &lt;sensor name="holding-garbage" class="sweep.model.sensor.InternalBooleanSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="attrName" value="holdingGarbage"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when on a fully armed mine --&gt;
+            &lt;sensor name="on-armed-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="range" value="mine.range.on"/&gt;
+                    &lt;attribute name="targetValue" value="mine.value.armed"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+
+            &lt;!-- Sensor: true when on a partially disarmed mine --&gt;
+            &lt;sensor name="on-partially-disarmed-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="range" value="mine.range.on"/&gt;
+                    &lt;attribute name="targetValue" value="mine.value.partial"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when on the dumpster --&gt;
+            &lt;sensor name="on-dumpster" class="grid.model.sensor.LocationSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="location" value="const:10,10"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when near a (fully|partially) armed mine --&gt;
+            &lt;sensor name="near-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="range" value="mine.range.near"/&gt;
+                    &lt;attribute name="targetValue" value="mine.value.armed,mine.value.partial"/&gt;
+                    &lt;attribute name="varName" value="mine.location"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+        &lt;/sensors&gt;
+        
+        &lt;actions&gt;
+            &lt;!-- Action: if on a piece of garbage, pick it up --&gt;
+            &lt;action name="pick-up-garbage" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+                &lt;if&gt;
+                    &lt;condition sensor="on-garbage" value="true"/&gt;
+                    &lt;condition state="holdingGarbage" value="false"/&gt;
+                    &lt;then&gt;
+                        &lt;action name="pick-up-garbage-helper"/&gt;
+                        &lt;action name="set-holding-garbage"/&gt;
+                    &lt;/then&gt;
+                &lt;/if&gt;
+            &lt;/action&gt;
+
+            &lt;!-- Action: if holding garbage and on dumpster, put it down --&gt;
+            &lt;action name="put-down-garbage" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+                &lt;if&gt;
+                    &lt;condition sensor="on-dumpster" value="true"/&gt;
+                    &lt;condition state="holdingGarbage" value="true"/&gt;
+                    &lt;then&gt;
+                        &lt;!--&lt;action name="put-down-garbage-helper"/&gt;--&gt;
+                        &lt;action name="reset-holding-garbage"/&gt;
+                        &lt;action name="increment-garbage-count"/&gt;
+                    &lt;/then&gt;
+                &lt;/if&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: pick up a piece of garbage --&gt;
+            &lt;action name="pick-up-garbage-helper" class="grid.model.action.SetAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="value" value="empty"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+
+            &lt;!-- Action: put down a piece of garbage --&gt;
+            &lt;action name="put-down-garbage-helper" class="grid.model.action.SetAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="value" value="garbage.downvalue"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: set the holding garbage flag --&gt;
+            &lt;action name="set-holding-garbage" class="sweep.model.action.SetStateVariableAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="flag" value="holdingGarbage"/&gt;
+                    &lt;attribute name="value" value="true"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+                
+            &lt;!-- Action: reset the holding garbage flag --&gt;
+            &lt;action name="reset-holding-garbage" class="sweep.model.action.SetStateVariableAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="flag" value="holdingGarbage"/&gt;
+                    &lt;attribute name="value" value="false"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: increment the garbage count --&gt;
+            &lt;action name="increment-garbage-count" class="sweep.model.action.IncrementCounterAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="name" value="garbage-counter"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: if on a mine, disarm the first stage --&gt;
+            &lt;action name="disarm-mine-stage-1" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+                &lt;if&gt;
+                    &lt;condition sensor="on-armed-mined" value="true"/&gt;
+                    &lt;then&gt;
+                        &lt;action name="disarm-mine-stage-1-helper"/&gt;
+                        &lt;action name="set-disarmed-phase-1"/&gt;
+                        &lt;action name="disable-agent"/&gt;
+                    &lt;/then&gt;
+                &lt;/if&gt;
+            &lt;/action&gt;
+
+            &lt;!-- Action: if on a mine, disarm the second stage --&gt;
+            &lt;action name="disarm-mine-stage-2" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+                &lt;if&gt;
+                    &lt;condition sensor="on-partial-mine" value="true"/&gt;
+                    &lt;then&gt;
+                        &lt;action name="disarm-mine-stage-2-helper"/&gt;
+                        &lt;action name="set-disarmed-phase-2"/&gt;
+                        &lt;action name="disable-agent"/&gt;
+                    &lt;/then&gt;
+                &lt;/if&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: First stage of disarming the mine --&gt;
+            &lt;action name="disarm-mine-stage-1-helper" class="grid.model.action.SetAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="value" value="mine.value.partial"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+
+            &lt;!-- Action: Second stage of disarming the mine --&gt;
+            &lt;action name="disarm-mine-stage-2-helper" class="grid.model.action.SetAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="value" value="mine.value.disarmed"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: set the phase 1 disarming flag --&gt;
+            &lt;action name="set-disarmed-phase-1" class="sweep.model.action.IncrementCounterAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="name" value="disarmed-phase-1"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            &lt;!--
+            &lt;action name="set-disarmed-phase-1" class="sweep.model.action.SetStateVariableAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="flag" value="disarmed-phase-1"/&gt;
+                    &lt;attribute name="value" value="true"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;  --&gt;
+
+            &lt;!-- Action: set the phase 2 disarming flag --&gt;
+            &lt;action name="set-disarmed-phase-2" class="sweep.model.action.IncrementCounterAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="name" value="disarmed-phase-2"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            &lt;!--
+            &lt;action name="set-disarmed-phase-2" class="sweep.model.action.SetStateVariableAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="flag" value="disarmed-phase-2"/&gt;
+                    &lt;attribute name="value" value="true"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;--&gt;
+            
+            &lt;!-- Action: disable the agent for the rest of the sim --&gt;
+            &lt;action name="disable-agent" class="sweep.model.action.DisableAction"/&gt;
+            
+            &lt;!-- Action: move in a random direction --&gt;
+            &lt;action name="move-random" class="grid.model.action.MoveRandomAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="environment"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: move towards the dumpster --&gt;
+            &lt;action name="move-towards-dumpster" class="grid.model.action.MoveTowardsAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="location" value="const:10,10"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: move towards the closest piece of garbage --&gt;
+            &lt;action name="move-towards-garbage" class="grid.model.action.MoveTowardsAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="location" value="av:garbage.location"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: move towards the closest mine --&gt;
+            &lt;action name="move-towards-mine" class="grid.model.action.MoveTowardsAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="location" value="av:mine.location"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+        &lt;/actions&gt;
+        
+        &lt;initializers&gt;
+            &lt;initializer name="random-placement" class="grid.model.RandomPlacementInitializer"/&gt;
+        &lt;/initializers&gt;
+    &lt;/model&gt;
+&lt;/models&gt;
+				</font></pre><br></font></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td background="../default/i/sw-gold.gif"><a border="0" href="index.html" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;"><img alt="Main menu" border="0" src="../default/i/main.gif" name="bottommain"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topsection'); iOver('bottomsection'); self.status=sectionblurb; return true;" onMouseOut="iOut('topsection'); iOut('bottomsection'); self.status=''; return true;" href="index2.html"><img alt="Section menu" border="0" src="../default/i/section.gif" name="bottomsection"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topfeedback'); iOver('bottomfeedback'); self.status=feedbackblurb; return true;" onMouseOut="iOut('topfeedback'); iOut('bottomfeedback'); self.status=''; return true;" href="index.html"><img alt="Feedback" border="0" src="../default/i/feedback.gif" name="bottomfeedback"></a></td><td width="100%" background="../default/i/sw-gold.gif"><img src="../default/i/c.gif"></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="doc-2-2.html"><img alt="Previous" border="0" src="../default/i/previous.gif" name="bottomprevious"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="doc-2-4.html"><img alt="Next" border="0" src="../default/i/next.gif" name="bottomnext"></a></td></tr><tr><td width="150" height="1" bgcolor="#000000" colspan="6"><img alt="" height="1" width="150" src="../default/i/c.gif"></td></tr></table><style>
+.bbg { background-color : #000000; vertical-align: middle }
+
+a.mainlink:link { text-decoration: none; color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; }
+a.mainlink:visited { text-decoration: none; color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; }
+a.mainlink:hover { text-decoration: underline; color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; }
+
+.divider { color: #999999; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: normal; }
+</style><table width="760" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td><img src="../default/i/c.gif" width="1" height="1" alt=""></td>
+</tr>
+<tr valign="top">
+<td height="21" class="bbg"><img src="../default/i/c.gif" width="1" height="1" alt="">  <a href="http://www-106.ibm.com/developerworks/cgi-bin/click.cgi?url=http://www.ibm.com/ibm/?origin=dwfooter" class="mainlink">About IBM</a><span class="divider">  |  </span><a href="http://www-106.ibm.com/developerworks/cgi-bin/click.cgi?url=http://www.ibm.com/privacy/?origin=dwfooter" class="mainlink">Privacy</a><span class="divider">  |  </span><a href="http://www-106.ibm.com/developerworks/cgi-bin/click.cgi?url=http://www.ibm.com/legal/?origin=dwfooter" class="mainlink">Legal</a><span class="divider">  |  </span><a href="http://www-106.ibm.com/developerworks/cgi-bin/click.cgi?url=http://www.ibm.com/contact/?origin=dwfooter" class="mainlink">Contact</a></td>
+</tr>
+</table><script type="text/javascript" language="JavaScript1.2" src="//www.ibm.com/common/stats/stats.js"></script><noscript><img src="//i.ihost.com/i/c.gif" width="1" height="1" alt="" border="0"></noscript></body></html>

@@ -1,0 +1,20 @@
+* Setup 'include ../Makefile' to automatically do backup- and sync-
+* Put in hooks for custom actions with backup- and sync-
+* Same for clean-
+* Get propser to work from relative paths
+* Maybe come up with an outline mode in latex
+* Pull stuff out of preamble into miko.tex or something
+* Make my own common or contrib directory
+
+* The following example defines an environment, called |fmpage|, that is
+a framed version of |minipage|.
+\begin{verbatim}
+   \newsavebox{\fmbox}
+   \newenvironment{fmpage}[1]
+     {\begin{lrbox}{\fmbox}\begin{minipage}{#1}}
+     {\end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}}
+\end{verbatim}
+
+* bug in propser, slide title with \texttt{}, the exttt shows up in the slide title in the slide browser, at least in xpdf
+
+* make so that the bolding of figure/table refs is selectable and defaultable

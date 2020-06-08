@@ -1,0 +1,11 @@
+<swarms>
+	<swarm name="swarm-1">
+		<builder class="standard.swarm.SwarmBuilder"/>
+		<entity name="swarm-1-entity">
+			<agent type="agent"/>
+			<controller type="controller"/>
+			<model type="avatar"/>
+		</entity>
+	</swarm>
+</swarms>
+

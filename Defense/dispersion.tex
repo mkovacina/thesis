@@ -1,0 +1,44 @@
+\begin{slide}{Dispersion}
+  \begin{itemize}
+  \item Swarm Goal: achieve a density level
+  \item Agent Goal: 
+    \begin{itemize}
+    \item neighbor at least $d_{min}$ units away
+    \item neighbor not more than $d_{max}$ units away
+    \end{itemize}
+  \end{itemize}
+  \centering
+  \includegraphics[scale=.18]{DispersionSensor}
+\end{slide}
+
+%%%%%
+%%%%%
+
+\begin{slide}{Dispersion}
+  \begin{itemize}
+  \item Fitness: Number of agents violating dispersion criteria
+  \end{itemize}
+  \centering
+  \begin{tabular}{l|l}
+    \textbf{Actions} & \textbf{Sensors} \\
+    \hline
+    move-up    & neighbor-above \\
+    move-down  & neighbor-below \\
+    move-left  & neighbor-left  \\
+    move-right & neighbor-right \\
+  \end{tabular}
+  \begin{itemize}
+  \item Population: 32
+  \item Mutations: all top 6 + 2 random
+  \item \SWEEP: 100 agents, $50\times50$ grid
+  \item $d_{min} = 2$, $d_{max} = 4, range = 6$
+  \end{itemize}
+\end{slide}
+
+%%%%%
+%%%%%
+
+\begin{slide}{Dispersion}
+  \centering
+  \includegraphics[scale=.5]{DispersionRun1}
+\end{slide}

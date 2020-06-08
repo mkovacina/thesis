@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE simulation [
+<!ENTITY main SYSTEM "file:./main.xml">
+<!ENTITY environment SYSTEM "file:./environments.xml">
+<!ENTITY models SYSTEM "file:./models.xml">
+<!ENTITY ocd_controller SYSTEM "file:./m02/solution-best.xml">
+<!ENTITY agents SYSTEM "file:./agents.xml">
+<!ENTITY swarms SYSTEM "file:./swarms.xml">
+<!ENTITY probes SYSTEM "file:./probes.xml">
+]>
+
+<simulation builder="standard.simulation.SimulationBuilder">
+	
+	&main;
+	
+	&environment;
+	
+	&models;
+
+	&agents;
+	
+	&swarms;
+
+	&probes;
+	
+	<controllers>
+		&ocd_controller;
+	</controllers>
+	
+	<information>
+		<info name="info-type1">
+			<builder class="sweep.info.NullInfoBuilder"/>
+		</info>
+	</information>
+	
+</simulation>

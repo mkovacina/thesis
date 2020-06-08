@@ -1,0 +1,7 @@
+<agents>
+	<agent name="agent">
+		<builder class="standard.agent.AgentBuilder"/>
+		<attributes></attributes>
+		<memory></memory>
+	</agent>
+</agents>	

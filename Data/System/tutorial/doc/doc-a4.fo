@@ -1,0 +1,1054 @@
+
+<!DOCTYPE fo:root [
+
+  <!ENTITY trade   "&trade;">
+  <!ENTITY nbsp   "&#160;">
+  <!ENTITY reg    "&#174;">
+  <!ENTITY middot "&#183;">
+  <!ENTITY Agrave "&#192;">
+  <!ENTITY Aacute "&#193;">
+  <!ENTITY Acirc  "&#194;">
+  <!ENTITY Atilde "&#195;">
+  <!ENTITY Auml   "&#196;">
+  <!ENTITY Aring  "&#197;">
+  <!ENTITY AElig  "&#198;">
+  <!ENTITY Ccedil "&#199;">
+  <!ENTITY Egrave "&#200;">
+  <!ENTITY Eacute "&#201;">
+  <!ENTITY Ecirc  "&#202;">
+  <!ENTITY Euml   "&#203;">
+  <!ENTITY Igrave "&#204;">
+  <!ENTITY Iacute "&#205;">
+  <!ENTITY Icirc  "&#206;">
+  <!ENTITY Iuml   "&#207;">
+  <!ENTITY ETH    "&#208;">
+  <!ENTITY Ntilde "&#209;">
+  <!ENTITY Ograve "&#210;">
+  <!ENTITY Oacute "&#211;">
+  <!ENTITY Ocirc  "&#212;">
+  <!ENTITY Otilde "&#213;">
+  <!ENTITY Ouml   "&#214;">
+  <!ENTITY times  "&#215;">
+  <!ENTITY Oslash "&#216;">
+  <!ENTITY Ugrave "&#217;">
+  <!ENTITY Uacute "&#218;">
+  <!ENTITY Ucirc  "&#219;">
+  <!ENTITY Uuml   "&#220;">
+  <!ENTITY Yacute "&#221;">
+  <!ENTITY THORN  "&#222;">
+  <!ENTITY szlig  "&#223;">
+  <!ENTITY agrave "&#224;">
+  <!ENTITY aacute "&#225;">
+  <!ENTITY acirc  "&#226;">
+  <!ENTITY atilde "&#227;">
+  <!ENTITY auml   "&#228;">
+  <!ENTITY aring  "&#229;">
+  <!ENTITY aelig  "&#230;">
+  <!ENTITY ccedil "&#231;">
+  <!ENTITY egrave "&#232;">
+  <!ENTITY eacute "&#233;">
+  <!ENTITY ecirc  "&#234;">
+  <!ENTITY euml   "&#235;">
+  <!ENTITY igrave "&#236;">
+  <!ENTITY iacute "&#237;">
+  <!ENTITY icirc  "&#238;">
+  <!ENTITY iuml   "&#239;">
+  <!ENTITY eth    "&#240;">
+  <!ENTITY ntilde "&#241;">
+  <!ENTITY ograve "&#242;">
+  <!ENTITY oacute "&#243;">
+  <!ENTITY ocirc  "&#244;">
+  <!ENTITY otilde "&#245;">
+  <!ENTITY ouml   "&#246;">
+  <!ENTITY oslash "&#248;">
+  <!ENTITY ugrave "&#249;">
+  <!ENTITY uacute "&#250;">
+  <!ENTITY ucirc  "&#251;">
+  <!ENTITY uuml   "&#252;">
+  <!ENTITY yacute "&#253;">
+  <!ENTITY thorn  "&#254;">
+  <!ENTITY yuml   "&#255;">
+]>
+      <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:fox="http://xml.apache.org/fop/extensions"><fo:layout-master-set><fo:simple-page-master margin-right="2.5cm" margin-left="2.5cm" margin-bottom="1cm" margin-top="1cm" page-width="21cm" page-height="29.7cm" master-name="first"><fo:region-body margin-bottom="1.5cm" margin-top="1.5cm"/><fo:region-after extent="1cm" region-name="ra-right"/></fo:simple-page-master><fo:simple-page-master margin-right="2.5cm" margin-left="2.5cm" margin-bottom="1cm" margin-top="1cm" page-width="21cm" page-height="29.7cm" master-name="left"><fo:region-before extent="3cm" region-name="rb-left"/><fo:region-body margin-bottom="1.5cm" margin-top="1.5cm"/><fo:region-after extent="1cm" region-name="ra-left"/></fo:simple-page-master><fo:simple-page-master margin-right="2.5cm" margin-left="2.5cm" margin-bottom="1cm" margin-top="1cm" page-width="21cm" page-height="29.7cm" master-name="right"><fo:region-before extent="3cm" region-name="rb-right"/><fo:region-body margin-bottom="1.5cm" margin-top="1.5cm"/><fo:region-after extent="1cm" region-name="ra-right"/></fo:simple-page-master><fo:page-sequence-master master-name="standard"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference page-position="first" master-name="first"/><fo:conditional-page-master-reference odd-or-even="even" master-name="left"/><fo:conditional-page-master-reference odd-or-even="odd" master-name="right"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master></fo:layout-master-set><fox:outline internal-destination="TableOfContents"><fox:label>Table of Contents</fox:label></fox:outline><fox:outline internal-destination="sec1"><fox:label>Example SWEEP Simulation</fox:label><fox:outline internal-destination="1-1"><fox:label>Scenario</fox:label></fox:outline><fox:outline internal-destination="1-2"><fox:label>&lt;Environments&gt;</fox:label></fox:outline><fox:outline internal-destination="1-3"><fox:label>&lt;Model&gt;</fox:label></fox:outline><fox:outline internal-destination="1-4"><fox:label>&lt;Controller&gt;</fox:label></fox:outline><fox:outline internal-destination="1-5"><fox:label>&lt;Swarm&gt;</fox:label></fox:outline><fox:outline internal-destination="1-6"><fox:label>&lt;Probe&gt;</fox:label></fox:outline><fox:outline internal-destination="1-7"><fox:label>&lt;Agent&gt; and &lt;Info&gt;</fox:label></fox:outline><fox:outline internal-destination="1-8"><fox:label>&lt;Main&gt;</fox:label></fox:outline><fox:outline internal-destination="1-9"><fox:label>Running the simulation</fox:label></fox:outline><fox:outline internal-destination="1-10"><fox:label>Full simulation XML file</fox:label></fox:outline></fox:outline><fox:outline internal-destination="sec2"><fox:label>End Notes</fox:label><fox:outline internal-destination="2-1"><fox:label>Acknowledgements</fox:label></fox:outline></fox:outline><fo:page-sequence master-name="standard"><fo:static-content flow-name="rb-right"><fo:block text-align-last="end" font-size="10pt"><fo:table><fo:table-column column-width="350pt"/><fo:table-column column-width="75pt"/><fo:table-body><fo:table-row><fo:table-cell><fo:block text-align="start">Presented by Orbital Research, Inc.</fo:block></fo:table-cell><fo:table-cell><fo:block font-family="monospace" font-weight="bold" text-align="end">orbitalresearch.com</fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="ra-right"><fo:block text-align-last="end" font-size="10pt"><fo:table><fo:table-column column-width="350pt"/><fo:table-column column-width="75pt"/><fo:table-body><fo:table-row><fo:table-cell><fo:block text-align="start"/></fo:table-cell><fo:table-cell><fo:block text-align="end">Page <fo:page-number/> of <fo:page-number-citation ref-id="TheVeryLastPage"/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="rb-left"><fo:block text-align-last="end" font-size="10pt"><fo:table><fo:table-column column-width="75pt"/><fo:table-column column-width="350pt"/><fo:table-body><fo:table-row><fo:table-cell><fo:block font-family="monospace" font-weight="bold" text-align="start">orbitalresearch.com</fo:block></fo:table-cell><fo:table-cell><fo:block text-align="end">Presented by Orbital Research, Inc.</fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="ra-left"><fo:block text-align-last="end" font-size="10pt"><fo:table><fo:table-column column-width="75pt"/><fo:table-column column-width="350pt"/><fo:table-body><fo:table-row><fo:table-cell><fo:block text-align="start">Page <fo:page-number/> of <fo:page-number-citation ref-id="TheVeryLastPage"/></fo:block></fo:table-cell><fo:table-cell><fo:block text-align="end"/></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body"><fo:block text-align="center" font-weight="bold" font-size="24pt" line-height="27pt" space-after.optimum="18pt"/><fo:block text-align="center" font-size="14pt" line-height="17pt" space-after.optimum="12pt">Presented by Orbital Research, Inc.</fo:block><fo:block font-family="monospace" font-weight="bold" text-align="center" font-size="14pt" line-height="17pt" space-after.optimum="24pt">orbitalresearch.com</fo:block><fo:block><fo:leader space-after.optimum="18pt" leader-pattern="rule"/></fo:block><fo:block text-align="start" font-size="18pt" line-height="21pt" id="TableOfContents" space-after.optimum="12pt">Table of Contents</fo:block><fo:block space-after.optimum="6pt" font-size="8pt" line-height="11pt">
+      If you're viewing this document online, you can click any of the topics below to link directly to that section.
+    </fo:block><fo:table space-after.optimum="12pt" space-before.optimum="6pt"><fo:table-column column-width="400pt"/><fo:table-column column-width="25pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell><fo:block text-align="start" space-after.optimum="3pt" font-size="14pt" line-height="17pt"><fo:basic-link color="blue" internal-destination="sec1">1. Example SWEEP Simulation</fo:basic-link><fo:leader leader-alignment="reference-area" leader-pattern-width="5pt" leader-pattern="dots"/></fo:block></fo:table-cell><fo:table-cell><fo:block text-align-last="end" text-align="end" space-after.optimum="3pt" font-size="14pt" line-height="17pt"><fo:basic-link color="blue" internal-destination="sec1"><fo:page-number-citation ref-id="sec1"/></fo:basic-link></fo:block></fo:table-cell></fo:table-row><fo:table-row space-before.optimum="3pt"><fo:table-cell><fo:block text-align="start" space-after.optimum="3pt" font-size="14pt" line-height="17pt"><fo:basic-link color="blue" internal-destination="sec2">2. End Notes</fo:basic-link><fo:leader leader-alignment="reference-area" leader-pattern-width="5pt" leader-pattern="dots"/></fo:block></fo:table-cell><fo:table-cell><fo:block text-align-last="end" text-align="end" space-after.optimum="3pt" font-size="14pt" line-height="17pt"><fo:basic-link color="blue" internal-destination="sec2"><fo:page-number-citation ref-id="sec2"/></fo:basic-link></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block text-align="start" font-size="18pt" line-height="21pt" space-after.optimum="12pt" break-before="page" id="sec1">Section 1. Example SWEEP Simulation</fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-1">Scenario</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:block space-after.optimum="14pt">A problem the arises frequently in real-world scenarios is that of gathering a group of objects into a pile.  In nature, this type of behavior can be seen the way ants separate their food from their waste and their dead.  A potential military application of a gathering behavior would be for clearing a minefield by disarming and deactivating all the mines in a given area.</fo:block><fo:block space-after.optimum="14pt">The scenario that is be used in this tutorial extends the object gathing scenario.  There will be two types of objects in the environment, mines and garbage.  There are two goals for the scenario:</fo:block><fo:list-block provisional-label-separation="0.2cm" provisional-distance-between-starts="0.4cm" space-after.optimum="14pt"><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">1. </fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Gather all the garbage into the dumpster</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block text-align="end">2. </fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Disarm all the mines in the area</fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:block space-after.optimum="14pt">Each agent is able to sense when they are in the area of either garbage or a mine.  Additionaly, each agent has specific abilities related both to garbage and mines.  With regards to garbage, each agent can pick-up and put down garbage, but can only cary one piece of garbage at a time.  As for the mines, the disarming process is a two-step procedure, thus to successfully disarm a mine, two separate actions must be performed.  Each mine disarming action has the side-effect that once performed, the performing agent is then disabled for the duration of the simulation.</fo:block><fo:block space-after.optimum="14pt">The final aspect of the simulation will be a competitive one.  There will be two swarms, each with equal abilities and algorithms.  The two swarms will compete against each other, try to collect more garbage and disarm more mines than the other swarm.  The implementation of unique algorithms for each competing swarm will be let as an exercise for the reader.</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-2">&lt;Environments&gt;</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:inline font-weight="bold">Description</fo:inline><fo:block space-after.optimum="14pt">The <fo:inline font-style="italic">&lt;Environments&gt;</fo:inline> section describes the different environments that will be used in the simulation.</fo:block><fo:block space-after.optimum="14pt">For the simulation, a grid-based environment named "world" is  used.  A grid-based environment is more than adequate for this simulation.  The environment is defined to have a size of 50x50.  The garbage objects will be represented by the integer value 1, and the mine values will be represented by the integer value 4 for an armed mine, 3 for a partially-disarmed mine, and 2 for a completely disarmed mine.  There will be 50 garbage objects and 10 mine objects randomly placed throughout the environment.</fo:block><fo:block wrap-option="no-wrap" white-space-collapse="false" font-size="10pt" line-height="13pt" font-family="monospace" space-after.optimum="11pt">
+&lt;environments&gt;
+    &lt;environment name="world"&gt;
+        &lt;builder class="standard.environment.EnvironmentBuilder"/&gt;
+        &lt;model class="grid.environment.SafeGridModel"&gt;
+            &lt;attributes&gt;
+                &lt;attribute name="rows" value="50"/&gt;
+                &lt;attribute name="cols" value="50"/&gt;
+            &lt;/attributes&gt;
+            &lt;initializers&gt;
+                &lt;initializer class="grid.environment.RandomInitialization"&gt;
+                    &lt;builder class="grid.environment.RandomInitializationBuilder"/&gt;
+
+                    &lt;seed value="3141592654"/&gt;
+                    
+                    &lt;!-- Garbage Object--&gt;
+                    &lt;object value="1" number="50"/&gt;
+                    &lt;!-- Mine Object --&gt;
+                    &lt;object value="4" number="10"/&gt;
+                &lt;/initializer&gt;
+            &lt;/initializers&gt;
+            &lt;updates&gt;&lt;/updates&gt;
+        &lt;/model&gt;
+    &lt;/environment&gt;
+&lt;/environments&gt;
+				</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-3">&lt;Model&gt;</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:inline font-weight="bold">Description</fo:inline><fo:block space-after.optimum="14pt">The <fo:inline font-style="italic">&lt;Model&gt;</fo:inline> section describes the different types of <fo:inline font-style="italic">physical</fo:inline> agents that will be used in a simulation.  The main purpose of an agent model, sometimes referred to as an <fo:inline font-style="italic">avatar</fo:inline>, is to define the basic behaviors and senses available with respect to the operating environment.</fo:block><fo:block space-after.optimum="14pt">For example, in this scenario, the available behaviors and sensors are related to the garbage objects and the mine objects that are scattered throughout the environment.  The basic sensors are:</fo:block><fo:list-block provisional-label-separation="0.2cm" provisional-distance-between-starts="0.4cm" space-after.optimum="14pt"><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>on-garbage</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>on-dumpster</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>near-garbage</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>on-armed-mine</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>on-partially-disarmed-mine</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>near-mine</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>holding-garbage</fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:block space-after.optimum="14pt">And the basic actions are:</fo:block><fo:list-block provisional-label-separation="0.2cm" provisional-distance-between-starts="0.4cm" space-after.optimum="14pt"><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>pick-up-garbage</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>put-down-garbage</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>disarm-mine-stage-1</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>disarm-mine-stage-2</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>move-random</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>move-towards-garbage</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>move-towards-dumpster</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>move-towards-mine</fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:block space-after.optimum="14pt">All the the sensors and actions are implemented using the basic actions and sensors defined in the core SWEEP package.  Though custom defined actions and sensors can be implemented in Java, this approach was not taken so as to show how a non-programmer might use SWEEP.</fo:block><fo:block space-after.optimum="14pt">The &lt;attributes&gt; section establishes a set of variables that the different sensors and actions can access.  Using attributes in this way makes changing parameter values much easier.  For example, without the attribute variables, changing all of the sensor ranges would require one to change the value in each sensor definition.  But using an attribute variable allows a user to make a single change and have that change propogate throughout.</fo:block><fo:block wrap-option="no-wrap" white-space-collapse="false" font-size="10pt" line-height="13pt" font-family="monospace" space-after.optimum="11pt">
+&lt;models&gt;
+    &lt;model name="avatar" class="grid.model.GridAvatar"&gt;
+        &lt;builder class="standard.model.ModelBuilder"/&gt;
+        
+        &lt;!-- attributes define model parameters --&gt;
+        &lt;attributes&gt;
+            &lt;!-- Basic attributes --&gt;
+            &lt;attribute name="empty" value="0"/&gt;
+            &lt;attribute name="environment" value="world"/&gt;
+            &lt;attribute name="holdingGarbage" value="false"/&gt;
+            
+            
+            &lt;!-- Parameters for garbage actions/sensors --&gt;
+            &lt;attribute name="garbage.grid" value="world"/&gt;
+            &lt;attribute name="garbage.value" value="1"/&gt;
+            &lt;attribute name="garbage.downvalue" value="6"/&gt;
+            &lt;attribute name="garbage.range.on" value="0"/&gt;
+            &lt;attribute name="garbage.range.near" value="5"/&gt;
+
+            &lt;!-- Paramters for mine actions/sensors --&gt;
+            &lt;attribute name="mine.grid" value="world"/&gt;
+            &lt;attribute name="mine.value.armed" value="4"/&gt;
+            &lt;attribute name="mine.value.partial" value="3"/&gt;
+            &lt;attribute name="mine.value.disarmed" value="2"/&gt;
+            &lt;attribute name="mine.range.on" value="0"/&gt;
+            &lt;attribute name="mine.range.near" value="5"/&gt;
+        &lt;/attributes&gt;
+        
+        &lt;!-- define available sensors --&gt;
+        &lt;sensors&gt;
+            &lt;!-- Sensor: true when on a piece of garbage --&gt;
+            &lt;sensor name="on-garbage" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="range"       value="garbage.range.on"/&gt;
+                    &lt;attribute name="targetValue" value="garbage.value"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when in range of garbage --&gt;
+            &lt;sensor name="near-garbage" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="range" value="garbage.range.near"/&gt;
+                    &lt;attribute name="targetValue" value="garbage.value"/&gt;
+                    &lt;attribute name="varName" value="garbage.location"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when holding garbage --&gt;
+            &lt;sensor name="holding-garbage" class="sweep.model.sensor.InternalBooleanSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="attrName" value="holdingGarbage"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when on a fully armed mine --&gt;
+            &lt;sensor name="on-armed-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="range" value="mine.range.on"/&gt;
+                    &lt;attribute name="targetValue" value="mine.value.armed"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+
+            &lt;!-- Sensor: true when on a partially disarmed mine --&gt;
+            &lt;sensor name="on-partially-disarmed-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="range" value="mine.range.on"/&gt;
+                    &lt;attribute name="targetValue" value="mine.value.partial"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when on the dumpster --&gt;
+            &lt;sensor name="on-dumpster" class="grid.model.sensor.LocationSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="location" value="const:10,10"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+            
+            &lt;!-- Sensor: true when near a (fully|partially) armed mine --&gt;
+            &lt;sensor name="near-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="range" value="mine.range.near"/&gt;
+                    &lt;attribute name="targetValue" value="mine.value.armed,mine.value.partial"/&gt;
+                    &lt;attribute name="varName" value="mine.location"/&gt;
+                &lt;/attributes&gt;
+            &lt;/sensor&gt;
+        &lt;/sensors&gt;
+        
+        &lt;actions&gt;
+            &lt;!-- Action: if on a piece of garbage, pick it up --&gt;
+            &lt;action name="pick-up-garbage" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+                &lt;if&gt;
+                    &lt;condition sensor="on-garbage" value="true"/&gt;
+                    &lt;condition state="holdingGarbage" value="false"/&gt;
+                    &lt;then&gt;
+                        &lt;action name="pick-up-garbage-helper"/&gt;
+                        &lt;action name="set-holding-garbage"/&gt;
+                    &lt;/then&gt;
+                &lt;/if&gt;
+            &lt;/action&gt;
+
+            &lt;!-- Action: if holding garbage and on dumpster, put it down --&gt;
+            &lt;action name="put-down-garbage" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+                &lt;if&gt;
+                    &lt;condition sensor="on-dumpster" value="true"/&gt;
+                    &lt;condition state="holdingGarbage" value="true"/&gt;
+                    &lt;then&gt;
+                        &lt;!--&lt;action name="put-down-garbage-helper"/&gt;--&gt;
+                        &lt;action name="reset-holding-garbage"/&gt;
+                        &lt;action name="increment-garbage-count"/&gt;
+                    &lt;/then&gt;
+                &lt;/if&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: pick up a piece of garbage --&gt;
+            &lt;action name="pick-up-garbage-helper" class="grid.model.action.SetAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="value" value="empty"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+
+            &lt;!-- Action: put down a piece of garbage --&gt;
+            &lt;action name="put-down-garbage-helper" class="grid.model.action.SetAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="value" value="garbage.downvalue"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: set the holding garbage flag --&gt;
+            &lt;action name="set-holding-garbage" class="sweep.model.action.SetStateVariableAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="flag" value="holdingGarbage"/&gt;
+                    &lt;attribute name="value" value="true"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+                
+            &lt;!-- Action: reset the holding garbage flag --&gt;
+            &lt;action name="reset-holding-garbage" class="sweep.model.action.SetStateVariableAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="flag" value="holdingGarbage"/&gt;
+                    &lt;attribute name="value" value="false"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: increment the garbage count --&gt;
+            &lt;action name="increment-garbage-count" class="sweep.model.action.IncrementCounterAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="name" value="garbage-counter"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: if on a mine, disarm the first stage --&gt;
+            &lt;action name="disarm-mine-stage-1" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+                &lt;if&gt;
+                    &lt;condition sensor="on-armed-mined" value="true"/&gt;
+                    &lt;then&gt;
+                        &lt;action name="disarm-mine-stage-1-helper"/&gt;
+                        &lt;action name="set-disarmed-phase-1"/&gt;
+                        &lt;action name="disable-agent"/&gt;
+                    &lt;/then&gt;
+                &lt;/if&gt;
+            &lt;/action&gt;
+
+            &lt;!-- Action: if on a mine, disarm the second stage --&gt;
+            &lt;action name="disarm-mine-stage-2" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+                &lt;if&gt;
+                    &lt;condition sensor="on-partial-mine" value="true"/&gt;
+                    &lt;then&gt;
+                        &lt;action name="disarm-mine-stage-2-helper"/&gt;
+                        &lt;action name="set-disarmed-phase-2"/&gt;
+                        &lt;action name="disable-agent"/&gt;
+                    &lt;/then&gt;
+                &lt;/if&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: First stage of disarming the mine --&gt;
+            &lt;action name="disarm-mine-stage-1-helper" class="grid.model.action.SetAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="value" value="mine.value.partial"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+
+            &lt;!-- Action: Second stage of disarming the mine --&gt;
+            &lt;action name="disarm-mine-stage-2-helper" class="grid.model.action.SetAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="value" value="mine.value.disarmed"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: set the phase 1 disarming flag --&gt;
+            &lt;action name="set-disarmed-phase-1" class="sweep.model.action.IncrementCounterAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="name" value="disarmed-phase-1"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            &lt;!--
+            &lt;action name="set-disarmed-phase-1" class="sweep.model.action.SetStateVariableAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="flag" value="disarmed-phase-1"/&gt;
+                    &lt;attribute name="value" value="true"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;  --&gt;
+
+            &lt;!-- Action: set the phase 2 disarming flag --&gt;
+            &lt;action name="set-disarmed-phase-2" class="sweep.model.action.IncrementCounterAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="name" value="disarmed-phase-2"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            &lt;!--
+            &lt;action name="set-disarmed-phase-2" class="sweep.model.action.SetStateVariableAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="flag" value="disarmed-phase-2"/&gt;
+                    &lt;attribute name="value" value="true"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;--&gt;
+            
+            &lt;!-- Action: disable the agent for the rest of the sim --&gt;
+            &lt;action name="disable-agent" class="sweep.model.action.DisableAction"/&gt;
+            
+            &lt;!-- Action: move in a random direction --&gt;
+            &lt;action name="move-random" class="grid.model.action.MoveRandomAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="environment"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: move towards the dumpster --&gt;
+            &lt;action name="move-towards-dumpster" class="grid.model.action.MoveTowardsAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="location" value="const:10,10"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: move towards the closest piece of garbage --&gt;
+            &lt;action name="move-towards-garbage" class="grid.model.action.MoveTowardsAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="garbage.grid"/&gt;
+                    &lt;attribute name="location" value="av:garbage.location"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+            
+            &lt;!-- Action: move towards the closest mine --&gt;
+            &lt;action name="move-towards-mine" class="grid.model.action.MoveTowardsAction"&gt;
+                &lt;attributes&gt;
+                    &lt;attribute name="environment" value="mine.grid"/&gt;
+                    &lt;attribute name="location" value="av:mine.location"/&gt;
+                &lt;/attributes&gt;
+            &lt;/action&gt;
+        &lt;/actions&gt;
+        
+        &lt;initializers&gt;
+            &lt;initializer name="random-placement" class="grid.model.RandomPlacementInitializer"/&gt;
+        &lt;/initializers&gt;
+    &lt;/model&gt;
+&lt;/models&gt;
+				</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-4">&lt;Controller&gt;</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:inline font-weight="bold">Description</fo:inline><fo:block space-after.optimum="14pt">The <fo:inline font-style="italic">&lt;Controller&gt;</fo:inline> section defines the basic agent logic.  This section is where the swarm algorithm itself is programmed.  The controller uses sensor inputs to make decisions, and from these decisions the desired behaviors are selected.</fo:block><fo:block space-after.optimum="14pt">SWEEP uses a state machine model by default to encode agent logic.  It is possible for a develper to implement other types of controllers besides state machines.  Examples of other controllers include pure Java controllers, LISP or PROLOG evaluators, embedded Jython, or interactive control through some input method (keyboard, joystick, etc).</fo:block><fo:block space-after.optimum="14pt">The state machine has a very simple setup.  Each state is defined as a collection of transitions.  Each transition has a boolean logic condition, that if met, enables a particular set of behaviors.  Also, each transitions defines the appropriate next state to go to if the transition fires.  Each state also has a default rule that is fired if not other rule is activated.</fo:block><fo:block space-after.optimum="14pt">For the example scenario used here, the state machine uses three states.  The first state manages the searching of the environment.  The second state handles the collection of garbage.  And the third state manages the destruction of mines.  Below is a psuedo-state-machine of the algorithm used in this example.</fo:block><fo:inline font-weight="bold">State: Search</fo:inline><fo:list-block provisional-label-separation="0.2cm" provisional-distance-between-starts="0.4cm" space-after.optimum="14pt"><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if <fo:inline font-style="italic">near-garbage</fo:inline> then <fo:inline font-style="italic">move-towards-garbage</fo:inline> and goto <fo:inline font-weight="bold">collect-garbage</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if <fo:inline font-style="italic">near-mine</fo:inline> then <fo:inline font-style="italic">move-towards-mine</fo:inline> and goto <fo:inline font-weight="bold">disarm-mine</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>default: <fo:inline font-style="italic">move-random</fo:inline> and goto <fo:inline font-weight="bold">search</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:inline font-weight="bold">State: Collect-Garbage</fo:inline><fo:list-block provisional-label-separation="0.2cm" provisional-distance-between-starts="0.4cm" space-after.optimum="14pt"><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if not <fo:inline font-style="italic">holding-garbage</fo:inline> and <fo:inline font-style="italic">on-garbage</fo:inline> then <fo:inline font-style="italic">pick-up-garbage</fo:inline> and goto <fo:inline font-weight="bold">collect-garbage</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if not <fo:inline font-style="italic">holding-garbage</fo:inline> and <fo:inline font-style="italic">near-garbage</fo:inline> then <fo:inline font-style="italic">move-towards-garbage</fo:inline> and goto  <fo:inline font-weight="bold">collect-garbage</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if <fo:inline font-style="italic">holding-garbage</fo:inline> and not <fo:inline font-style="italic">on-dumpster</fo:inline> then <fo:inline font-style="italic">move-towards-dumpster</fo:inline> and goto <fo:inline font-weight="bold">collect-garbage</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if <fo:inline font-style="italic">holding-garbage</fo:inline> and <fo:inline font-style="italic">on-dumpster</fo:inline> then <fo:inline font-style="italic">put-down-garbage</fo:inline> and goto <fo:inline font-weight="bold">search</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>default: <fo:inline font-style="italic">move-random</fo:inline> and goto <fo:inline font-weight="bold">search</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:inline font-weight="bold">State: Disarm-Mine</fo:inline><fo:list-block provisional-label-separation="0.2cm" provisional-distance-between-starts="0.4cm" space-after.optimum="14pt"><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if <fo:inline font-style="italic">on-armed-mine</fo:inline> then <fo:inline font-style="italic">disarm-phase-1</fo:inline> and goto <fo:inline font-weight="bold">disarm-mine</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if <fo:inline font-style="italic">on-partially-armed-mine</fo:inline> then <fo:inline font-style="italic">disarm-phase-2</fo:inline> and goto <fo:inline font-weight="bold">search</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>if <fo:inline font-style="italic">near-mine</fo:inline> then <fo:inline font-style="italic">move-towards-mine</fo:inline> and goto <fo:inline font-weight="bold">disarm-mine</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>default: <fo:inline font-style="italic">move-random</fo:inline> and goto <fo:inline font-weight="bold">search</fo:inline>
+						</fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:block wrap-option="no-wrap" white-space-collapse="false" font-size="10pt" line-height="13pt" font-family="monospace" space-after.optimum="11pt">
+&lt;controllers&gt;
+    &lt;controller name="basic-state-machine" format="state"&gt;
+        &lt;builder class="sweep.controller.FSABuilder"/&gt;
+        &lt;initialState name="searching"/&gt;
+        &lt;states&gt;
+        
+            &lt;!-- State: controls the search beahviors --&gt;
+            &lt;state name="searching"&gt;
+                &lt;!-- Rule: if in range of garbage, go into collecting mode --&gt;
+                &lt;transition nextState="collect-garbage"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="near-garbage" value="true"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="move-towards-garbage"/&gt;
+                &lt;/transition&gt;
+            
+                &lt;!-- Rule: if in range of a mine, go into disarming mode --&gt;
+                &lt;transition nextState="disarm-mine"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="near-mine" value="true"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="move-towards-mine"/&gt;
+                &lt;/transition&gt;
+                
+                &lt;!-- Rule: otherwise, keep searching randomly --&gt;
+                &lt;default nextState="searching"&gt;
+                    &lt;action name="move-random"/&gt;
+                &lt;/default&gt;
+            &lt;/state&gt;
+            
+            &lt;!-- State: controls the collection of garbage --&gt;
+            &lt;state name="collect-garbage"&gt;
+                &lt;!-- Rule: if on a piece of garbage, pick it up --&gt;
+                &lt;transition nextState="collect-garbage"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="holding-garbage" value="false"/&gt;
+                        &lt;sensor name="on-garbage" value="true"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="pick-up-garbage"/&gt;
+                &lt;/transition&gt;
+                
+                &lt;!-- Rule: if near garbage, move towards it --&gt;
+                &lt;transition nextState="collect-garbage"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="holding-garbage" value="false"/&gt;
+                        &lt;sensor name="near-garbage" value="true"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="move-towards-garbage"/&gt;
+                &lt;/transition&gt;
+                
+                &lt;!-- Rule: if holding garbage, move towards the dumpster --&gt;
+                &lt;transition nextState="collect-garbage"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="holding-garbage" value="true"/&gt;
+                        &lt;sensor name="on-dumpster" value="false"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="move-towards-dumpster"/&gt;
+                &lt;/transition&gt;
+
+                &lt;!-- Rule: if holding garbage and on the dumpster, dispose of the garbage --&gt;
+                &lt;transition nextState="searching"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="holding-garbage" value="true"/&gt;
+                        &lt;sensor name="on-dumpster" value="true"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="put-down-garbage"/&gt;
+                &lt;/transition&gt;
+
+                &lt;!-- Rule: go back to searching --&gt;
+                &lt;default nextState="searching"&gt;
+                    &lt;action name="move-random"/&gt;
+                &lt;/default&gt;
+            &lt;/state&gt;
+            
+            &lt;!-- State: controls the disarming of mines --&gt;
+            &lt;state name="disarm-mine"&gt;
+                &lt;!-- Rule: if on an armed mine, perform the first disarming step --&gt;
+                &lt;transition nextState="disarm-mine"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="on-armed-mine" value="true"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="disarm-mine-stage-1"/&gt;
+                &lt;/transition&gt;
+
+                &lt;!-- Rule: if on a partially disarmed mine, finish the job --&gt;
+                &lt;transition nextState="searching"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="on-partially-disarmed-mine" value="true"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="disarm-mine-stage-2"/&gt;
+                &lt;/transition&gt;
+
+                &lt;!-- Rule: if near a mine, move towards it --&gt;
+                &lt;transition nextState="disarm-mine"&gt;
+                    &lt;rule logical="and"&gt;
+                        &lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+                        &lt;sensor name="near-mine" value="true"/&gt;
+                    &lt;/rule&gt;
+                    &lt;action name="move-towards-mine"/&gt;
+                &lt;/transition&gt;
+                
+                &lt;!-- Rule: go back to searching --&gt;
+                &lt;default nextState="searching"&gt;
+                    &lt;action name="move-random"/&gt;
+                &lt;/default&gt;
+            &lt;/state&gt;
+        &lt;/states&gt;
+    &lt;/controller&gt;
+&lt;/controllers&gt;
+				</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-5">&lt;Swarm&gt;</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:inline font-weight="bold">Description</fo:inline><fo:block space-after.optimum="14pt">The <fo:inline font-style="italic">&lt;Swarm&gt;</fo:inline> section defines the construction of the swarms to be used.  A swarm is defined as being a collection of entities.  For our purposes, an entity is a collection consisting of an agent, an avatar/model, and a controller.  A swarm can have any number of entities.  The specific size of the swarm(s) is specified in the <fo:inline font-style="italic">&lt;Main&gt;</fo:inline> section.</fo:block><fo:block space-after.optimum="14pt">For the example, two swarm types have been defined.  Though their composition is identical, the separate definition effectively create two distinct swarm types.  For each swarm, the entity is composed of a default agent, and the model and controller previously defined.</fo:block><fo:block wrap-option="no-wrap" white-space-collapse="false" font-size="10pt" line-height="13pt" font-family="monospace" space-after.optimum="11pt">
+&lt;swarms&gt;
+	&lt;swarm name="swarm-A"&gt;
+		&lt;builder class="standard.swarm.SwarmBuilder"/&gt;
+		&lt;entity name="swarm-A-entity"&gt;
+			&lt;agent type="agent"/&gt;
+			&lt;controller type="basic-state-machine"/&gt;
+			&lt;model type="avatar"/&gt;
+		&lt;/entity&gt;
+	&lt;/swarm&gt;
+
+	&lt;swarm name="swarm-B"&gt;
+		&lt;builder class="standard.swarm.SwarmBuilder"/&gt;
+		&lt;entity name="swarm-B-entity"&gt;
+			&lt;agent type="agent"/&gt;
+			&lt;controller type="basic-state-machine"/&gt;
+			&lt;model type="avatar"/&gt;
+		&lt;/entity&gt;
+	&lt;/swarm&gt;
+&lt;/swarms&gt;
+				</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-6">&lt;Probe&gt;</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:inline font-weight="bold">Description</fo:inline><fo:block space-after.optimum="14pt">The <fo:inline font-style="italic">&lt;Probe&gt;</fo:inline> section defines points in the simulation where data can be extracted or injected.  Probes can be used for basically anything, including: debugging, changing internal variables, monitoring single/multiple agent(s), and facilitating user interactivity.</fo:block><fo:block space-after.optimum="14pt">For this example, two probes have been defined.  The first probe (CounterProbe) is used to set an upper limit of 500 iterations on the runtime of the simulation.  The second probe (SummaryProbe) is used to collect and summarize statistical data about the simulation; more specifically the number of garbage objects collected and the number of mines disabled.</fo:block><fo:block wrap-option="no-wrap" white-space-collapse="false" font-size="10pt" line-height="13pt" font-family="monospace" space-after.optimum="11pt">
+&lt;probes&gt;
+    &lt;probe name="terminator"&gt;
+        &lt;builder class="sweep.probe.CounterProbeBuilder"/&gt;
+        &lt;iterations num="500"/&gt;
+    &lt;/probe&gt;
+    
+    &lt;probe name="summarizer"&gt;
+        &lt;builder class="sweep.probe.SummaryProbeBuilder"/&gt;
+        &lt;sum swarm="my-swarm-A" var="garbage-counter"/&gt;
+        &lt;sum swarm="my-swarm-A" var="disarmed-phase-1"/&gt;
+        &lt;sum swarm="my-swarm-A" var="disarmed-phase-2"/&gt;
+        &lt;sum swarm="my-swarm-B" var="garbage-counter"/&gt;
+        &lt;sum swarm="my-swarm-B" var="disarmed-phase-1"/&gt;
+        &lt;sum swarm="my-swarm-B" var="disarmed-phase-2"/&gt;        
+        &lt;screen/&gt;
+    &lt;/probe&gt;
+&lt;/probes&gt;
+				</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-7">&lt;Agent&gt; and &lt;Info&gt;</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:block space-after.optimum="14pt">The sections <fo:inline font-style="italic">&lt;Agent&gt;</fo:inline> and <fo:inline font-style="italic">&lt;Info&gt;</fo:inline> are not currently used in this version of SWEEP.</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-8">&lt;Main&gt;</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:inline font-weight="bold">Description</fo:inline><fo:block space-after.optimum="14pt">The <fo:inline font-style="italic">&lt;Main&gt;</fo:inline> section serves a similar purpose to the main() method in C or Java, that being to handle the high-level setup and execution of the simulation.  This section defines many important features of the simulation including swarm sizes, environmental parameters, and the specific probes to be used.</fo:block><fo:block space-after.optimum="14pt">For 50 garbage object and 10 mine objects, two swarms of size 30 should be sufficient to address the problem in 500 timesteps.  Aside from declaration, no specific actions need be taken with regards to the environment or probes.</fo:block><fo:block space-after.optimum="14pt">
+						<fo:inline font-weight="bold">N.B.</fo:inline>
+						<fo:inline font-style="italic">&lt;Main&gt;</fo:inline> is not yet able to fully customize every aspect of the simulation at runtime due certain implementation limitations that will require rearchitecting to address.</fo:block><fo:block wrap-option="no-wrap" white-space-collapse="false" font-size="10pt" line-height="13pt" font-family="monospace" space-after.optimum="11pt">
+&lt;main&gt;
+    &lt;info name="about" type="info-type1"/&gt;
+    
+    &lt;swarm name="my-swarm-A" type="swarm-A"&gt;
+        &lt;entity type="swarm-A-entity" number="10"/&gt;
+    &lt;/swarm&gt;
+
+    &lt;swarm name="my-swarm-B" type="swarm-B"&gt;
+        &lt;entity type="swarm-B-entity" number="10"/&gt;
+    &lt;/swarm&gt;
+    
+    &lt;!-- should be able to override environment attributes here too --&gt;
+    &lt;environment name="world" type="world"/&gt;
+    
+    &lt;probe name="probe" type="terminator"/&gt;
+    &lt;probe name="summary" type="summarizer"/&gt;
+&lt;/main&gt;
+				</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-9">Running the simulation</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:inline font-weight="bold">Building SWEEP</fo:inline><fo:block space-after.optimum="14pt">Building SWEEP requires that <fo:inline font-style="italic">make</fo:inline> be installed.  From the SWEEP_WPAFB directory, type: <fo:inline font-style="italic">make</fo:inline>.  This will handle compiling SWEEP.</fo:block><fo:block space-after.optimum="14pt">In order to run the simulation graphically, first, from a command line, change to the SWEEP_WPAFB directory.  From that directory, run the following command: <fo:inline font-style="italic">java -cp jars/dom4j-full.jar:bin  sweep.viewer.Main simulation.xml</fo:inline>
+					</fo:block><fo:block space-after.optimum="14pt">Alternatively, if you are running this on a Linux-type platform (or have <fo:inline font-style="italic">make</fo:inline> installed on Windows), just execute the command <fo:inline font-style="italic">make run</fo:inline>, which is a small script that handles all the command-line parameters.</fo:block><fo:block space-after.optimum="14pt">When you execute the simulation, you should see textual output similar to this</fo:block><fo:block wrap-option="no-wrap" white-space-collapse="false" font-size="10pt" line-height="13pt" font-family="monospace" space-after.optimum="11pt">
+simulation.xml
+...adding the required probes
+...starting sweep
+...opening ServerSocket on port 3333
+...got a socket...
+my-swarm-A:garbage-counter:20
+my-swarm-A:disarmed-phase-1:2
+my-swarm-A:disarmed-phase-2:3
+my-swarm-B:garbage-counter:12
+my-swarm-B:disarmed-phase-1:3
+my-swarm-B:disarmed-phase-2:1
+				</fo:block><fo:block space-after.optimum="14pt">If there are problems running the simulation, make sure that your firewall software is not blocking port 3333, as the viewer and SWEEP communicate using the network.</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="1-10">Full simulation XML file</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:block wrap-option="no-wrap" white-space-collapse="false" font-size="10pt" line-height="13pt" font-family="monospace" space-after.optimum="11pt">
+&lt;?xml version="1.0"?&gt;
+
+&lt;simulation builder="standard.simulation.SimulationBuilder"&gt;
+
+&lt;main&gt;
+	&lt;info name="about" type="info-type1"/&gt;
+	
+	&lt;swarm name="my-swarm-A" type="swarm-A"&gt;
+		&lt;entity type="swarm-A-entity" number="10"/&gt;
+	&lt;/swarm&gt;
+
+	&lt;swarm name="my-swarm-B" type="swarm-B"&gt;
+		&lt;entity type="swarm-B-entity" number="10"/&gt;
+	&lt;/swarm&gt;
+	
+	&lt;!-- should be able to override environment attributes here too --&gt;
+	&lt;environment name="world" type="world"/&gt;
+	
+	&lt;probe name="probe" type="terminator"/&gt;
+	&lt;probe name="summary" type="summarizer"/&gt;
+&lt;/main&gt;
+
+&lt;environments&gt;
+	&lt;environment name="world"&gt;
+		&lt;builder class="standard.environment.EnvironmentBuilder"/&gt;
+		&lt;model class="grid.environment.SafeGridModel"&gt;
+			&lt;attributes&gt;
+				&lt;attribute name="rows" value="50"/&gt;
+				&lt;attribute name="cols" value="50"/&gt;
+			&lt;/attributes&gt;
+			&lt;initializers&gt;
+				&lt;initializer class="grid.environment.RandomInitialization"&gt;
+					&lt;builder class="grid.environment.RandomInitializationBuilder"/&gt;
+
+					&lt;seed value="3141592654"/&gt;
+					
+					&lt;!-- Garbage Object--&gt;
+					&lt;object value="1" number="50"/&gt;
+					&lt;!-- Mine Object --&gt;
+					&lt;object value="4" number="10"/&gt;
+				&lt;/initializer&gt;
+			&lt;/initializers&gt;
+			&lt;updates&gt;&lt;/updates&gt;
+		&lt;/model&gt;
+	&lt;/environment&gt;
+&lt;/environments&gt;
+
+&lt;models&gt;
+	&lt;model name="avatar" class="grid.model.GridAvatar"&gt;
+		&lt;builder class="standard.model.ModelBuilder"/&gt;
+		
+		&lt;!-- attributes define model parameters --&gt;
+		&lt;attributes&gt;
+			&lt;!-- Basic attributes --&gt;
+			&lt;attribute name="empty" value="0"/&gt;
+			&lt;attribute name="environment" value="world"/&gt;
+			&lt;attribute name="holdingGarbage" value="false"/&gt;
+			
+			
+			&lt;!-- Parameters for garbage actions/sensors --&gt;
+			&lt;attribute name="garbage.grid" value="world"/&gt;
+			&lt;attribute name="garbage.value" value="1"/&gt;
+			&lt;attribute name="garbage.downvalue" value="6"/&gt;
+			&lt;attribute name="garbage.range.on" value="0"/&gt;
+			&lt;attribute name="garbage.range.near" value="5"/&gt;
+
+			&lt;!-- Paramters for mine actions/sensors --&gt;
+			&lt;attribute name="mine.grid" value="world"/&gt;
+			&lt;attribute name="mine.value.armed" value="4"/&gt;
+			&lt;attribute name="mine.value.partial" value="3"/&gt;
+			&lt;attribute name="mine.value.disarmed" value="2"/&gt;
+			&lt;attribute name="mine.range.on" value="0"/&gt;
+			&lt;attribute name="mine.range.near" value="5"/&gt;
+		&lt;/attributes&gt;
+		
+		&lt;!-- define available sensors --&gt;
+		&lt;sensors&gt;
+			&lt;!-- Sensor: true when on a piece of garbage --&gt;
+			&lt;sensor name="on-garbage" class="grid.model.sensor.FilteredValueSensor"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="garbage.grid"/&gt;
+					&lt;attribute name="range"       value="garbage.range.on"/&gt;
+					&lt;attribute name="targetValue" value="garbage.value"/&gt;
+				&lt;/attributes&gt;
+			&lt;/sensor&gt;
+			
+			&lt;!-- Sensor: true when in range of garbage --&gt;
+			&lt;sensor name="near-garbage" class="grid.model.sensor.FilteredValueSensor"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="garbage.grid"/&gt;
+					&lt;attribute name="range" value="garbage.range.near"/&gt;
+					&lt;attribute name="targetValue" value="garbage.value"/&gt;
+					&lt;attribute name="varName" value="garbage.location"/&gt;
+				&lt;/attributes&gt;
+			&lt;/sensor&gt;
+			
+			&lt;!-- Sensor: true when holding garbage --&gt;
+			&lt;sensor name="holding-garbage" class="sweep.model.sensor.InternalBooleanSensor"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="attrName" value="holdingGarbage"/&gt;
+				&lt;/attributes&gt;
+			&lt;/sensor&gt;
+			
+			&lt;!-- Sensor: true when on a fully armed mine --&gt;
+			&lt;sensor name="on-armed-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="mine.grid"/&gt;
+					&lt;attribute name="range" value="mine.range.on"/&gt;
+					&lt;attribute name="targetValue" value="mine.value.armed"/&gt;
+				&lt;/attributes&gt;
+			&lt;/sensor&gt;
+
+			&lt;!-- Sensor: true when on a partially disarmed mine --&gt;
+			&lt;sensor name="on-partially-disarmed-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="mine.grid"/&gt;
+					&lt;attribute name="range" value="mine.range.on"/&gt;
+					&lt;attribute name="targetValue" value="mine.value.partial"/&gt;
+				&lt;/attributes&gt;
+			&lt;/sensor&gt;
+			
+			&lt;!-- Sensor: true when on the dumpster --&gt;
+			&lt;sensor name="on-dumpster" class="grid.model.sensor.LocationSensor"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="garbage.grid"/&gt;
+					&lt;attribute name="location" value="const:10,10"/&gt;
+				&lt;/attributes&gt;
+			&lt;/sensor&gt;
+			
+			&lt;!-- Sensor: true when near a (fully|partially) armed mine --&gt;
+			&lt;sensor name="near-mine" class="grid.model.sensor.FilteredValueSensor"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="mine.grid"/&gt;
+					&lt;attribute name="range" value="mine.range.near"/&gt;
+					&lt;attribute name="targetValue" value="mine.value.armed,mine.value.partial"/&gt;
+					&lt;attribute name="varName" value="mine.location"/&gt;
+				&lt;/attributes&gt;
+			&lt;/sensor&gt;
+		&lt;/sensors&gt;
+		
+		&lt;actions&gt;
+			&lt;!-- Action: if on a piece of garbage, pick it up --&gt;
+			&lt;action name="pick-up-garbage" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+				&lt;if&gt;
+					&lt;condition sensor="on-garbage" value="true"/&gt;
+					&lt;condition state="holdingGarbage" value="false"/&gt;
+					&lt;then&gt;
+						&lt;action name="pick-up-garbage-helper"/&gt;
+						&lt;action name="set-holding-garbage"/&gt;
+					&lt;/then&gt;
+				&lt;/if&gt;
+			&lt;/action&gt;
+
+			&lt;!-- Action: if holding garbage and on dumpster, put it down --&gt;
+			&lt;action name="put-down-garbage" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+				&lt;if&gt;
+					&lt;condition sensor="on-dumpster" value="true"/&gt;
+					&lt;condition state="holdingGarbage" value="true"/&gt;
+					&lt;then&gt;
+						&lt;!--&lt;action name="put-down-garbage-helper"/&gt;--&gt;
+						&lt;action name="reset-holding-garbage"/&gt;
+						&lt;action name="increment-garbage-count"/&gt;
+					&lt;/then&gt;
+				&lt;/if&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: pick up a piece of garbage --&gt;
+			&lt;action name="pick-up-garbage-helper" class="grid.model.action.SetAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="garbage.grid"/&gt;
+					&lt;attribute name="value" value="empty"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+
+			&lt;!-- Action: put down a piece of garbage --&gt;
+			&lt;action name="put-down-garbage-helper" class="grid.model.action.SetAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="garbage.grid"/&gt;
+					&lt;attribute name="value" value="garbage.downvalue"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: set the holding garbage flag --&gt;
+			&lt;action name="set-holding-garbage" class="sweep.model.action.SetStateVariableAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="flag" value="holdingGarbage"/&gt;
+					&lt;attribute name="value" value="true"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+				
+			&lt;!-- Action: reset the holding garbage flag --&gt;
+			&lt;action name="reset-holding-garbage" class="sweep.model.action.SetStateVariableAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="flag" value="holdingGarbage"/&gt;
+					&lt;attribute name="value" value="false"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: increment the garbage count --&gt;
+			&lt;action name="increment-garbage-count" class="sweep.model.action.IncrementCounterAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="name" value="garbage-counter"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: if on a mine, disarm the first stage --&gt;
+			&lt;action name="disarm-mine-stage-1" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+				&lt;if&gt;
+					&lt;condition sensor="on-armed-mined" value="true"/&gt;
+					&lt;then&gt;
+						&lt;action name="disarm-mine-stage-1-helper"/&gt;
+						&lt;action name="set-disarmed-phase-1"/&gt;
+						&lt;action name="disable-agent"/&gt;
+					&lt;/then&gt;
+				&lt;/if&gt;
+			&lt;/action&gt;
+
+			&lt;!-- Action: if on a mine, disarm the second stage --&gt;
+			&lt;action name="disarm-mine-stage-2" builder="sweep.model.action.ConditionalActionBuilder"&gt;
+				&lt;if&gt;
+					&lt;condition sensor="on-partial-mine" value="true"/&gt;
+					&lt;then&gt;
+						&lt;action name="disarm-mine-stage-2-helper"/&gt;
+						&lt;action name="set-disarmed-phase-2"/&gt;
+						&lt;action name="disable-agent"/&gt;
+					&lt;/then&gt;
+				&lt;/if&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: First stage of disarming the mine --&gt;
+			&lt;action name="disarm-mine-stage-1-helper" class="grid.model.action.SetAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="mine.grid"/&gt;
+					&lt;attribute name="value" value="mine.value.partial"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+
+			&lt;!-- Action: Second stage of disarming the mine --&gt;
+			&lt;action name="disarm-mine-stage-2-helper" class="grid.model.action.SetAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="mine.grid"/&gt;
+					&lt;attribute name="value" value="mine.value.disarmed"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: set the phase 1 disarming flag --&gt;
+			&lt;action name="set-disarmed-phase-1" class="sweep.model.action.IncrementCounterAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="name" value="disarmed-phase-1"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			&lt;!--
+			&lt;action name="set-disarmed-phase-1" class="sweep.model.action.SetStateVariableAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="flag" value="disarmed-phase-1"/&gt;
+					&lt;attribute name="value" value="true"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;  --&gt;
+
+			&lt;!-- Action: set the phase 2 disarming flag --&gt;
+			&lt;action name="set-disarmed-phase-2" class="sweep.model.action.IncrementCounterAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="name" value="disarmed-phase-2"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			&lt;!--
+			&lt;action name="set-disarmed-phase-2" class="sweep.model.action.SetStateVariableAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="flag" value="disarmed-phase-2"/&gt;
+					&lt;attribute name="value" value="true"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;--&gt;
+			
+			&lt;!-- Action: disable the agent for the rest of the sim --&gt;
+			&lt;action name="disable-agent" class="sweep.model.action.DisableAction"/&gt;
+			
+			&lt;!-- Action: move in a random direction --&gt;
+			&lt;action name="move-random" class="grid.model.action.MoveRandomAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="environment"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: move towards the dumpster --&gt;
+			&lt;action name="move-towards-dumpster" class="grid.model.action.MoveTowardsAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="garbage.grid"/&gt;
+					&lt;attribute name="location" value="const:10,10"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: move towards the closest piece of garbage --&gt;
+			&lt;action name="move-towards-garbage" class="grid.model.action.MoveTowardsAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="garbage.grid"/&gt;
+					&lt;attribute name="location" value="av:garbage.location"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+			
+			&lt;!-- Action: move towards the closest mine --&gt;
+			&lt;action name="move-towards-mine" class="grid.model.action.MoveTowardsAction"&gt;
+				&lt;attributes&gt;
+					&lt;attribute name="environment" value="mine.grid"/&gt;
+					&lt;attribute name="location" value="av:mine.location"/&gt;
+				&lt;/attributes&gt;
+			&lt;/action&gt;
+		&lt;/actions&gt;
+		
+		&lt;initializers&gt;
+			&lt;initializer name="random-placement" class="grid.model.RandomPlacementInitializer"/&gt;
+		&lt;/initializers&gt;
+	&lt;/model&gt;
+&lt;/models&gt;
+
+&lt;controllers&gt;
+	&lt;controller name="basic-state-machine" format="state"&gt;
+		&lt;builder class="sweep.controller.FSABuilder"/&gt;
+		&lt;initialState name="searching"/&gt;
+		&lt;states&gt;
+		
+			&lt;!-- State: controls the search beahviors --&gt;
+			&lt;state name="searching"&gt;
+				&lt;!-- Rule: if in range of garbage, go into collecting mode --&gt;
+				&lt;transition nextState="collect-garbage"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="near-garbage" value="true"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="move-towards-garbage"/&gt;
+				&lt;/transition&gt;
+			
+				&lt;!-- Rule: if in range of a mine, go into disarming mode --&gt;
+				&lt;transition nextState="disarm-mine"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="near-mine" value="true"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="move-towards-mine"/&gt;
+				&lt;/transition&gt;
+				
+				&lt;!-- Rule: otherwise, keep searching randomly --&gt;
+				&lt;default nextState="searching"&gt;
+					&lt;action name="move-random"/&gt;
+				&lt;/default&gt;
+			&lt;/state&gt;
+			
+			&lt;!-- State: controls the collection of garbage --&gt;
+			&lt;state name="collect-garbage"&gt;
+				&lt;!-- Rule: if on a piece of garbage, pick it up --&gt;
+				&lt;transition nextState="collect-garbage"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="holding-garbage" value="false"/&gt;
+						&lt;sensor name="on-garbage" value="true"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="pick-up-garbage"/&gt;
+				&lt;/transition&gt;
+				
+				&lt;!-- Rule: if near garbage, move towards it --&gt;
+				&lt;transition nextState="collect-garbage"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="holding-garbage" value="false"/&gt;
+						&lt;sensor name="near-garbage" value="true"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="move-towards-garbage"/&gt;
+				&lt;/transition&gt;
+				
+				&lt;!-- Rule: if holding garbage, move towards the dumpster --&gt;
+				&lt;transition nextState="collect-garbage"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="holding-garbage" value="true"/&gt;
+						&lt;sensor name="on-dumpster" value="false"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="move-towards-dumpster"/&gt;
+				&lt;/transition&gt;
+
+				&lt;!-- Rule: if holding garbage and on the dumpster, dispose of the garbage --&gt;
+				&lt;transition nextState="searching"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="holding-garbage" value="true"/&gt;
+						&lt;sensor name="on-dumpster" value="true"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="put-down-garbage"/&gt;
+				&lt;/transition&gt;
+
+				&lt;!-- Rule: go back to searching --&gt;
+				&lt;default nextState="searching"&gt;
+					&lt;action name="move-random"/&gt;
+				&lt;/default&gt;
+			&lt;/state&gt;
+			
+			&lt;!-- State: controls the disarming of mines --&gt;
+			&lt;state name="disarm-mine"&gt;
+				&lt;!-- Rule: if on an armed mine, perform the first disarming step --&gt;
+				&lt;transition nextState="disarm-mine"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="on-armed-mine" value="true"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="disarm-mine-stage-1"/&gt;
+				&lt;/transition&gt;
+
+				&lt;!-- Rule: if on a partially disarmed mine, finish the job --&gt;
+				&lt;transition nextState="searching"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="on-partially-disarmed-mine" value="true"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="disarm-mine-stage-2"/&gt;
+				&lt;/transition&gt;
+
+				&lt;!-- Rule: if near a mine, move towards it --&gt;
+				&lt;transition nextState="disarm-mine"&gt;
+					&lt;rule logical="and"&gt;
+						&lt;builder class="sweep.controller.SensorRuleBuilder"/&gt;
+						&lt;sensor name="near-mine" value="true"/&gt;
+					&lt;/rule&gt;
+					&lt;action name="move-towards-mine"/&gt;
+				&lt;/transition&gt;
+				
+				&lt;!-- Rule: go back to searching --&gt;
+				&lt;default nextState="searching"&gt;
+					&lt;action name="move-random"/&gt;
+				&lt;/default&gt;
+			&lt;/state&gt;
+		&lt;/states&gt;
+	&lt;/controller&gt;
+&lt;/controllers&gt;
+
+&lt;!-- Not currently being used --&gt;
+&lt;agents&gt;
+	&lt;agent name="agent"&gt;
+		&lt;builder class="standard.agent.AgentBuilder"/&gt;
+		&lt;attributes&gt;&lt;/attributes&gt;
+		&lt;memory&gt;&lt;/memory&gt;
+	&lt;/agent&gt;
+&lt;/agents&gt;    
+
+&lt;swarms&gt;
+	&lt;swarm name="swarm-A"&gt;
+		&lt;builder class="standard.swarm.SwarmBuilder"/&gt;
+		&lt;entity name="swarm-A-entity"&gt;
+			&lt;agent type="agent"/&gt;
+			&lt;controller type="basic-state-machine"/&gt;
+			&lt;model type="avatar"/&gt;
+		&lt;/entity&gt;
+	&lt;/swarm&gt;
+
+	&lt;swarm name="swarm-B"&gt;
+		&lt;builder class="standard.swarm.SwarmBuilder"/&gt;
+		&lt;entity name="swarm-B-entity"&gt;
+			&lt;agent type="agent"/&gt;
+			&lt;controller type="basic-state-machine"/&gt;
+			&lt;model type="avatar"/&gt;
+		&lt;/entity&gt;
+	&lt;/swarm&gt;
+&lt;/swarms&gt;
+
+&lt;!-- Not currently being used --&gt;    
+&lt;information&gt;
+	&lt;info name="info-type1"&gt;
+		&lt;builder class="sweep.info.NullInfoBuilder"/&gt;
+	&lt;/info&gt;
+&lt;/information&gt;
+
+&lt;probes&gt;
+	&lt;probe name="terminator"&gt;
+		&lt;builder class="sweep.probe.CounterProbeBuilder"/&gt;
+		&lt;iterations num="200"/&gt;
+	&lt;/probe&gt;
+	
+	&lt;probe name="summarizer"&gt;
+		&lt;builder class="sweep.probe.SummaryProbeBuilder"/&gt;
+		&lt;sum swarm="my-swarm-A" var="garbage-counter"/&gt;
+		&lt;sum swarm="my-swarm-A" var="disarmed-phase-1"/&gt;
+		&lt;sum swarm="my-swarm-A" var="disarmed-phase-2"/&gt;
+		&lt;sum swarm="my-swarm-B" var="garbage-counter"/&gt;
+		&lt;sum swarm="my-swarm-B" var="disarmed-phase-1"/&gt;
+		&lt;sum swarm="my-swarm-B" var="disarmed-phase-2"/&gt;        
+		&lt;screen/&gt;
+	&lt;/probe&gt;
+&lt;/probes&gt;
+&lt;/simulation&gt;				
+				</fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block text-align="start" font-size="18pt" line-height="21pt" space-after.optimum="12pt" break-before="page" id="sec2">Section 2. End Notes</fo:block><fo:table space-before.optimum="6pt"><fo:table-column column-width="425pt"/><fo:table-body><fo:table-row space-before.optimum="3pt"><fo:table-cell vertical-align="middle"><fo:block text-align="start" keep-with-next.within-page="always" space-before.optimum="12pt" space-after.optimum="18pt" font-size="18pt" line-height="21pt" id="2-1">Acknowledgements</fo:block><fo:block text-align="start" line-height="14pt" font-size="11pt"><fo:list-block provisional-label-separation="0.2cm" provisional-distance-between-starts="0.4cm" space-after.optimum="14pt"><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Dan Palmer</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Chad Hantak</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>John Carroll University</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Orbital Research, Inc.</fo:block></fo:list-item-body></fo:list-item><fo:list-item space-after.optimum="3pt"><fo:list-item-label end-indent="label-end()"><fo:block><fo:inline font-family="Symbol">&middot;</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>Wright Patterson AFB</fo:block></fo:list-item-body></fo:list-item></fo:list-block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:block><fo:leader space-after.optimum="6pt" leader-pattern="rule"/><fo:leader space-after.optimum="6pt" leader-pattern="rule"/></fo:block><fo:block text-align="start" font-size="14pt" line-height="14pt" space-after.optimum="10pt" space-before.optimum="8pt">Colophon</fo:block><fo:block space-after.optimum="10pt" font-size="11pt" line-height="14pt">This tutorial was written entirely in XML, using the developerWorks Toot-O-Matic tutorial generator.  The open source Toot-O-Matic tool is an XSLT style sheet and several XSLT extension functions that convert an XML file into a number of HTML pages, a zip file, JPEG heading graphics, and two PDF files.  Our ability to generate multiple text and binary formats from a single source file illustrates the power and flexibility of XML.  (It also saves our production team a great deal of time and effort.)</fo:block><fo:block font-size="11pt" line-height="14pt">You can get the source code for the Toot-O-Matic at <fo:basic-link external-destination="http://www6.software.ibm.com/dl/devworks/dw-tootomatic-p" color="blue">www6.software.ibm.com/dl/devworks/dw-tootomatic-p</fo:basic-link>.  The tutorial <fo:basic-link external-destination="http://www-105.ibm.com/developerworks/education.nsf/xml-onlinecourse-bytitle/01F99F6B8BE60C9486256A69005BD21C?OpenDocument" color="blue">Building tutorials with the Toot-O-Matic</fo:basic-link> demonstrates how to use the Toot-O-Matic to create your own tutorials.  developerWorks also hosts a forum devoted to the Toot-O-Matic; it's available at <fo:basic-link external-destination="http://www-105.ibm.com/developerworks/xml_df.nsf/AllViewTemplate?OpenForm&amp;RestrictToCategory=11" color="blue">www-105.ibm.com/developerworks/xml_df.nsf/AllViewTemplate?OpenForm&amp;RestrictToCategory=11</fo:basic-link>.  We'd love to know what you think about the tool.</fo:block><fo:block id="TheVeryLastPage"/></fo:flow></fo:page-sequence></fo:root>

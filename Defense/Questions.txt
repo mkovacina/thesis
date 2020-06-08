@@ -1,0 +1,17 @@
+[ ] Why was this problem chosen?
+
+[ ] Why was this approach to the problem chosen?
+
+[ ] Why was SWEEP built?  Why not use existing tools?
+    * Portability, initially Java implementations of other tools weren't there
+    * Goal, to be easy to use (not quite there yet)
+    * Started as an undergrad project that I carried with me   
+  
+[ ] Composite metrics?  Why not use existing multi-objective fitness techniques?
+
+[ ] Something about the definition of swarm intelligence?  Why 'a small
+subgroup'?  Why was a new definition needed? 
+
+[ ] Difference between Mealy and Moore?
+
+

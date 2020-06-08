@@ -1,0 +1,38 @@
+\multirow{2}{*}{A}
+ & !on-goal & pick-up & E\\
+ & holding-object\_C & put-down & F\\
+\hline
+
+\multirow{4}{*}{B}
+ & on-goal & move-to-object\_C & A\\
+ & near-object\_C & broadcast-garbage & D\\
+ & holding-object\_C & move-to-goal & E\\
+ & !on-object\_C & move-random & C\\
+\hline
+
+\multirow{2}{*}{C}
+ & !on-goal & move-to-object\_C & A\\
+ & near-object\_C & put-down & B\\
+\hline
+
+\multirow{2}{*}{D}
+ & !on-goal & - & F\\
+ & !near-object\_C & put-down & B\\
+\hline
+
+\multirow{4}{*}{E}
+ & on-goal & move-random & G\\
+ & on-object\_C & - & B\\
+ & !near-object\_C & move-to-goal & B\\
+ & !on-object\_C & move-to-object\_C & C\\
+\hline
+
+\multirow{2}{*}{F}
+ & !holding-object\_C & - & E\\
+ & holding-object\_C & move-to-object\_C & B\\
+\hline
+
+\multirow{1}{*}{G}
+ & !holding-object\_C & move-to-object\_C & G\\
+\hline
+

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<controller name="controller" format="state">
+  <builder class="sweep.controller.FSABuilder"/>
+  <initialState name="568fb5:102d37d4b3b:-7ff2"/>
+  <states>
+    <state name="568fb5:102d37d4b3b:-7ff2">
+      <transition nextState="568fb5:102d37d4b3b:-7ff2">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-1"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f7f">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f73">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7ff2">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7fc2">
+      <transition nextState="568fb5:102d37d4b3b:-7e9e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="false"/>
+        </rule>
+        <action name="broadcast-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7fc2">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7fa7">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="false"/>
+        </rule>
+        <action name="broadcast-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7e9e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7e8d">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f7f">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7fc2">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7ff2">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7fa7">
+      <transition nextState="568fb5:102d37d4b3b:-7ff2">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="true"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7e9e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-1"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7e6e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7ff2">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f3d">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f3d">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="false"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7fc2">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7f97">
+      <transition nextState="568fb5:102d37d4b3b:-7fc2">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7e9e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="false"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7e8d">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7f97">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7f7f">
+      <transition nextState="568fb5:102d37d4b3b:-7f7f">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7fa7">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f7f">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7fa7">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f97">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7fa7">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7f73">
+      <transition nextState="568fb5:102d37d4b3b:-7e9e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f97">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7e8d">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="false"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7f7f">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7f3d">
+      <transition nextState="568fb5:102d37d4b3b:-7e8d">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f7f">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-1"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7fa7">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7e9e">
+      <transition nextState="568fb5:102d37d4b3b:-7e9e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="false"/>
+        </rule>
+        <action name="broadcast-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f97">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7f7f">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7e8d">
+      <transition nextState="568fb5:102d37d4b3b:-7e9e">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="false"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7fc2">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7ff2">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="false"/>
+        </rule>
+        <action name="move-towards-mine"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7f3d">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="near-mine" value="false"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <transition nextState="568fb5:102d37d4b3b:-7fa7">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-partially-disarmed-mine" value="true"/>
+        </rule>
+        <action name="disarm-mine-stage-2"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7fa7">
+        <action name="default-action"/>
+      </default>
+    </state>
+    <state name="568fb5:102d37d4b3b:-7e6e">
+      <transition nextState="568fb5:102d37d4b3b:-7f73">
+        <rule logical="and">
+          <builder class="sweep.controller.SensorRuleBuilder"/>
+          <sensor name="on-armed-mine" value="true"/>
+        </rule>
+        <action name="move-random"/>
+      </transition>
+      <default nextState="568fb5:102d37d4b3b:-7f7f">
+        <action name="default-action"/>
+      </default>
+    </state>
+  </states>
+</controller>
+

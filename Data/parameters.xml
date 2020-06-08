@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- REM implement a FitnessManager -->
+
+<parameters class="sweep.ga.Parameters">
+
+	<population num="32"/>
+	
+	<!--<search type="max"/>-->
+	<terminator target="70" epsilon="10" numGenerations="5000"/>
+	
+	<comparator class="sweep.ga.evaluator.RadixSolutionComparator" invert="true"/>
+<!--
+	<comparator class="sweep.ga.evaluator.AggregateSolutionComparator" invert="true"/>
+-->
+	
+	<!--
+	<evaluator class="sweep.ga.evaluator.NewTournamentEvaluator">
+		<runner class="sweep.ga.evaluator.SweepDuelManager">
+			<basedoc name="xml/simulation-ga.xml"/>
+			<input filename="data.dat"/>
+		</runner>
+		
+		<comparator class="sweep.ga.evaluator.RadixScoreComparator"/>
+			
+	</evaluator>	
+	-->
+	<evaluator class="sweep.ga.evaluator.SerialEvaluator">
+		<fitness class="sweep.ga.fitness.BasicFitnessFunction">
+			<datafile name="data.dat"/>
+			<xmlfile name="xml/simulation-ga.xml"/>
+			<scenario name="manipulation"/>
+		</fitness>
+		<print/>
+		<rescore/>
+	</evaluator>
+	
+	<population>
+		<generator class=""/>
+		
+	</population>
+	
+	<solution>
+		<chromosome class="sweep.ga.chromosome.OriginalSweepChromosome">
+			<states min="1" max="1"/>
+			<transitions min="1" max="1"/>
+			
+			<defaultAction name="default-action"/>
+			
+			<actions>
+				<action name="move-random"/>
+
+				<action name="pick-up-garbage"/>
+				<action name="put-down-garbage"/>
+				<action name="move-towards-garbage"/>
+				<action name="move-towards-dumpster"/>
+				<action name="broadcast-garbage"/>
+
+				<action name="disarm-mine-stage-1"/>
+				<action name="disarm-mine-stage-2"/>
+				<action name="move-towards-mine"/> 
+				<action name="broadcast-mine"/>
+			</actions>
+			
+			<sensors>
+				<sensor name="on-garbage"/>
+				<sensor name="near-garbage"/>
+				<sensor name="on-dumpster"/>
+				<sensor name="holding-garbage"/>
+
+				<sensor name="on-armed-mine"/>
+				<sensor name="on-partially-disarmed-mine"/>
+				<sensor name="near-mine"/> 
+			</sensors>
+		</chromosome>
+		
+		<defaultScore score="1"/>
+	</solution>
+
+	<operators>
+		<crossover 
+			name="Single-State-Crossover" 
+			number="0"
+			method="sweep.ga.operator.SingleStateCrossover" 
+			selectionMethod="sweep.ga.selection.StochasticUniversalSelection"/>
+
+		<mutation 
+			name="Change-sensor-value" 
+			number="8"
+			method="sweep.ga.operator.InvertOneSensorValueMutation" 
+			selectionMethod="sweep.ga.selection.EliteSelectionMethod"/>
+			
+		<mutation 
+			name="Change-action-value" 
+			number="8"
+			method="sweep.ga.operator.ChangeActionValueMutation" 
+			selectionMethod="sweep.ga.selection.EliteSelectionMethod"/>
+
+		<mutation 
+			name="Change-next-state" 
+			number="8"
+			method="sweep.ga.operator.ChangeNextStateMutation" 
+			selectionMethod="sweep.ga.selection.EliteSelectionMethod"/>
+			
+		<mutation 
+			name="Add-state" 
+			number="8"
+			method="sweep.ga.operator.AddStateMutation" 
+			selectionMethod="sweep.ga.selection.EliteSelectionMethod"/>
+
+		<mutation 
+			name="Add-transition" 
+			number="8"
+			method="sweep.ga.operator.AddTransitionMutation" 
+			selectionMethod="sweep.ga.selection.EliteSelectionMethod"/>
+
+			
+		<randomize number="1"/>
+	</operators>
+
+	<reapers>
+		<reaper 
+			name="reaper" 
+			number="16"
+			class="sweep.ga.operator.Reaper" 
+			selectionMethod="sweep.ga.selection.StochasticUniversalSelection"/>
+
+		<reaper 
+			name="reaper" 
+			number="16"
+			class="sweep.ga.operator.Reaper" 
+			selectionMethod="sweep.ga.selection.EliteSelectionMethod"/>
+	</reapers>
+	
+	<probes>
+		<group when="post-population">
+			<probe name="print-best-score" class="sweep.ga.probe.PrintInfoProbe">
+				<parameter name="type" value="baw"/>
+			</probe>
+			
+			<probe name="filewriter" class="sweep.ga.probe.FileBestSolutionProbe">
+				<parameter name="path" value="History"/>
+				<parameter name="prefix" value="solution-"/>
+				<parameter name="suffix" value=".xml"/>
+				<parameter name="formatter" value="sweep.ga.solution.SweepSolutionFormatter"/>
+			</probe>
+			
+			<probe name="dump" class="sweep.ga.probe.DumpProbe">
+				<parameter name="path" value="Data"/>
+			</probe>
+		</group>
+	</probes>
+</parameters>

@@ -1,0 +1,1 @@
+grep '<state name=' solution-best.xml | awk -F\" '{printf("sed 's/%s/X/g' | ",$2)}'  > states && chmod +x states

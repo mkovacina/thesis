@@ -1,0 +1,140 @@
+\chapter{Swarm Intelligence}
+\label{ch:SwarmIntelligence}
+
+\section{Swarm Intelligence Overview}
+
+Birds flock, fish school, slime molds aggregate.  Why is it that evolution has produced swarming in so many different contexts?  The formation of a swarm simultaneously provides the individual and the group a number of benefits arising from the synergy of interaction.  As an agent in the swarm, the potential benefits available to the individual is maximized through the efforts of the others in the swarm.  From the perspective of the swarm as an organism, the survivability of the swarm is increased through the higher-level coordination the emerges from the low-level interactions of the individuals.
+
+There are several examples in nature that exhibit the individual and group benefits of a swarm.  First, swarming provides the ability to forage more effectively.  Perhaps the best know example is the foraging behavior of ants.  Each ant searches for food, and upon finding a food source returns to the colony, emitting a pheromone trail along the way.  Other ants detect the pheromone trail and follow the trail to the food source.  In turn, they also emit the pheromone on the return trip to the colony, thus reinforcing the trail.  As a result, the trail to the closest food source is the strongest, thus without any central supervision the ant colony has located the closest food source, thus optimizing their search.  
+
+Also, there is the concept of safety in numbers.  A fish traveling in a school is much safer from predators that it would be traveling alone.  When attacked, the school can split to evade the predator.  Also, many predators will attack a solitary fish, but will be wary of large school of fish that may retaliate \emph{en masse}.  
+
+Finally, traveling as a group maximizes the distance able to be traveled.  For example, the V-shape formation observed in flocking birds is a functional formation where the flight of the lead bird reduces the drag on the rest of the flock, thus enabling the flock to travel farther as a whole.  Table \ref{tab:swarmExamples} provides other examples of swarming, including some of the other benefits of swarming for both the individual and the collective.
+
+As seen through these examples of swarming in nature, evolution and natural selection have tuned the behaviors of these swarms, enabling seemingly globally directed behaviors to emerge solely through the interactions of the individuals in the collective.  Thus, these swarms are self-organizing systems where \qw{the whole is greater than the sum of the parts.}  In order to further study the application of swarm intelligence as a problem solving technique, a formal definition of what is meant by swarm intelligence must first be established.
+
+\begin{table}[ht]
+  % Human: levee en masse, invisible hand,
+  % Biological: weaver ants, foraging, pack hunting
+  % Misc: water swirling,
+  \centering
+  \begin{tabular}{|c|l|l|l|}
+\hline
+Swarm & Behavior & Individual Benefit & Collective Benefit \\
+\hline
+Birds            & Flocking         & Reduces drag           & Maximize flock travel \\
+Fish              & Schooling      & Enhances foraging  & Defense from predators \\
+Slime Mold & Aggregating   & Survive famines       & Find food quicker \\
+Ants             & Foraging         & Enhances foraging  & Finding food faster \\
+Termites      & Nest building & Shelter                      & Climate-controlled incubator \\
+\hline
+  \end{tabular}
+  \caption{Examples of swarm intelligence that can be found throughout nature.}
+  \label{tab:swarmExamples}
+\end{table}
+
+\section{Definition of Swarm Intelligence}
+
+In order to establish a concrete definition for swarm intelligence, a working definition of \textit{agent} must be established.  For this work, an \textit{agent} is defined as an entity that is able to sense and affect its environment directly or indirectly.  A \textit{swarm} is then defined as a collection of interacting agents.  Finally, an \textit{environment} is a substrate that facilitates the functionalities of an agent through both observable and unobservable properties.  Thus, an environment provides a context for the agent and its abilities.  For example, an ocean is an environment to a fish in that it enables the fish to swim, but factors such as viscosity affect the ability of the fish to swim.
+
+With these definitions in place, a definition for swarm intelligence can be constructed.  In order to construct this definition, one must consider the definitions already existing in the field.  As noted by Bonabeau, the term \qw{swarm intelligence} was first used by Beni, Hackwood, and Wang in regards to the self-organizing behaviors of cellular robotic systems \cite{beni:CellularRoboticSystems}.  This interpretation of swarm intelligence focuses on unintelligent agents with limited processing capabilities, but possessing behaviors that collectively are intelligent.  Bonabeau \cite{bonabeau:SwarmIntelligence} extends the definition of swarm intelligence to include \qw{any attempt to design algorithms or distributed problem-solving devices inspired by the collective behavior of social insect colonies and other animal societies}.  
+
+Clough sees swarm intelligence as being related solely to a collection of simple autonomous agents that depend on local sensing and reactive behaviors to emerge global behaviors \cite{clough:SwarmingUAVs}.  Quite similarly to Clough, Payman \cite{arabshahi:SwarmIntelligence} defines swarm intelligence as the property of a system whereby the collective behaviors of unsophisticated agents interacting locally with their environment cause coherent functional global patterns to emerge.
+
+The definitions of swarm intelligence outlined here are only a few of the many varied definitions available, but from these definitions several key similarities can be extracted.  First, a swarm relies on a large number of agents.  Secondly, the power of a swarm is derived from large numbers of direct and/or indirect agent interactions, thus the need for a relatively large number of agents.  It is through the interactions of the agents that their individual behaviors are magnified, thus emerging a global level behavior for the entire swarm.  Finally, the agents in a swarm tend to be thought of as simple because the complex emergent behaviors of the swarm is beyond their capabilities and comprehension.
+%a more complex agent would be able solve the problem on their own.
+
+Based on the previously discussed definitions of swarm intelligence, we will establish a new definition of swarm intelligence that will be used for the purposes of this work.  Thus, given a group of agents considered simple relative to the observer, we define swarm intelligence 
+as
+\begin{quote}
+a group of agents whose collective interactions magnify the effects of individual agent behaviors, resulting in the manifestation of swarm level behaviors beyond the capability of a small subgroup of agents.
+\end{quote}
+
+In accord with our definition, we identify several key properties required for the emergent behaviors observed in swarms.  Foremost are large numbers of agent interactions.  These interactions create feedback, both positive and negative, which in turn affects an agent's context.  Coupled over time with changing contexts, the continued interactions among agents accumulate creating a feedback effect larger than that realized by any single agent.  This exploitation of magnified feedback pathways is the key to swarm intelligence.  Additionally, the interactions between agents not only affect the agents but also the environment.  The modification of the environment imbues the agents with an indirect means of communication known as stigmergy.
+
+In addition, randomness plays a large role in the success of a swarm algorithm.  When properly applied, random behavior can significantly reduce the size and complexity of an agent's ruleset by reducing the number of conditions that must be handled.  For example, a random walk combined with pheromone dropping serves as a much simpler and robust foraging algorithm as compared to a more complex algorithm that would need to account for the many situations that an agent in the swarm would encounter.  Of course, this reduction in choice is coupled with the loss of some precision and efficiency.  Also, randomness is an excellent way to escape from local extremum, with respect to the problem at hand, without having to resort to a case-by-case enumerative method.  Fortunately, the robust nature of a swarm compensates on a global scale for the possible misbehavior of a single agent, thus the adverse effects of random behavior are relatively small.  
+
+%Though randomness is useful as a tool, it does not appear to be a necessary component of a swarm algorithm.  A rigorous study of this conjecture is beyond the scope of this work, but it is hoped that this work will lay some of the foundation for a study of this sort in the near term.
+
+\section{Swarm Intelligence as a Problem Solving Technique}
+
+As seen through the mentioned examples of swarm intelligence, a swarm algorithm is a balance of ability and numbers.  For example, assume an arbitrary task to be completed.  On one end of the spectrum, a single complex agent capable of performing the task must possess the all the intelligence and skill required to complete the task.  This enables the agent to quickly and efficiently address the task, but at a cost of robustness and flexibility.  If any of the required components of the agent fails, the agent cannot complete the task.  Additionally, when the ability of the agent needs to be expanded, the complexity of the agent will be increased, thus possibly causing unforeseen issues and reducing the maintainability of the agent.  Finally, if the task is dynamic, a single agent may have a difficult time of keeping up with the changing environment.
+
+At the other end of the spectrum, for the same task, assume that you are given a non-homogeneous swarm of agents who collectively have the ability to accomplish the task.  The swarm contains agents with redundant abilities, thus some duplicate work will be performed but with the benefit that a malfunctioning or damaged agent does not preclude the accomplishment of the task.  Practically speaking, the complexity of each swarm agent is much less than that of the single centralized agent, thus maintenance and replication is much easier.  Finally, though swarms may not always optimally perform small or static tasks, as the size and dynamicism of a problem grow, a swarm can scale with the problem with the addition of new agents.
+
+Swarm algorithms are most useful for problems that are amenable to an agent-based decomposition, have a dynamic nature, and do not require time-limited or optimal solutions.  Many problems today are ideal candidates for swarm algorithms, including traveling salesman problems, data fusion on distributed sensor networks, network load balancing, and the coordination of large numbers of machines, i.e. cars on the highway or automatons in a factory.
+
+The concept is an enticing one: program a few simple agents to react to their limited environment, mechanically replicate the agents into a swarm and gain the ability to realize complex goals. The resulting system is flexible, robust and inexpensive. Flexibility comes through the ability of a swarm to adapt behaviors to operational contexts. The system is robust because it provides for the possibility that several agents can be lost or go rogue while the swarm still achieves its goals. In addition, the size and composition of the swarm can change over time in conjunction with evolving scenario parameters. Furthermore, this approach is also less expensive because many simple system components consume fewer resources to build and maintain than a single, centralized system. \refTable{tab:SwarmBenefits} summarizes the main benefits of swarm intelligence approach.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|m{3.25in}|}
+\hline
+\textbf{Robust} & Swarms have the ability to recover gracefully from a wide range of exceptional inputs and situations in a given environment\\
+& \\
+\textbf{Distributed and Parallel} & Swarms can simultaneously task individual agents or groups of agents to perform different behaviors in parallel\\
+& \\
+\textbf{Effort Magnification} & The feedback generated through the interactions of the agents with each other and the environment magnify the actions of the individual agents\\
+& \\
+\textbf{Simple Agents} & Each agent is programmed with a rulebase that is simple relative to the complexity of the problem\\
+& \\
+\textbf{Scalability} & An increase in problem size can be addressed by adding more agents \\
+\hline
+\end{tabular}
+\caption{Benefits of using a swarm intelligence as a problem solving technique.}
+\label{tab:SwarmBenefits}
+\end{table}
+
+%\subsection{Programming a Swarm}
+
+%Three general classes of swarm algorithms are outlined in \cite{palmer:Behavior}: indifferent, agent-critical and uniform algorithms.  In indifferent algorithms, agents act independently, having little or no ability to communicate with or alter the actions of other agents.  Though no direct communication occurs, an agent can still affect the behavior of other agents through unintentional stigmergy.  Agent-critical algorithms are based upon the collective being divided into different groups of \qw{specialists}; certain agents have greater influence over others, often in proportion to their sensor or computational capacity.  These specialized, \qw{critical} agents perform pre-defined sub-tasks designed to assist the actions of other agents.  Uniform algorithms concern collectives composed of identical individuals, each possessing similar capabilities but possibly having different sets of directives.  Uniform algorithms, therefore, require each agent to possess full sensor capabilities and a full complement of behaviors.
+
+%A wide spectrum of high-level swarm behaviors have  been defined. Several such behaviors have been abstracted as design patterns applicable for the execution of swarm algorithms. Specific design patterns that have been found useful for swarm algorithms include:
+
+%\begin{table}[ht]
+%  \centering
+%  \begin{tabular}{|c|m{3.25in}|}
+%    \hline
+%    Behavior & Description \\
+%    \hline
+%    Stigmergy & Indirect communication through the modification of the environment \\
+%	& \\
+%    Randomness & Randomized behavior can significantly reduce the complexity of agent logic in the face of local maxima and minima \\
+%	& \\
+%    Context-Aware & The ability of individual agents to follow different rule sets based upon locally observed conditions \\
+%	& \\
+%    Specialization & The ability within a collective for specific agents to perform specific tasks; as in insect societies, certain agents are ideally equipped to perform specialized roles \\
+%	& \\
+%    Knowledge-propagation & Acquiring and distributing useful information is critical for the emergence of swarm intelligence; as useful information propagates, more agents may access it as a basis for their actions \\
+%	& \\
+%    Reinforcement & Suppression of wasteful or hazardous action and the encouragement of productive behaviors \\
+%	& \\
+%    Probabilistic alternatives & Instincts enabling small perturbations in agents behaviors when no useful behaviors are available \\
+%    \hline
+%  \end{tabular} 
+%\end{table}
+
+%Note that these patterns are all not necessarily compatible with each other, nor do all mesh with every type of swarm algorithm. The enumeration of these primitives is not intended to represent multiple facets of a single approach, but correspond to flexible sets of parameters designed to provide potential components of several different approaches. Although this set is by no means exhaustive, the behaviors described here are general, and may be applied to a wide spectrum of scenarios
+
+\section{Applications of Swarm Intelligence}
+
+Many real-world problems are amenable to a swarm intelligence approach.  Specifically, the areas of computer graphics, schduling, and networking have leveraged swarm methodologies to create scalble, robust, and elegant solutions to complex, challengening problems.  This section presents a summary of some of these real-world applications of swarm intelligence.  
+
+\paragraph{Computer Animation\\}
+Boids are simulated flocking creatures created by Craig Reynolds to model the coordinated behaviors bird flocks and fish schools \cite{reynolds87flocks}.  The basic flocking model consists of three simple steering behaviors that describe how an individual boid maneuvers based on the positions and velocities its neighboring boids: separation, alignment, and cohesion.  The separation behavior steers a boid to avoid crowding its local flockmates.  The alignment behavior steers a boid towards the average heading of its local flockmates.  The cohesion behavior steers a boid to move toward the average position of its local flockmates.  These three steering behaviors, using only information sensed from other nearby boids, allowed Reynolds to produce realistic flocking behaviors.  The first commercial application of the boid model appeared in the movie \textit{Batman Returns}, in which flock of bats and colonies of penguins were simulated.
+
+While boids modeled the flocking behaviors of simple flying creatures, Massive is able to generate lifelike crowd scenes with thousands of individual \qw{actors} using agent-based aritificial life technolgoy.   Agents in Massive have vision, hearing, and touch sensing capabilities,  allowing them to respond naturally to their environment.  The intelligence for the agents is a combination of fuzzy logic, reactive behaviors, and rule-based programming.  Currently, Massive is the premier 3D animation system for generating crowd-related visual effects for film and television.   Most notably, Massive was used to create many of the dramatic battle scenes in the \textit{Lord of the Rings} trilogy.
+
+\paragraph{Scheduling\\}
+One of the emergent behaviors that can arises through swarm intelligence is that of task assignment.  One of the better know examples of task assignment within an insect society is with honey bees.  For example, typically older bees forage for food, but in times of famine, younger bees will also be recruited for foraging to increase the probability of find a viable food source.  Using such a biological system as a model, Michael Campos of Northwestern University devised a technique for scheduling paint booths in a truck factory that paint trucks as they roll off the assembly line \cite{bonabeau:SwarmSmarts}.  Each paint booth is modeled as an artificial bee that specializes in painting one specific color.  The booths have the ability to change their color, but the process is costly and time-consuming.  
+
+The basic rule used to manage the division of labor states that a specialized paint booth will continue to paint its color unless it percieves an important need to switch colors and incur the related penalties.  For example, if an urgent job for white paint occurs and the queues for the white paint booths are significant, a green paint booth will switch to white to handle the current job.  This has a two-fold benefit in that first the urgent job is handled in an acceptable amount of time, and second, the addition of a new white paint booth can alleviate the long queues at the other white paint booths.
+
+The paint scheduling system has been used successfully, resulting in a lower number of color switches and a higher level of efficiency.  Also, the method is responsive to changes in demand and can easily cope with paint booth breakdowns.
+
+\paragraph{Network Routing\\}
+Perhaps the best know, and most widely applied, swarm intelligence example found in nature is that of the foraging capabilites of ants.  Given multiple food sources around a nest, through stigmergy and random walking, the ants will locate the nearest food source (shortest path) without any global coordination.  The ants use pheromone trails to indicate to other ants the location of a food source; the stronger the pheronome, the closer the source.  Through a simple gradient following behavior, the shortest path to a food source emerges.
+
+Di Caro and Dorigo \cite{caro-antnet} used the biological-inspiration derived from the ant foraging to develop AntNet, an ant colony based algorithm in which sets of artificial ant move over a graph that represents a data network.  Each ant constructs a path from a source to a destination, along the way collecting information about the total time and the network load.  This information is then shared with other ants in the local area.  Di~Caro and Dorigo have shown that AntNet was able to outperform static and adaptive vector-distance and link-state shortest path routing algorithms, especially with respect to heavy network loads.
+
+The success of swarm-inspired network routing algorithms such as AntNet have encouraged many in the communications industry to explore ant colony approaches to network optimization.  For example, British Telecom has applied concepts from ant foraging to the problem of load balancing and message routing in telecommunications networks.  Their network model is populated by agents, which in this case are modeled as artificial ants.  The ants deposit pheromone on each node traversed on their trip through the network, thus populating a routing table with current information.  Call routing is then decided based on these routing tables.  

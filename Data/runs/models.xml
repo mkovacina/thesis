@@ -1,0 +1,396 @@
+
+<models>
+	<model name="avatar" class="grid.model.GridAvatar">
+		<builder class="standard.model.ModelBuilder"/>
+		
+		<!-- attributes define model parameters -->
+		<attributes>
+			<!-- Basic attributes -->
+			<attribute name="empty" value="0"/>
+			<attribute name="environment" value="world"/>
+			<attribute name="holdingGarbage" value="false"/>
+			
+			
+			<!-- Parameters for garbage actions/sensors -->
+			<attribute name="garbage.grid" value="world"/>
+			<attribute name="garbage.value" value="1"/>
+			<attribute name="garbage.downvalue" value="6"/>
+			<attribute name="garbage.range.on" value="0"/>
+			<attribute name="garbage.range.near" value="5"/>
+
+			<!-- Paramters for mine actions/sensors -->
+			<attribute name="mine.grid" value="world"/>
+			<attribute name="mine.value.armed" value="4"/>
+			<attribute name="mine.value.partial" value="3"/>
+			<attribute name="mine.value.disarmed" value="2"/>
+			<attribute name="mine.range.on" value="0"/>
+			<attribute name="mine.range.near" value="5"/>
+		</attributes>
+		
+		<!-- define available sensors -->
+		<sensors>
+			<!-- Sensor: true when on a piece of garbage -->
+			<sensor name="on-garbage" class="grid.model.sensor.FilteredValueSensor">
+				<attributes>
+					<attribute name="environment" value="garbage.grid"/>
+					<attribute name="range" value="garbage.range.on"/>
+					<attribute name="targetValue" value="garbage.value"/>
+				</attributes>
+			</sensor>
+			
+			<!-- Sensor: true when in range of garbage -->
+			<!--
+			<sensor name="near-garbage" class="grid.model.sensor.FilteredValueSensor">
+				<attributes>
+					<attribute name="environment" value="garbage.grid"/>
+					<attribute name="range" value="garbage.range.near"/>
+					<attribute name="targetValue" value="garbage.value"/>
+					<attribute name="varName" value="garbage.location"/>
+				</attributes>
+			</sensor>
+			-->
+
+			<!-- Sensor: true when holding garbage -->
+			<sensor name="holding-garbage" class="sweep.model.sensor.InternalBooleanSensor">
+				<attributes>
+					<attribute name="attrName" value="holdingGarbage"/>
+				</attributes>
+			</sensor>
+
+			<!-- Sensor: true when on a any mine -->
+			<sensor name="on-mine" class="grid.model.sensor.FilteredValueSensor">
+				<attributes>
+					<attribute name="environment" value="mine.grid"/>
+					<attribute name="range" value="mine.range.on"/>
+					<attribute name="targetValue" value="mine.value.armed,mine.value.partial"/>
+				</attributes>
+			</sensor>
+			
+			<!-- Sensor: true when on a fully armed mine -->
+			<sensor name="on-armed-mine" class="grid.model.sensor.FilteredValueSensor">
+				<attributes>
+					<attribute name="environment" value="mine.grid"/>
+					<attribute name="range" value="mine.range.on"/>
+					<attribute name="targetValue" value="mine.value.armed"/>
+				</attributes>
+			</sensor>
+
+			<!-- Sensor: true when on a partially disarmed mine -->
+			<sensor name="on-partially-disarmed-mine" class="grid.model.sensor.FilteredValueSensor">
+				<attributes>
+					<attribute name="environment" value="mine.grid"/>
+					<attribute name="range" value="mine.range.on"/>
+					<attribute name="targetValue" value="mine.value.partial"/>
+				</attributes>
+			</sensor>
+			
+			<!-- Sensor: true when on the dumpster -->
+			<sensor name="on-dumpster" class="grid.model.sensor.LocationSensor">
+				<attributes>
+					<attribute name="environment" value="garbage.grid"/>
+					<attribute name="location" value="const:10,10"/>
+				</attributes>
+			</sensor>
+			
+			<!-- Sensor: true when near a (fully|partially) armed mine -->
+			<sensor name="near-mine" class="grid.model.sensor.FilteredValueSensor">
+				<attributes>
+					<attribute name="environment" value="mine.grid"/>
+					<attribute name="range" value="mine.range.near"/>
+					<attribute name="targetValue" value="mine.value.armed,mine.value.partial"/>
+					<attribute name="varName" value="mine.location"/>
+				</attributes>
+			</sensor>
+
+
+			<!-- Sensor: true when near a garbage or have a garbage message -->
+			<sensor name="near-garbage" class="object.NearObjectSensor">
+				<attributes>
+					<attribute name="environment" value="garbage.grid"/>
+					<attribute name="range" value="garbage.range.near"/>
+					<attribute name="targetValue" value="garbage.value"/>
+					<attribute name="varName" value="garbage.location"/>
+					<attribute name="source" value="global:messages"/>
+				</attributes>
+			</sensor>
+			
+			<!-- Sensor: true when there is a garbage message -->
+			<!--
+			<sensor name="garbage-message" class="object.MessageSensor">
+				<attributes>
+					<attribute name="source" value="global:messages"/>
+					<attribute name="varName" value="garbage.message"/>
+				</attributes>
+			</sensor>
+			-->
+		</sensors>
+		
+		<actions>
+			<!-- Action: if on a piece of garbage, pick it up -->
+			<action name="pick-up-garbage" builder="sweep.model.action.ConditionalActionBuilder">
+				<if>
+					<condition sensor="on-garbage" value="true"/>
+					<condition state="holdingGarbage" value="false"/>
+					<then>
+						<action name="pick-up-garbage-helper"/>
+						<action name="set-holding-garbage"/>
+						<action name="increment-correct"/>
+						<action name="increment-pickup-counter"/>
+					</then>
+					<else>
+						<action name="increment-error"/>
+					</else>
+				</if>
+			</action>
+
+			<!-- Action: if holding garbage and on dumpster, put it down -->
+			<action name="put-down-garbage" builder="sweep.model.action.ConditionalActionBuilder">
+				<if>
+					<condition sensor="on-dumpster" value="true"/>
+					<condition state="holdingGarbage" value="true"/>
+					<then>
+						<action name="reset-holding-garbage"/>
+						<action name="increment-garbage-count"/>
+						<action name="increment-correct"/>
+					</then>
+					<else>
+						<action name="increment-error"/>
+					</else>
+				</if>
+			</action>
+			
+			<!-- Action: pick up a piece of garbage -->
+			<action name="pick-up-garbage-helper" class="grid.model.action.SetAction">
+				<attributes>
+					<attribute name="environment" value="garbage.grid"/>
+					<attribute name="value" value="empty"/>
+				</attributes>
+			</action>
+
+			<!-- Action: set the holding garbage flag -->
+			<action name="set-holding-garbage" class="sweep.model.action.SetStateVariableAction">
+				<attributes>
+					<attribute name="flag" value="holdingGarbage"/>
+					<attribute name="value" value="true"/>
+				</attributes>
+			</action>
+				
+			<!-- Action: reset the holding garbage flag -->
+			<action name="reset-holding-garbage" class="sweep.model.action.SetStateVariableAction">
+				<attributes>
+					<attribute name="flag" value="holdingGarbage"/>
+					<attribute name="value" value="false"/>
+				</attributes>
+			</action>
+			
+			<!-- Action: if on a mine, disarm the first stage -->
+			<action name="disarm-mine-stage-1" builder="sweep.model.action.ConditionalActionBuilder">
+				<if>
+					<condition sensor="on-armed-mine" value="true"/>
+					<then>
+						<action name="disarm-mine-stage-1-helper"/>
+						<action name="set-disarmed-phase-1"/>
+						<action name="disable-agent"/>
+						<action name="increment-correct"/>
+					</then>
+					<else>
+						<action name="disable-agent"/>
+						<action name="increment-error"/>
+					</else>
+				</if>
+			</action>
+
+			<!-- Action: if on a mine, disarm the second stage -->
+			<action name="disarm-mine-stage-2" builder="sweep.model.action.ConditionalActionBuilder">
+				<if>
+					<condition sensor="on-partially-disarmed-mine" value="true"/>
+					<then>
+						<action name="disarm-mine-stage-2-helper"/>
+						<action name="set-disarmed-phase-2"/>
+						<action name="disable-agent"/>
+						<action name="increment-correct"/>
+					</then>
+					<else>
+						<action name="disable-agent"/>
+						<action name="increment-error"/>
+					</else>
+				</if>
+			</action>
+			
+			<!-- Action: First stage of disarming the mine -->
+			<action name="disarm-mine-stage-1-helper" class="grid.model.action.SetAction">
+				<attributes>
+					<attribute name="environment" value="mine.grid"/>
+					<attribute name="value" value="mine.value.partial"/>
+				</attributes>
+			</action>
+
+			<!-- Action: Second stage of disarming the mine -->
+			<action name="disarm-mine-stage-2-helper" class="grid.model.action.SetAction">
+				<attributes>
+					<attribute name="environment" value="mine.grid"/>
+					<attribute name="value" value="mine.value.disarmed"/>
+				</attributes>
+			</action>
+			
+			<!-- Action: disable the agent for the rest of the sim -->
+			<action name="disable-agent" class="sweep.model.action.DisableAction"/>
+			
+			<!-- Action: move in a random direction -->
+			<action name="move-random" class="grid.model.action.MoveRandomAction">
+				<attributes>
+					<attribute name="environment" value="environment"/>
+				</attributes>
+			</action>
+
+			<!-- Action: move towards the dumpster if the sensor condidition is correct -->
+			<action name="move-towards-dumpster" builder="sweep.model.action.ConditionalActionBuilder">
+				<if>
+					<condition sensor="holding-garbage" value="true"/>
+					<condition sensor="on-dumpster" value="false"/>
+					<then>
+						<action name="move-towards-dumpster-helper"/>
+						<action name="increment-correct"/>
+					</then>
+					<else>
+						<action name="increment-error"/>
+					</else>
+				</if>
+			</action>
+			
+			<!-- Action: move towards the dumpster -->
+			<action name="move-towards-dumpster-helper" class="grid.model.action.MoveTowardsAction">
+				<attributes>
+					<attribute name="environment" value="garbage.grid"/>
+					<attribute name="location" value="const:10,10"/>
+				</attributes>
+			</action>
+			
+			<!-- Action: move towards the closest piece of garbage if sensors are active -->
+			<action name="move-towards-garbage" builder="sweep.model.action.ConditionalActionBuilder">
+				<if>
+					<condition sensor="on-garbage" value="false"/>
+					<condition sensor="near-garbage" value="true"/>
+					<then>
+						<action name="move-towards-garbage-helper"/>
+						<action name="increment-correct"/>
+					</then>
+					<else>
+						<action name="increment-error"/>
+					</else>
+				</if>
+			</action>
+			
+			<!-- Action: move towards the closest piece of garbage -->
+			<action name="move-towards-garbage-helper" class="grid.model.action.MoveTowardsAction">
+				<attributes>
+					<attribute name="environment" value="garbage.grid"/>
+					<attribute name="location" value="av:garbage.location"/>
+				</attributes>
+			</action>
+			
+			<!-- Action: move towards the closest mine if sensors are correct -->
+			<action name="move-towards-mine" builder="sweep.model.action.ConditionalActionBuilder">
+				<if>
+					<condition sensor="on-mine" value="false"/>
+					<condition sensor="near-mine" value="true"/>
+					<then>
+						<action name="move-towards-mine-helper"/>
+						<action name="increment-correct"/>
+					</then>
+					<else>
+						<action name="increment-error"/>
+					</else>
+				</if>
+			</action>
+
+			<!-- Action: move towards the closest mine -->
+			<action name="move-towards-mine-helper" class="grid.model.action.MoveTowardsAction">
+				<attributes>
+					<attribute name="environment" value="mine.grid"/>
+					<attribute name="location" value="av:mine.location"/>
+				</attributes>
+			</action>
+
+			<!-- Action: broadcast the location of a nearby garbage object -->
+			<action name="broadcast-garbage" class="object.BroadcastAction">
+				<attributes>
+					<attribute name="sensor-value" value="av:garbage.location"/>
+				</attributes>
+			</action>
+			
+			<!-- Action: broadcast the location of a nearby garbage object -->
+			<action name="broadcast-mine" class="object.BroadcastAction">
+				<attributes>
+					<attribute name="sensor-value" value="av:mine.location"/>
+				</attributes>
+			</action>
+
+			<!-- Action: follow a garbage message broadcast -->
+			<!--
+			<action name="follow-garbage-message" class="grid.model.action.MoveTowardsAction">
+				<attributes>
+					<attribute name="environment" value="garbage.grid"/>
+					<attribute name="location" value="av:garbage.message"/>
+				</attributes>
+			</action>
+			-->
+			
+							
+			<action name="default-action" builder="sweep.model.action.MultiActionBuilder">
+				<sub-action name="move-random"/>
+				<sub-action name="increment-error"/>
+			</action>
+							
+			<action name="no-op" class="sweep.model.action.NoOpAction"/>
+
+
+			
+			<!-- Action: increment the pick-up counter -->
+			<action name="increment-pickup-counter" class="sweep.model.action.IncrementCounterAction">
+				<attributes>
+					<attribute name="name" value="global:pickup"/>
+				</attributes>
+			</action>
+			
+			<!-- Action: increment the garbage count -->
+			<action name="increment-garbage-count" class="sweep.model.action.IncrementCounterAction">
+				<attributes>
+					<attribute name="name" value="global:garbage"/>
+				</attributes>
+			</action>
+			
+			<!-- Action: set the phase 1 disarming flag -->
+			<action name="set-disarmed-phase-1" class="sweep.model.action.IncrementCounterAction">
+				<attributes>
+					<attribute name="name" value="global:disarm-phase-1"/>
+				</attributes>
+			</action>
+
+			<!-- Action: set the phase 2 disarming flag -->
+			<action name="set-disarmed-phase-2" class="sweep.model.action.IncrementCounterAction">
+				<attributes>
+					<attribute name="name" value="global:disarm-phase-2"/>
+				</attributes>
+			</action>
+			
+			<!-- Action: increment the error counter -->
+			<action name="increment-error" class="sweep.model.action.DecrementCounterAction">
+				<attributes>
+					<attribute name="name" value="global:error"/>
+				</attributes>
+			</action>
+
+			<!-- Action: increment the coorect counter -->
+			<action name="increment-correct" class="sweep.model.action.IncrementCounterAction">
+				<attributes>
+					<attribute name="name" value="global:correct"/>
+				</attributes>
+			</action>
+		</actions>
+						
+		<initializers>
+			<initializer name="random-placement" class="grid.model.RandomPlacementInitializer"/>
+		</initializers>
+	</model>
+</models>

@@ -1,0 +1,94 @@
+<html>
+              <!-- This panel generated from the developerWorks XML tag set for tutorials, Version 3.0.2.  (C) Copyright 2000, 2002 IBM Corporation.  All rights reserved. -->
+            <head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Example SWEEP Simulation</title></head><body vlink="663366" alink="330000" text="000000" bgcolor="ffffff"><script language="javascript">
+<!-- 
+var emailAbstract="A reference tutorial for the SWEEP swarm development platform";
+var justTitle="";
+var tutorialPrereqs="";
+var menu1blurb="Example SWEEP Simulation"; 
+var menu2blurb="End Notes"; 
+
+      var browser = "x";
+      if (navigator.userAgent.indexOf("Mozilla/4") != -1) browser = "N3";
+      else if (navigator.userAgent.indexOf("Mozilla/3") != -1) browser = "N3";
+      else browser = "x";
+      
+      if (browser=="N3")
+      {
+    var menu1over=new Image(108,68); 
+var menu1out=new Image(108,68); 
+var menu2over=new Image(108,68); 
+var menu2out=new Image(108,68); 
+
+        var topmainover=new Image(77,15);
+        var topmainout=new Image(77,15);
+        var bottommainover=new Image(77,15);
+        var bottommainout=new Image(77,15);
+        var topsectionover=new Image(98,15);
+        var topsectionout=new Image(98,15);
+        var bottomsectionover=new Image(98,15);
+        var bottomsectionout=new Image(98,15);
+        var topfeedbackover=new Image(80,15);
+        var topfeedbackout=new Image(80,15);
+        var bottomfeedbackover=new Image(80,15);
+        var bottomfeedbackout=new Image(80,15);
+        var toppreviousover=new Image(77,15);
+        var toppreviousout=new Image(77,15);
+        var bottompreviousover=new Image(77,15);
+        var bottompreviousout=new Image(77,15);
+        var topnextover=new Image(60,15);
+        var topnextout=new Image(60,15);
+        var bottomnextover=new Image(60,15);
+        var bottomnextout=new Image(60,15);
+        var topnextsectionover=new Image(108,15);
+        var topnextsectionout=new Image(108,15);
+        var bottomnextsectionover=new Image(108,15);
+        var bottomnextsectionout=new Image(108,15);
+      
+    menu1over.src="imagemaster/himenu1.jpg"; 
+menu1out.src="imagemaster/menu1.jpg"; 
+menu2over.src="imagemaster/himenu2.jpg"; 
+menu2out.src="imagemaster/menu2.jpg"; 
+
+        var mainblurb="Main menu";
+        var sectionblurb="Section menu";
+        var feedbackblurb="Give feedback on this tutorial";
+        var previousblurb="Go to previous panel";
+        var nextblurb="Go to next panel";
+        var nextsectionblurb="Go to next section";
+
+      topmainover.src="../default/i/h-main.gif";
+      topmainout.src="../default/i/main.gif";
+      bottommainover.src="../default/i/h-main.gif";
+      bottommainout.src="../default/i/main.gif";
+      topsectionover.src="../default/i/h-section.gif";
+      topsectionout.src="../default/i/section.gif";      
+      bottomsectionover.src="../default/i/h-section.gif";
+      bottomsectionout.src="../default/i/section.gif";      
+      topfeedbackover.src="../default/i/h-feedback.gif";
+      topfeedbackout.src="../default/i/feedback.gif";
+      bottomfeedbackover.src="../default/i/h-feedback.gif";
+      bottomfeedbackout.src="../default/i/feedback.gif";
+      toppreviousover.src="../default/i/h-previous.gif";
+      toppreviousout.src="../default/i/previous.gif";
+      bottompreviousover.src="../default/i/h-previous.gif";
+      bottompreviousout.src="../default/i/previous.gif";
+      topnextover.src="../default/i/h-next.gif";
+      topnextout.src="../default/i/next.gif";
+      bottomnextover.src="../default/i/h-next.gif";
+      bottomnextout.src="../default/i/next.gif";
+      topnextsectionout.src="../default/i/nextsection.gif";
+      topnextsectionover.src="../default/i/h-nextsection.gif";
+      bottomnextsectionout.src="../default/i/nextsection.gif";
+      bottomnextsectionover.src="../default/i/h-nextsection.gif";
+      }
+      function iOut(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "out.src");
+      }
+      function iOver(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "over.src");
+      }
+      // -->
+    </script><script src="../default/i/emailfriend.js" language="javascript"></script><a href="#navskip"><img border="0" alt="Skip to main content" src="../default/i/c.gif"></a><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><img src="imagemaster/masthead.jpg" alt=""></td><td width="*" valign="bottom" align="right"><a border="0" href="doc.zip"><img alt="ZIP" border="0" src="../default/i/icon-zip.gif"></a><a border="0" href="doc-ltr.pdf"><img alt="PDF (letter)" border="0" src="../default/i/icon-pdf-ltr.gif"></a><a border="0" href="doc-a4.pdf"><img alt="PDF (A4)" border="0" src="../default/i/icon-pdf-a4.gif"></a><a href="javascript:newWindow()" border="0"><img alt="e-mail" border="0" src="../default/i/icon-email.gif"></a></td></tr><tr><td height="2" colspan="2"><img height="2" width="1" src="../default/i/c.gif"></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td width="150" height="1" bgcolor="#000000" colspan="6"><img alt="" height="1" width="150" src="../default/i/c.gif"></td></tr><tr><td background="../default/i/sw-gold.gif"><a border="0" href="index.html" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;"><img alt="Main menu" border="0" src="../default/i/main.gif" name="topmain"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topsection'); iOver('bottomsection'); self.status=sectionblurb; return true;" onMouseOut="iOut('topsection'); iOut('bottomsection'); self.status=''; return true;" href="index1.html"><img alt="Section menu" border="0" src="../default/i/section.gif" name="topsection"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topfeedback'); iOver('bottomfeedback'); self.status=feedbackblurb; return true;" onMouseOut="iOut('topfeedback'); iOut('bottomfeedback'); self.status=''; return true;" href="index.html"><img alt="Feedback" border="0" src="../default/i/feedback.gif" name="topfeedback"></a></td><td width="100%" background="../default/i/sw-gold.gif"><img src="../default/i/c.gif"></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="doc-1-6.html"><img alt="Previous" border="0" src="../default/i/previous.gif" name="topprevious"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="doc-1-8.html"><img alt="Next" border="0" src="../default/i/next.gif" name="topnext"></a></td></tr></table><table bgcolor="ffffff" cellspacing="0" cellpadding="2" border="0" height="400" width="100%"><tr valign="bottom"><td height="25" colspan="4"><img border="0" height="25" width="562" src="imagemaster/titlebar1.jpg" alt="1. Example SWEEP Simulation"></td></tr><tr><td bgcolor="ffffff" width="15">&nbsp;</td><td bgcolor="ffffff" width="12">&nbsp;</td><td valign="top" align="left" bgcolor="ffffff" width="*"><p><br><table cellspacing="0" cellpadding="0" border="0"><tr><td width="90%"><font size="4" face="Verdana, Arial, sans-serif"><b>&lt;Agent&gt; and &lt;Info&gt;</b></font></td><td width="200" align="right"><font size="1" face="Verdana, Arial, sans-serif"><nobr>    page 7 of 10</nobr></font></td></tr></table><br><br></p><font size="2" face="Verdana, Arial, sans-serif"><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">The sections <i>&lt;Agent&gt;</i> and <i>&lt;Info&gt;</i> are not currently used in this version of SWEEP.</p><br></font></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td background="../default/i/sw-gold.gif"><a border="0" href="index.html" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;"><img alt="Main menu" border="0" src="../default/i/main.gif" name="bottommain"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topsection'); iOver('bottomsection'); self.status=sectionblurb; return true;" onMouseOut="iOut('topsection'); iOut('bottomsection'); self.status=''; return true;" href="index1.html"><img alt="Section menu" border="0" src="../default/i/section.gif" name="bottomsection"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topfeedback'); iOver('bottomfeedback'); self.status=feedbackblurb; return true;" onMouseOut="iOut('topfeedback'); iOut('bottomfeedback'); self.status=''; return true;" href="index.html"><img alt="Feedback" border="0" src="../default/i/feedback.gif" name="bottomfeedback"></a></td><td width="100%" background="../default/i/sw-gold.gif"><img src="../default/i/c.gif"></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="doc-1-6.html"><img alt="Previous" border="0" src="../default/i/previous.gif" name="bottomprevious"></a></td><td background="../default/i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="doc-1-8.html"><img alt="Next" border="0" src="../default/i/next.gif" name="bottomnext"></a></td></tr><tr><td width="150" height="1" bgcolor="#000000" colspan="6"><img alt="" height="1" width="150" src="../default/i/c.gif"></td></tr></table></body></html>

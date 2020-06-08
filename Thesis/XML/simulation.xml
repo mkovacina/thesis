@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<simulation builder="standard.simulation.SimulationBuilder">
+  <main>
+    <info name="about" type="info-type1"/>
+    <swarm name="my-swarm-A" type="swarm-A">
+      <entity type="swarm-A-entity" number="10"/>
+    </swarm>
+    <swarm name="my-swarm-B" type="swarm-B">
+      <entity type="swarm-B-entity" number="10"/>
+    </swarm>
+<!-- should be able to override environment attributes here too -->
+    <environment name="world" type="world"/>
+    <probe name="probe" type="terminator"/>
+    <probe name="summary" type="summarizer"/>
+  </main>
+  <environments>
+    <environment name="world">
+      <builder class="standard.environment.EnvironmentBuilder"/>
+      <model class="grid.environment.SafeGridModel">
+        <attributes>
+          <attribute name="rows" value="50"/>
+          <attribute name="cols" value="50"/>
+        </attributes>
+        <initializers>
+          <initializer class="grid.environment.RandomInitialization">
+            <builder class="grid.environment.RandomInitializationBuilder"/>
+            <seed value="3141592654"/>
+<!-- Garbage Object-->
+            <object value="1" number="50"/>
+<!-- Mine Object -->
+            <object value="4" number="10"/>
+          </initializer>
+        </initializers>
+        <updates/>
+      </model>
+    </environment>
+  </environments>
+  <models>
+    <model name="avatar" class="grid.model.GridAvatar">
+      <builder class="standard.model.ModelBuilder"/>
+<!-- attributes define model parameters -->
+      <attributes>
+<!-- Basic attributes -->
+        <attribute name="empty" value="0"/>
+        <attribute name="environment" value="world"/>
+        <attribute name="holdingGarbage" value="false"/>
+<!-- Parameters for garbage actions/sensors -->
+        <attribute name="garbage.grid" value="world"/>
+        <attribute name="garbage.value" value="1"/>
+        <attribute name="garbage.downvalue" value="6"/>
+        <attribute name="garbage.range.on" value="0"/>
+        <attribute name="garbage.range.near" value="5"/>
+<!-- Paramters for mine actions/sensors -->
+        <attribute name="mine.grid" value="world"/>
+        <attribute name="mine.value.armed" value="4"/>
+        <attribute name="mine.value.partial" value="3"/>
+        <attribute name="mine.value.disarmed" value="2"/>
+        <attribute name="mine.range.on" value="0"/>
+        <attribute name="mine.range.near" value="5"/>
+      </attributes>
+<!-- define available sensors -->
+      <sensors>
+<!-- Sensor: true when on a piece of garbage -->
+        <sensor name="on-garbage" class="grid.model.sensor.FilteredValueSensor">
+          <attributes>
+            <attribute name="environment" value="garbage.grid"/>
+            <attribute name="range" value="garbage.range.on"/>
+            <attribute name="targetValue" value="garbage.value"/>
+          </attributes>
+        </sensor>
+<!-- Sensor: true when in range of garbage -->
+        <sensor name="near-garbage" class="grid.model.sensor.FilteredValueSensor">
+          <attributes>
+            <attribute name="environment" value="garbage.grid"/>
+            <attribute name="range" value="garbage.range.near"/>
+            <attribute name="targetValue" value="garbage.value"/>
+            <attribute name="varName" value="garbage.location"/>
+          </attributes>
+        </sensor>
+<!-- Sensor: true when holding garbage -->
+        <sensor name="holding-garbage" class="sweep.model.sensor.InternalBooleanSensor">
+          <attributes>
+            <attribute name="attrName" value="holdingGarbage"/>
+          </attributes>
+        </sensor>
+<!-- Sensor: true when on a fully armed mine -->
+        <sensor name="on-armed-mine" class="grid.model.sensor.FilteredValueSensor">
+          <attributes>
+            <attribute name="environment" value="mine.grid"/>
+            <attribute name="range" value="mine.range.on"/>
+            <attribute name="targetValue" value="mine.value.armed"/>
+          </attributes>
+        </sensor>
+<!-- Sensor: true when on a partially disarmed mine -->
+        <sensor name="on-partially-disarmed-mine" class="grid.model.sensor.FilteredValueSensor">
+          <attributes>
+            <attribute name="environment" value="mine.grid"/>
+            <attribute name="range" value="mine.range.on"/>
+            <attribute name="targetValue" value="mine.value.partial"/>
+          </attributes>
+        </sensor>
+<!-- Sensor: true when on the dumpster -->
+        <sensor name="on-dumpster" class="grid.model.sensor.LocationSensor">
+          <attributes>
+            <attribute name="environment" value="garbage.grid"/>
+            <attribute name="location" value="const:10,10"/>
+          </attributes>
+        </sensor>
+<!-- Sensor: true when near a (fully|partially) armed mine -->
+        <sensor name="near-mine" class="grid.model.sensor.FilteredValueSensor">
+          <attributes>
+            <attribute name="environment" value="mine.grid"/>
+            <attribute name="range" value="mine.range.near"/>
+            <attribute name="targetValue" value="mine.value.armed,mine.value.partial"/>
+            <attribute name="varName" value="mine.location"/>
+          </attributes>
+        </sensor>
+      </sensors>
+      <actions>
+<!-- Action: if on a piece of garbage, pick it up -->
+        <action name="pick-up-garbage" builder="sweep.model.action.ConditionalActionBuilder">
+          <if>
+            <condition sensor="on-garbage" value="true"/>
+            <condition state="holdingGarbage" value="false"/>
+            <then>
+              <action name="pick-up-garbage-helper"/>
+              <action name="set-holding-garbage"/>
+            </then>
+          </if>
+        </action>
+<!-- Action: if holding garbage and on dumpster, put it down -->
+        <action name="put-down-garbage" builder="sweep.model.action.ConditionalActionBuilder">
+          <if>
+            <condition sensor="on-dumpster" value="true"/>
+            <condition state="holdingGarbage" value="true"/>
+            <then>
+<!--<action name="put-down-garbage-helper"/>-->
+              <action name="reset-holding-garbage"/>
+              <action name="increment-garbage-count"/>
+            </then>
+          </if>
+        </action>
+<!-- Action: pick up a piece of garbage -->
+        <action name="pick-up-garbage-helper" class="grid.model.action.SetAction">
+          <attributes>
+            <attribute name="environment" value="garbage.grid"/>
+            <attribute name="value" value="empty"/>
+          </attributes>
+        </action>
+<!-- Action: put down a piece of garbage -->
+        <action name="put-down-garbage-helper" class="grid.model.action.SetAction">
+          <attributes>
+            <attribute name="environment" value="garbage.grid"/>
+            <attribute name="value" value="garbage.downvalue"/>
+          </attributes>
+        </action>
+<!-- Action: set the holding garbage flag -->
+        <action name="set-holding-garbage" class="sweep.model.action.SetStateVariableAction">
+          <attributes>
+            <attribute name="flag" value="holdingGarbage"/>
+            <attribute name="value" value="true"/>
+          </attributes>
+        </action>
+<!-- Action: reset the holding garbage flag -->
+        <action name="reset-holding-garbage" class="sweep.model.action.SetStateVariableAction">
+          <attributes>
+            <attribute name="flag" value="holdingGarbage"/>
+            <attribute name="value" value="false"/>
+          </attributes>
+        </action>
+<!-- Action: increment the garbage count -->
+        <action name="increment-garbage-count" class="sweep.model.action.IncrementCounterAction">
+          <attributes>
+            <attribute name="name" value="garbage-counter"/>
+          </attributes>
+        </action>
+<!-- Action: if on a mine, disarm the first stage -->
+        <action name="disarm-mine-stage-1" builder="sweep.model.action.ConditionalActionBuilder">
+          <if>
+            <condition sensor="on-armed-mined" value="true"/>
+            <then>
+              <action name="disarm-mine-stage-1-helper"/>
+              <action name="set-disarmed-phase-1"/>
+              <action name="disable-agent"/>
+            </then>
+          </if>
+        </action>
+<!-- Action: if on a mine, disarm the second stage -->
+        <action name="disarm-mine-stage-2" builder="sweep.model.action.ConditionalActionBuilder">
+          <if>
+            <condition sensor="on-partial-mine" value="true"/>
+            <then>
+              <action name="disarm-mine-stage-2-helper"/>
+              <action name="set-disarmed-phase-2"/>
+              <action name="disable-agent"/>
+            </then>
+          </if>
+        </action>
+<!-- Action: First stage of disarming the mine -->
+        <action name="disarm-mine-stage-1-helper" class="grid.model.action.SetAction">
+          <attributes>
+            <attribute name="environment" value="mine.grid"/>
+            <attribute name="value" value="mine.value.partial"/>
+          </attributes>
+        </action>
+<!-- Action: Second stage of disarming the mine -->
+        <action name="disarm-mine-stage-2-helper" class="grid.model.action.SetAction">
+          <attributes>
+            <attribute name="environment" value="mine.grid"/>
+            <attribute name="value" value="mine.value.disarmed"/>
+          </attributes>
+        </action>
+<!-- Action: set the phase 1 disarming flag -->
+        <action name="set-disarmed-phase-1" class="sweep.model.action.IncrementCounterAction">
+          <attributes>
+            <attribute name="name" value="disarmed-phase-1"/>
+          </attributes>
+        </action>
+<!--
+	  <action name="set-disarmed-phase-1" class="sweep.model.action.SetStateVariableAction">
+	  <attributes>
+	  <attribute name="flag" value="disarmed-phase-1"/>
+	  <attribute name="value" value="true"/>
+	</attributes>
+	</action>  -->
+<!-- Action: set the phase 2 disarming flag -->
+        <action name="set-disarmed-phase-2" class="sweep.model.action.IncrementCounterAction">
+          <attributes>
+            <attribute name="name" value="disarmed-phase-2"/>
+          </attributes>
+        </action>
+<!--
+	  <action name="set-disarmed-phase-2" class="sweep.model.action.SetStateVariableAction">
+	  <attributes>
+	  <attribute name="flag" value="disarmed-phase-2"/>
+	  <attribute name="value" value="true"/>
+	</attributes>
+	</action>-->
+<!-- Action: disable the agent for the rest of the sim -->
+        <action name="disable-agent" class="sweep.model.action.DisableAction"/>
+<!-- Action: move in a random direction -->
+        <action name="move-random" class="grid.model.action.MoveRandomAction">
+          <attributes>
+            <attribute name="environment" value="environment"/>
+          </attributes>
+        </action>
+<!-- Action: move towards the dumpster -->
+        <action name="move-towards-dumpster" class="grid.model.action.MoveTowardsAction">
+          <attributes>
+            <attribute name="environment" value="garbage.grid"/>
+            <attribute name="location" value="const:10,10"/>
+          </attributes>
+        </action>
+<!-- Action: move towards the closest piece of garbage -->
+        <action name="move-towards-garbage" class="grid.model.action.MoveTowardsAction">
+          <attributes>
+            <attribute name="environment" value="garbage.grid"/>
+            <attribute name="location" value="av:garbage.location"/>
+          </attributes>
+        </action>
+<!-- Action: move towards the closest mine -->
+        <action name="move-towards-mine" class="grid.model.action.MoveTowardsAction">
+          <attributes>
+            <attribute name="environment" value="mine.grid"/>
+            <attribute name="location" value="av:mine.location"/>
+          </attributes>
+        </action>
+      </actions>
+      <initializers>
+        <initializer name="random-placement" class="grid.model.RandomPlacementInitializer"/>
+      </initializers>
+    </model>
+  </models>
+  <controllers>
+    <controller name="basic-state-machine" format="state">
+      <builder class="sweep.controller.FSABuilder"/>
+      <initialState name="searching"/>
+      <states>
+<!-- State: controls the search beahviors -->
+        <state name="searching">
+<!-- Rule: if in range of garbage, go into collecting mode -->
+          <transition nextState="collect-garbage">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="near-garbage" value="true"/>
+            </rule>
+            <action name="move-towards-garbage"/>
+          </transition>
+<!-- Rule: if in range of a mine, go into disarming mode -->
+          <transition nextState="disarm-mine">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="near-mine" value="true"/>
+            </rule>
+            <action name="move-towards-mine"/>
+          </transition>
+<!-- Rule: otherwise, keep searching randomly -->
+          <default nextState="searching">
+            <action name="move-random"/>
+          </default>
+        </state>
+<!-- State: controls the collection of garbage -->
+        <state name="collect-garbage">
+<!-- Rule: if on a piece of garbage, pick it up -->
+          <transition nextState="collect-garbage">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="holding-garbage" value="false"/>
+              <sensor name="on-garbage" value="true"/>
+            </rule>
+            <action name="pick-up-garbage"/>
+          </transition>
+<!-- Rule: if near garbage, move towards it -->
+          <transition nextState="collect-garbage">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="holding-garbage" value="false"/>
+              <sensor name="near-garbage" value="true"/>
+            </rule>
+            <action name="move-towards-garbage"/>
+          </transition>
+<!-- Rule: if holding garbage, move towards the dumpster -->
+          <transition nextState="collect-garbage">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="holding-garbage" value="true"/>
+              <sensor name="on-dumpster" value="false"/>
+            </rule>
+            <action name="move-towards-dumpster"/>
+          </transition>
+<!-- Rule: if holding garbage and on the dumpster, dispose of the garbage -->
+          <transition nextState="searching">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="holding-garbage" value="true"/>
+              <sensor name="on-dumpster" value="true"/>
+            </rule>
+            <action name="put-down-garbage"/>
+          </transition>
+<!-- Rule: go back to searching -->
+          <default nextState="searching">
+            <action name="move-random"/>
+          </default>
+        </state>
+<!-- State: controls the disarming of mines -->
+        <state name="disarm-mine">
+<!-- Rule: if on an armed mine, perform the first disarming step -->
+          <transition nextState="disarm-mine">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="on-armed-mine" value="true"/>
+            </rule>
+            <action name="disarm-mine-stage-1"/>
+          </transition>
+<!-- Rule: if on a partially disarmed mine, finish the job -->
+          <transition nextState="searching">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="on-partially-disarmed-mine" value="true"/>
+            </rule>
+            <action name="disarm-mine-stage-2"/>
+          </transition>
+<!-- Rule: if near a mine, move towards it -->
+          <transition nextState="disarm-mine">
+            <rule logical="and">
+              <builder class="sweep.controller.SensorRuleBuilder"/>
+              <sensor name="near-mine" value="true"/>
+            </rule>
+            <action name="move-towards-mine"/>
+          </transition>
+<!-- Rule: go back to searching -->
+          <default nextState="searching">
+            <action name="move-random"/>
+          </default>
+        </state>
+      </states>
+    </controller>
+  </controllers>
+<!-- Not currently being used -->
+  <agents>
+    <agent name="agent">
+      <builder class="standard.agent.AgentBuilder"/>
+      <attributes/>
+      <memory/>
+    </agent>
+  </agents>
+  <swarms>
+    <swarm name="swarm-A">
+      <builder class="standard.swarm.SwarmBuilder"/>
+      <entity name="swarm-A-entity">
+        <agent type="agent"/>
+        <controller type="basic-state-machine"/>
+        <model type="avatar"/>
+      </entity>
+    </swarm>
+    <swarm name="swarm-B">
+      <builder class="standard.swarm.SwarmBuilder"/>
+      <entity name="swarm-B-entity">
+        <agent type="agent"/>
+        <controller type="basic-state-machine"/>
+        <model type="avatar"/>
+      </entity>
+    </swarm>
+  </swarms>
+<!-- Not currently being used -->
+  <information>
+    <info name="info-type1">
+      <builder class="sweep.info.NullInfoBuilder"/>
+    </info>
+  </information>
+  <probes>
+    <probe name="terminator">
+      <builder class="sweep.probe.CounterProbeBuilder"/>
+      <iterations num="200"/>
+    </probe>
+    <probe name="summarizer">
+      <builder class="sweep.probe.SummaryProbeBuilder"/>
+      <sum swarm="my-swarm-A" var="garbage-counter"/>
+      <sum swarm="my-swarm-A" var="disarmed-phase-1"/>
+      <sum swarm="my-swarm-A" var="disarmed-phase-2"/>
+      <sum swarm="my-swarm-B" var="garbage-counter"/>
+      <sum swarm="my-swarm-B" var="disarmed-phase-1"/>
+      <sum swarm="my-swarm-B" var="disarmed-phase-2"/>
+      <screen/>
+    </probe>
+  </probes>
+</simulation>

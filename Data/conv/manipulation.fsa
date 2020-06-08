@@ -1,0 +1,89 @@
+\multirow{7}{*}{A}
+ & on-garbage & pick-up-garbage & J\\
+ & near-garbage & move-towards-mine & J\\
+ & near-mine & move-random & H\\
+ & holding-garbage & move-towards-garbage & F\\
+ & on-dumpster & pick-up-garbage & G\\
+ & on-armed-mine & move-random & B\\
+ & on-partially-disarmed-mine & broadcast-garbage & A\\
+\hline
+
+\multirow{5}{*}{B}
+ & !on-dumpster & move-random & J\\
+ & !on-armed-mine & move-towards-dumpster & K\\
+ & holding-garbage & disarm-mine-stage-1 & F\\
+ & !on-garbage & disarm-mine-stage-2 & G\\
+ & near-mine & pick-up-garbage & C\\
+ & on-garbage & move-towards-mine & A\\
+\hline
+
+\multirow{4}{*}{C}
+ & !near-garbage & broadcast-mine & A\\
+ & on-armed-mine & broadcast-mine & A\\
+ & holding-garbage & broadcast-mine & D\\
+ & on-garbage & broadcast-garbage & J\\
+\hline
+
+\multirow{3}{*}{D}
+ & near-mine & broadcast-mine & C\\
+ & !on-garbage & move-random & K\\
+ & holding-garbage & broadcast-garbage & D\\
+ & !holding-garbage & move-towards-mine & B\\
+\hline
+
+\multirow{2}{*}{E}
+ & !near-mine & pick-up-garbage & K\\
+ & near-garbage & move-towards-garbage & F\\
+ & near-mine & move-towards-dumpster & B\\
+\hline
+
+\multirow{6}{*}{F}
+ & on-garbage & move-towards-garbage & B\\
+ & holding-garbage & put-down-garbage & K\\
+ & on-partially-disarmed-mine & disarm-mine-stage-2 & B\\
+ & !near-mine & disarm-mine-stage-1 & B\\
+ & on-armed-mine & disarm-mine-stage-1 & I\\
+ & near-garbage & put-down-garbage & K\\
+ & near-mine & move-towards-mine & D\\
+\hline
+
+\multirow{5}{*}{G}
+ & on-partially-disarmed-mine & broadcast-mine & C\\
+ & holding-garbage & move-towards-dumpster & K\\
+ & !near-mine & move-towards-garbage & B\\
+ & near-garbage & broadcast-mine & A\\
+ & !on-dumpster & move-towards-dumpster & I\\
+ & near-mine & move-towards-garbage & J\\
+\hline
+
+\multirow{3}{*}{H}
+ & !on-garbage & broadcast-mine & G\\
+ & !on-armed-mine & move-towards-dumpster & H\\
+ & !on-dumpster & disarm-mine-stage-2 & F\\
+ & on-dumpster & disarm-mine-stage-2 & K\\
+\hline
+
+\multirow{5}{*}{I}
+ & on-dumpster & pick-up-garbage & E\\
+ & on-armed-mine & move-towards-mine & F\\
+ & !near-garbage & broadcast-mine & J\\
+ & on-garbage & put-down-garbage & A\\
+ & !on-partially-disarmed-mine & move-towards-garbage & C\\
+ & near-garbage & disarm-mine-stage-2 & B\\
+\hline
+
+\multirow{6}{*}{J}
+ & on-partially-disarmed-mine & pick-up-garbage & I\\
+ & holding-garbage & move-towards-dumpster & G\\
+ & near-mine & pick-up-garbage & I\\
+ & on-garbage & broadcast-garbage & E\\
+ & !near-garbage & put-down-garbage & C\\
+ & !on-dumpster & move-towards-garbage & I\\
+\hline
+
+\multirow{2}{*}{K}
+ & !on-partially-disarmed-mine & put-down-garbage & J\\
+ & on-dumpster & put-down-garbage & J\\
+ & on-partially-disarmed-mine & put-down-garbage & G\\
+\hline
+
